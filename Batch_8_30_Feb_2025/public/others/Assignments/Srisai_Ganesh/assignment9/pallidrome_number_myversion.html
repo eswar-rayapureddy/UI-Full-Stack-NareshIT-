@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome number</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Enter a number");
+        var rev = "";
+        for (let i of String(n)) {
+            rev = i + rev;
+            // console.log(rev);
+        }
+        if (rev == n) {
+            console.log("The given number " + n + " is a Pallindrome number");
+        }
+        else {
+            console.log("The given number " + n + " is not a Pallindrome number")
+        }
+    </script>
+</body>
+</html>

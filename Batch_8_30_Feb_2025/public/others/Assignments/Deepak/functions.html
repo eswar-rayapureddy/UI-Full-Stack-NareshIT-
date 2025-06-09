@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var empDetails = () => {
+                var emp_name = prompt("Enter Name of employ ");            
+                var emp_age = prompt("Enter Age of employ ");            
+                var emp_gender = prompt("Enter Gender of Employee (Male/Female) ");            
+                var emp_department = prompt("Enter Department of employ");                  
+                var basic_salary = prompt("Enter basic sal of employ");
+                basic_salary = parseInt(basic_salary);
+                empHra(basic_salary);
+                var hra= empHra(basic_salary);
+                var pf = empPf(basic_salary);
+                var total = empTotal(basic_salary, pf, hra);
+                
+                empPrintDetails(emp_name, emp_age,emp_gender, emp_department, basic_salary,total);
+
+            }
+
+            var empHra = (basic_salary) => {
+                var hra = (0.24*basic_salary);
+                return hra;
+                
+            }
+
+<<<<<<< HEAD
+            var empPf = (basic_salary, hra) => {
+=======
+            var empPf = (basic_salary) => {
+>>>>>>> cd43fbf76526ce81a3e68888a6d266b87752f2d8
+                var pf = (0.12*basic_salary);
+                pf = parseInt(pf);
+                return pf;
+                
+            }
+            
+            var empTotal = (basic_salary, pf, hra) => {
+                var total = (basic_salary + hra + pf); 
+                
+                return total;
+                
+            }
+
+            var empTax = (total) => {
+                if (emp_gender = 'Male'){
+                    if(total>=100000)
+                    {
+                        var taxPercent= 0.15*total;
+                        console.log("total for 15% tax is ", taxPercent);
+                    }
+                        else if(total>=50000)
+                        {
+                            var taxPercent= 0.10 * total;
+                            console.log("total for 10% tax is " , taxPercent);
+                        }
+                        else if(total>=25000)
+                        {
+                            var taxPercent= 0.5 * total;
+                            console.log("total for 5% tax is " , taxPercent);
+                        }
+                    else{
+                            console.log("no tax")
+                        }
+                    }
+                else{
+                        if( emp_gender = 'Female')
+                            {
+                            if(total>=100000)
+                                {
+                                var taxPercent= 0.10*total;
+                                console.log("total for 10% tax is ", taxPercent);
+                                    }
+                                else if(total>=50000)
+                                {
+                                    var taxPercent= 0.5 * total;
+                                    console.log("total for 10% tax is " , taxPercent);
+                                }
+                                else{
+                                    console.log("no tax");
+                                }
+                            }
+                        }
+                    }
+<<<<<<< HEAD
+                    var empPrintDetails =  (emp_name, emp_age,emp_gender, emp_department, basic_salary) => {
+                        console.log( "emp name is" , emp_name);
+                        console.log( "emp age is" , emp_age);
+                        console.log( "emp gender is" , emp_gender);
+                        console.log( "emp dept is" , emp_department);
+                        Console.log("basic salary is", basic_salary);
+                        console.log("employee total salary is" , total);
+                    }
+                    empDetails();
+=======
+                    var empPrintDetails = (emp_name, emp_age,emp_gender, emp_department, basic_salary,total) => {
+                    console.log( "emp name is" , emp_name);
+                    console.log( "emp age is" , emp_age);
+                    console.log( "emp gender is" , emp_gender);
+                    console.log( "emp dept is" , emp_department);
+                    console.log("basic salary is", basic_salary);
+                    console.log("employee total salary is" , total);
+                    }
+            empDetails();
+>>>>>>> cd43fbf76526ce81a3e68888a6d266b87752f2d8
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employeed Details Jquery</title>
+    <script src="../Library/jquerylib.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <h3>
+        Employee Details
+    </h3>
+    <ul>
+        <li>
+            Employee name:
+            <input type="text" id="ename">
+        </li>
+        <li>
+            Employee gender:
+            <input type="radio" name="gender" value="Male">
+            Male
+            <input type="radio" name="gender" value="Female">
+            Female
+        </li>
+        <li>
+            Employee location:
+            <input type="text" id="eloc">
+        </li>
+        <li>
+            Employee department:
+            <input type="text" id="edept">
+        </li>
+        <li>
+            Employee salary:
+            <input type="text" id="esal">
+        </li>
+        <li>
+            <input type="button" value="Generate Employee Details" onclick="generateEmpDetails()">
+        </li>
+    </ul>
+
+    <div>
+        <ul>
+            <li class="title">
+                Employee Details
+            </li>
+            <li>
+                Employee Name: <span id="e_name"></span>
+            </li>
+            <li>
+                Employee Gender: <span id="e_gen"></span>
+            </li>
+            <li>
+                Employee Location: <span id="e_loc"></span>
+            </li>
+            <li>
+                Employee Department: <span id="e_dept"></span>
+            </li>
+            <li>
+                Employee PF: <span id="e_pf"></span>
+            </li>
+            <li>
+                Employee HRA: <span id="e_hra"></span>
+            </li>
+            <li>
+                Employee Total Salary: <span id="e_sal"></span>
+            </li>
+            <li>
+                Employee Tax: <span id="e_tax"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

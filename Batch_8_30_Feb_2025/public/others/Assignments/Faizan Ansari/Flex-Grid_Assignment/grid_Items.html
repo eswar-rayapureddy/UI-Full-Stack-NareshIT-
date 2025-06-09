@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+            .mainContainer {
+                border: 2px solid rebeccapurple;
+                height: 600px;
+                padding: 5px;
+                display: grid;
+                grid-template-columns: 150px auto auto 80px;
+                grid-template-rows: 100px auto 100px ;
+                gap: 30px 20px;  
+            }
+
+            .mainContainer div {
+                border: 1px solid darkorange;
+                margin: 5px;
+                padding: 5px;
+            }
+            
+            .itm6{
+                /* grid-column-start: 2;
+                grid-column-end: 4; */
+                grid-column: 2/4;
+            }
+
+            .itm8 {
+                /* grid-row-start: 2;
+                grid-row-end: 4; */
+                grid-row: 2/4;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h3> Grid Item Property </h3>
+        
+        <div class="mainContainer">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div class="itm6">Item 6</div>
+            <div>Item 7</div>
+            <div class="itm8">Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>
+            <div>Item 11</div>
+            <div>Item 12</div>
+        </div>
+
+    </body>
+
+</html>
+
+<!-- 
+
+    Items:
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-column: 1 / 3;
+
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-row: 1 / 4;
+
+        grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end
+
+-->

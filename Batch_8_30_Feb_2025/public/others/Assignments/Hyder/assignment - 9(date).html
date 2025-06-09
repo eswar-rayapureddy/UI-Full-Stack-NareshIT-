@@ -1,0 +1,24 @@
+
+<script>
+    var monName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var monName_Full = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER", "DECEMBER"];
+    var weeks = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+    var months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+    var date = new Date();
+    var monthIndex = date.getMonth();
+    var assa = monName[monthIndex];
+
+    var dayOfMonth = date.getDate(); // Get the actual date (1-31)
+    var year = date.getFullYear(); // Get full year
+    var hours = date.getHours();
+    var minutes= date.getMinutes();
+    var seconds = date.getSeconds(); 
+    var week = date.getDay();
+    var wek = weeks[week];
+
+    
+    
+    var dateformat =dayOfMonth +'th'+','+ ' '+ monName[monthIndex] + " "+ year + ' ' + hours +':'+minutes +':' +seconds +' '+ weeks[week];
+    console.log(dateformat);
+</script>

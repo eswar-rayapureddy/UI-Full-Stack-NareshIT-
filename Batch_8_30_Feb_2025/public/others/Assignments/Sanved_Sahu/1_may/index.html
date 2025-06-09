@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="dpContainer">
+        <div class="dropContainer"  name="mens" id="menContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)" >Men's Section <hr> </div>
+        <div class="dropContainer"  name="womens" id="womenContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)">Women's Section <hr> </div>
+        <div class="dropContainer" name="kids" id="kidsContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)">Kid's Section <hr> </div>
+    </div>
+    <div>
+        <div class="dragContainer"  >
+            <span>Men's : </span>
+            <img class="menProduct" name="mens" id="prod_1" src="https://m.media-amazon.com/images/I/517z9sh8PeL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_2" src="https://m.media-amazon.com/images/I/61u5oAftaeL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_3" src="https://m.media-amazon.com/images/I/31OZsKxGlZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_4" src="https://m.media-amazon.com/images/I/51oLp9oqbOL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_5" src="https://m.media-amazon.com/images/I/71OcMg+yvZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_6" src="https://m.media-amazon.com/images/I/71OcMg+yvZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_7" src="https://m.media-amazon.com/images/I/71OcMg+yvZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="menProduct" name="mens" id="prod_8" src="https://m.media-amazon.com/images/I/71OcMg+yvZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+        </div>
+        <div class="dragContainer" >
+            <span>Women's : </span>
+            <img class="womenProduct" name="womens" id="prod_9" src="https://m.media-amazon.com/images/I/61mfTjwqcNL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct"  name="womens" id="prod_10" src="https://m.media-amazon.com/images/I/71jF7678loL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct" name="womens" id="prod_11" src="https://m.media-amazon.com/images/I/51Q6gdK8LuL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct" name="womens" id="prod_12" src="https://m.media-amazon.com/images/I/61jjKBU1xbL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct" name="womens" id="prod_13" src="https://m.media-amazon.com/images/I/41U-NB-ijXL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct" name="womens" id="prod_14" src="https://m.media-amazon.com/images/I/41U-NB-ijXL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="womenProduct" name="womens" id="prod_15" src="https://m.media-amazon.com/images/I/41U-NB-ijXL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+        </div>
+        <div class="dragContainer" >
+            <span>Men's : </span>
+            <img class="kidsProduct" name="kids" id="prod_16" src="https://m.media-amazon.com/images/I/61lWtjIeSTL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct"  name="kids" id="prod_17" src="https://m.media-amazon.com/images/I/81BrzdELfZL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct" name="kids" id="prod_18" src="https://m.media-amazon.com/images/I/51OFP4X1R4L._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct"  name="kids" id="prod_19" src="https://m.media-amazon.com/images/I/517+8nArL8L._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct"  name="kids" id="prod_20" src="https://m.media-amazon.com/images/I/61C3ebth7RL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct"  name="kids" id="prod_21" src="https://m.media-amazon.com/images/I/61C3ebth7RL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+            <img class="kidsProduct" name="kids" id="prod_22" src="https://m.media-amazon.com/images/I/61C3ebth7RL._AC_UL640_QL65_.jpg" alt="" draggable="true" ondragstart="startDrag(event)"> 
+        </div>
+    </div>
+
+    <script>
+
+        var produtId;
+
+        var startDrag = (event) => {
+            console.log("Drag is Started ");
+            produtId = event.target.getAttribute('id');
+            console.log(produtId);
+        }
+
+        var itemDropped = (event) => {
+            produtId = '#' + produtId;
+            var containerName = event.target.getAttribute('name');
+            var productName = document.querySelector(produtId).getAttribute('name');            
+            
+            
+            var productClass = document.querySelector(produtId).getAttribute('class');
+            console.log(productClass);
+            
+            if (containerName == productName) {
+                if (productClass == 'menProduct'){
+                    document.querySelector('#menContainer').append(document.querySelector(produtId))
+                } else if(productClass == 'womenProduct'){
+                    document.querySelector('#womenContainer').append(document.querySelector(produtId))
+                } else if(productClass == 'kidsProduct'){
+                    document.querySelector('#kidsContainer').append(document.querySelector(produtId))
+                }
+            } else {
+                alert("Invalid");
+            }
+            event.preventDefault();
+            console.log("Item got Dropped ");
+        }
+
+        var itemDragOver = (event) => {
+            event.preventDefault();
+            console.log("From itemDragOver ");
+        }
+    </script>
+</body>
+</html>

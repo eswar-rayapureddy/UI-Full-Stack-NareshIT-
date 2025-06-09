@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    
+    <script>
+        var employefname = prompt("Please enter your FirstName");
+        var employelname = prompt("Please enter your lastName");
+        var age = prompt('Please enter your age');
+        var emp_gender = prompt('Please Enter your Gender');
+        var emp_Dept = prompt ('Please Enter your Department');
+        var basc_salary = parseInt(prompt('Please Enter Salary'));
+        var hra = (24/100)*basc_salary;
+        var pf = (12/100)*basc_salary;
+
+        console.log( 'FullName of the Employee is:' + employefname + + employelname);
+        console.log('HRA of the Employee is :' + hra);
+        console.log("PF of the employee is :" + pf);
+
+        alert ('Thank you for inquiry' + employefname +"" + employelname + "" + "your total HRA is :" + hra + ""+ " and PF is: " + "" + pf );
+
+    </script>
+</body>
+</html>

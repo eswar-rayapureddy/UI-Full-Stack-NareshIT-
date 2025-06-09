@@ -1,0 +1,32 @@
+h3 {
+    text-align: center;
+    color: grey;
+    border: 2px solid;
+    padding: 2px;
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 5px #000;
+}
+
+ul {
+    font-size: large;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: pink;
+}
+
+li {
+    list-style: none;
+    border: 1px solid;
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    background-color: cade ;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+         <link rel="stylesheet" href="app.css">
+     </head>
+     <body>
+     <ul>
+         <li>
+             enter first value :
+             <input type="text" id="firstVal" onkeypress = "return validateTextContent(event)">
+         </li>
+         <li>
+             enter second value :
+             <input type="text" id="secondVal" onkeypress = "return validateTextContent(event)">
+         </li>
+         <li>
+             enter third value :
+             <input type="text" id="thirdVal" onkeypress = "return validateTextContent(event)">
+         </li>
+         <li>
+            <input type="button" value="Get sum" onclick="doTheSum(event)">
+            <input type="button" value="Get sub" onclick="doTheSub(event)">
+            <input type="button" value="Get mul" onclick="doTheMul(event)">
+            <input type="button" value="Get div" onclick="doTheDiv(event)">
+         </li>
+         <li id="resultBlock">
+             <span>.....</span>
+         </li>
+     </ul>
+     <script>
+         var doTheSum = (event) => {
+             console.log(event);
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue + secondValue + thirdValue;
+             document.querySelector('span').innerText = 'sum is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheSub = (event) => {
+             console.log(event);
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue - secondValue - thirdValue;
+             document.querySelector('span').innerText = 'substraction is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheMul = (event) => {
+             console.log(event);
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue * secondValue * thirdValue;
+             document.querySelector('span').innerText = 'multiplication is : ' +result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheDiv = (event) => {
+             console.log(event);
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue / secondValue / thirdValue;
+             document.querySelector('span').innerText = 'division is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var validateTextContent = (event) => {
+            console.log(event);
+            if(event.keyCode >= 48 && event.keyCode <= 57){
+                return true;
+            }else{
+                return false;
+            }
+         }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+HTML - Hyper text markup language
+XML - Extensible markup language
+    Markuplanguage -> 
+        which uses Tags to represent content 
+            Tag -> 
+
+                <sample>
+                    ....
+                    ....
+                </sample>
+
+    Predefined tags:
+        <html></html>
+        <body></body>
+        div
+        span 
+        p 
+        a 
+        b 
+        u 
+        i 
+        ul 
+        li 
+        table 
+        head 
+        script 
+        style
+        ...
+
+    Basic Strucute of any webpage:
+
+        <html>
+            <head>
+                <title>
+                    .....tile of webpage 
+                </title>
+            </head>
+            <body>
+                content of page...
+            </body>
+        </html>

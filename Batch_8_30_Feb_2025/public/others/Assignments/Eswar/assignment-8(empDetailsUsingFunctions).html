@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>
+            Assignment 
+        </title>
+    </head>
+    <body>
+        <script>
+            var Ename,Eage,Egender,Edept;
+            var Basic_sal,hra,pf,Total_sal;
+            var tax15M,tax10M,tax5M,tax10F,tax5F;
+            function readingEmpDetails() {
+                Ename = prompt("Enter Emp name ");
+                Eage = prompt("Enter Emp age");
+                Egender = prompt("Enter emp gender");
+                Edept = prompt("Enter Emp dept");
+                Basic_sal = parseInt(prompt("Enter Basic Salary"));
+                calHraAndPf();
+            }
+            var calHraAndPf = function() {
+                hra = 24/100 * Basic_sal ;
+                pf = 12/100 * Basic_sal ;
+                calTotalSal();
+            }
+            var calTotalSal = () => {
+                Total_sal = hra + pf + Basic_sal ;
+                calTax();
+            }
+            function calTax() {
+                tax15M = 15 / 100 * Total_sal;
+                tax10M = 10 / 100 * Total_sal;
+                tax5M = 5 / 100 * Total_sal;
+                tax10F = 10 / 100 * Total_sal;
+                tax5F = 5 / 100 * Total_sal;
+                displayStatements();
+            }
+            var displayStatements = () => {
+                console.log("Employee name is :",Ename);
+                console.log("Employee age is :",Eage);
+                console.log("Employee gender is :",Egender);
+                console.log("Employee Department is :",Edept);
+                console.log("Employee total salary is :",Total_sal);
+                checkTax();
+            }
+            var checkTax = function() {
+                if (Egender == "Male" || Egender == "male") {
+                    if (Total_sal >= 100000) {
+                        console.log("Total tax he pay is :",tax15M);
+                    } else if (Total_sal >= 50000) {
+                        console.log("Total tax he pay is :",tax10M);
+                    } else if (Total_sal >= 25000) {
+                        console.log("Total tax he pay is :",tax5M);
+                    } else {
+                        console.log("Total tax he pay is : 0");
+                    }
+                } else if (Egender == "Female" || Egender == "female") {
+                    if (Total_sal >= 100000) {
+                        console.log("Total tax she pay is :",tax10F);
+                    } else if ( Total_sal >= 50000) {
+                        console.log("Total tax she pay is :",tax5F);
+                    } else {
+                        console.log("Total tax she pay is : 0");
+                    }
+                }
+            }
+            readingEmpDetails();
+            
+           
+            
+            
+        </script>
+    </body>
+</html>

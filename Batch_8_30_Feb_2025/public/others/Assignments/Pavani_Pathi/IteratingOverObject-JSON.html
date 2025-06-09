@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var details = {
+            name: 'raj',
+            gender: 'male',
+            age: 10
+        }
+        var studDeatils = {
+            loc : 'hyd',
+            tptal:300 ,
+            avg: 45.6,
+            name: 'xxr',
+            marks:[12,34,45,56,67]
+        }
+        var bookDetails = 
+        {
+            bookname: 'My Dreams of hills',
+            authorDetails: {
+                name: 'Krish',
+                age: 90,
+                rank: '23/1000'
+                       },
+            price: 230,
+            discountPercent: 7
+        }
+    
+        var iteratibeObject = (data) => {
+            for(var i in data) {
+                if(typeof(data[i]) == 'object' && data[i].length == undefined) {
+                        iteratibeObject(data[i]);
+                    } else {
+                console.log(i +":" + data[i])
+                    }
+            }
+        }
+        iteratibeObject(details);
+        iteratibeObject(studDeatils);
+        iteratibeObject(bookDetails);
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            Emp Details 
+        </title>
+    </head>
+    <body>
+        <script>
+            function readingEmpDetails() {
+                var Ename = prompt("Enter Emp Name :");
+                var Eage = prompt("Enter emp age :");
+                var Edept = prompt("Enter dept of the emp :");
+                var Egender = prompt("Enter the gender of the emp :");
+                var Basic_sal = parseInt(prompt("Enter the basic salary of emp :"));
+                calHRA_PF_TotSal(Ename , Eage , Edept , Egender , Basic_sal);
+            }
+            var calHRA_PF_TotSal = function(name , age , dept ,gender , Basic_sal) {
+                var hra = 24 / 100 * Basic_sal;
+                var pf = 12 / 100 * Basic_sal;
+                Total_Salary = Basic_sal + hra + pf ;
+                calTax(name , age , dept ,gender ,Total_Salary);
+             }
+             var calTax = (name , age , dept ,gender ,Total_Salary) => {
+                tax15M = 15 / 100 * Total_Salary ;
+                tax10M = 10 / 100 * Total_Salary ;
+                tax5M = 5 / 100 * Total_Salary ;
+                tax10F = 10 / 100 * Total_Salary ;
+                tax5F = 5 / 100 * Total_Salary ;
+                DisplayEmpDetails(name , age , dept , gender , Total_Salary , tax15M ,tax10M , tax5M , tax10F ,tax5F);
+             }
+             var DisplayEmpDetails = (name , age , dept , gender , Total_Salary , tax15M ,tax10M , tax5M , tax10F ,tax5F) => {
+                console.log("Employee Name is :",name);
+                console.log("Employee Age is :",age);
+                console.log("Employee Department is :",dept);
+                console.log("Employee Gender is :",gender);
+                console.log("Employee Total Salary is :",Total_Salary);
+                tax = checkTax(gender , Total_Salary , tax15M ,tax10M , tax5M , tax10F ,tax5F);
+                console.log("Tax they pay is :",tax);
+             }
+             function checkTax(gender , Total_Salary , tax15M ,tax10M , tax5M , tax10F ,tax5F) {
+                if (gender == "Male" || gender == "male") {
+                    if (Total_Salary >= 100000) {
+                       var PaidTax = tax15M ;
+                    } else if (Total_Salary >= 50000) {
+                        PaidTax = tax10M;
+                    } else if (Total_Salary >= 25000) {
+                        PaidTax = tax5M;
+                    } else {
+                        PaidTax =  0;
+                    }
+
+                } else if (gender == "Female" || gender == "female") {
+                    if (Total_Salary >= 100000) {
+                        PaidTax = tax10F;
+                    } else if (Total_Salary >= 50000) {
+                        PaidTax = tax5F;
+                    } else {
+                        PaidTax =  0;
+                    }
+                }
+                
+                return PaidTax ;
+             }
+             readingEmpDetails();
+             
+        </script>
+    </body>
+</html>

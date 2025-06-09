@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set Data Structure</title>
+    </head>
+    <body>
+        <script>
+
+            var s = new Set();
+            console.log(s);
+
+            // need to pass value in the form of an array
+            var s1 = new Set([10,20,30,40,50]);
+            console.log(s1);
+
+            var s2 = new Set();
+            s2.add(66);
+            s2.add(77);
+            s2.add("marks"); // Heterogenous
+            s2.add(false); // Heterogenous
+            s2.add(99);
+            s2.add(99); // duplicate element not inserted
+            s2.add(99); // duplicate element not inserted
+            console.log(s2);            
+            console.log("The size of set: "+s2.size);
+            
+            s2.delete(77);
+            console.log(s2);
+
+            s2.clear();
+            console.log(s2);
+
+        </script>
+    </body>
+</html>
+
+<!-- 
+
+Set Data Structre
+-----------------
+1. Take array as a set of input value
+2. Similar to array
+3. Heterogenous element allowed
+4. Duplicate elements not allowed. (In array its allowed)
+5. Predefine methods -> add(), delete(), clear(), size etc
+
+-->

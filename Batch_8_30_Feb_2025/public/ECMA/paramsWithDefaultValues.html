@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Params with default values
+        </title>
+    </head>
+    <body>
+        <script>
+            var addValues = (a = 5, b = 10, c = 15) => {
+                var sum = 0;
+                sum = a + b + c;
+                return sum;
+            }
+
+            var result = addValues(11, 12, 1);
+            console.log("Sum of values is " + result);
+        </script>
+    </body>
+</html>

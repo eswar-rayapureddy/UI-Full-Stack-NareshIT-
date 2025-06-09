@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Employee Details Generater</title>
+         <script src="jquery.js"></script>
+         <link rel="stylesheet" href="app.css">
+         <script src="app.js"></script>
+     </head>
+     <body>
+         <h3>Employee Details Generator</h3>
+         <ul>
+             <li>
+                 Emp Name : 
+                 <input type="text" id="ename">
+             </li>
+             <li>
+                 Age : 
+                 <input type="text" id="eage">
+             </li>
+             <li>
+                 Gender : 
+                 <input type="radio" name="gender" value="Male">Male
+                 <input type="radio" name="gender" value="Female">Female
+             </li>
+             <li>
+                 Location : 
+                 <select name="" id="locationname">
+                      <option>Location</option>
+                      <option value="hyd">Hyderabad</option>
+                      <option value="ap">AndhraPradesh</option>
+                      <option value="ban">Banglore</option>
+                      <option value="kol">kolkata</option>
+                      <option value="ker">Kerala</option>
+                      <option value="mah">Maharastra</option>
+                </select>
+             </li>
+             <li>
+                 Department : 
+                 <input type="text" id="edepartment">
+             </li>
+             <li>
+                 Emp Salary : 
+                 <input type="text" id="esalary">
+             </li>
+             <li>
+                 <input type="button" value="generateEmployeeDetails" onclick = "generateEmployeeDetails()">
+             </li>
+             <ol>
+                 <li class = "title">
+                     DETAILS
+                 </li>
+                 <li>
+                     Employee Name : <span id="d_name"></span>
+                 </li>
+                 <li>
+                     Age : <span id="d_age"></span>
+                 </li>
+                 <li>
+                     Gender : <span id="d_gender"></span>
+                 </li>
+                 <li>
+                     Location : <span id="d_location"></span>
+                 </li>
+                 <li>
+                     Department : <span id="d_department"></span>
+                 </li>
+                 <li>
+                     Total Salary : <span id="d_totalsal"></span>
+                 </li>
+                 <li>
+                     Tax Percent : <span id="d_taxpercent"></span>
+                 </li>
+             </ol>
+     </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+     </head>
+     <body>
+         <script>
+             var studentDetails = {
+                 name : 'krish',
+                 location : 'hubli',
+                 total : 600,
+                 avg : 60.5,
+                 marks : [37 , 42 , 50 , 29 , 45],
+             }
+             var bookDetails = {
+                 name : 'beLoved',
+                 bookInfo : {
+                     rating : 4.5 / 5,
+                     discountPer : 5,
+                     price : 400,
+                     authorDetails : {
+                         name : 'toniMorrison',
+                         age : 50,
+                         address : {
+                             location : 'hyderabad',
+                             state : 'telangana',
+                             country : 'India',
+                             pincode : 986453,
+                     }
+                 }
+              }
+            }
+            var empDetails = {
+             name : 'ravi',
+             age : 20,
+             gender : 'male',
+             address : {
+                 location : 'ongole',
+                 state : 'andhraPradesh',
+                 salaryDetails : {
+                       basicSal : 80000,
+                       pf : 9600,
+                       hra : 19200,
+                       totalSal : 108800,
+                       taxPercent : 16320,
+                }
+              }
+            }
+            var iterateOverObject = (data) => {
+             for(var i in data){
+                 if(typeof(data[i]) == 'object' && data[i].length == undefined){
+                     iterateOverObject(data[i]);
+                 }else{
+                     console.log(i + ' : ' + data[i]);
+                 }
+               }
+             }
+               iterateOverObject(studentDetails);
+               console.log("------------------------------------");
+               iterateOverObject(bookDetails);
+               console.log("------------------------------------");
+               iterateOverObject(empDetails);
+         </script>
+     </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Calculator</title>
+   </head>
+   <STyle>
+    h1{
+        background-color: blueviolet;
+        text-align: center;
+        border: 2px solid white;
+        padding: 20px;
+        margin: 20px;
+
+    }
+    .container{
+        background-color: beige;
+        width: 600px;
+        height: 300px;
+        border: 2px solid black;
+        text-align: center;
+        margin:auto;
+        padding: auto;
+    }
+    ul > li{
+        width: 500px;
+        border: 2px solid black;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #ccc;
+
+    }
+    li{
+        list-style: none;
+        padding: 20px;
+        margin: 20px;
+    }
+    #resultBlock {
+        display: none;
+    }
+    
+    
+   </STyle>
+   <body>
+    <h1>
+        SIMPLE CALCULATOR
+    </h1>
+    <div class="container">
+       
+        <ul>
+            <li>
+                Enter the value: 
+                <input type="text" id="fval">
+            </li>
+            <li>
+                Enter the value: 
+                <input type="text" id="sval">  
+            </li>
+            <li>
+                <input type="button" value="Addition" onclick="doTheSum()">
+                <input type="button" value = "Subraction" onclick="doTheSub()">
+                <input type="button" value = "Multiplication" onclick="doTheMul()">
+                <input type="button" value = "Division" onclick="doTheDiv()">
+
+            </li>
+            <li id="resultBlock">
+                The result is
+                <span>...</span>
+            </li>
+        </ul>
+
+
+
+    </div>
+    
+    <script>
+         var doTheSum = () => {
+                var firstVal = document.querySelector("#fval").value;
+                firstVal = parseInt(firstVal);
+                var secondVal = document.querySelector("#sval").value;
+                secondVal = parseInt(secondVal);
+                var result = firstVal + secondVal;
+                
+
+                document.querySelector('span').innerText  = "addition : " + result;
+            
+                document.querySelector("#resultBlock").style.display = 'block';
+            }
+            var doTheSub = () =>{
+                var firstVal = parseInt(document.querySelector("#fval").value);
+                var secondVal = parseInt(document.querySelector("#sval").value);
+                var result = firstVal - secondVal;
+                document.querySelector("span").innerText = "subraction : " + result;
+                document.querySelector("#resultBlock").style.display = 'block';
+            }
+            var doTheMul = () =>{
+                var firstVal = parseInt(document.querySelector("#fval").value);
+                var secondVal = parseInt(document.querySelector("#sval").value);
+                var result = firstVal * secondVal;
+                document.querySelector("span").innerText = "Multiplication : " + result;
+                document.querySelector("#resultBlock").style.display = 'block';
+
+            }
+            var doTheDiv = () => {
+                var firstVal = parseInt(document.querySelector("#fval").value);
+                var secondVal = parseInt(document.querySelector("#sval").value);
+                var result = firstVal / secondVal;
+                document.querySelector("span").innerText = "Division : " + result;
+                document.querySelector("#resultBlock").style.display = 'block';
+            }
+    </script>
+    
+       
+   </body>
+</html>

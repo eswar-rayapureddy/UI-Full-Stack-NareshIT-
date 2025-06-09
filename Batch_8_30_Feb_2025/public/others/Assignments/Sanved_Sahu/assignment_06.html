@@ -1,0 +1,62 @@
+<!-- Javascript conditional Statement Employee  details -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details </title>
+</head>
+<body>
+    <script>
+        var emp_name = prompt("Enter Name of Employee ");
+        var emp_age = prompt("Enter Age of Employee ");
+        var emp_gender = prompt("Enter Gender of Employee (Male/Female) ");
+        var emp_department = prompt("Enter Department of Employee ");
+        var basic_salary = prompt("Enter Basic Pay of Employee ");
+        basic_salary = parseInt(basic_salary);
+        var hra = ((24/100)*basic_salary);
+        var pf = ((12/100)*basic_salary);
+        var total = (basic_salary + hra + pf); 
+
+        console.log("Name of Employee is " + emp_name);
+        console.log("Age of Employee is " + emp_age);
+        console.log("Gender of Employee is " + emp_gender);
+        console.log("Department of Employee is " + emp_department);
+        console.log("Basic Salary is of Employee " + basic_salary);
+        console.log("HRA is " + hra);
+        console.log("PF is " + pf);
+        console.log("Total Salary of Employee is " + total);
+
+        if((emp_gender=="Male")){
+            if(total>=100000){
+                var tax = (15/100)*total;
+                console.log("15% Tax on " + total + " is " +tax  );
+            }else if (total>=50000){
+                var tax = (10/100)*total;
+                console.log("10% Tax on " + total + " is " +tax  );
+            }else if(total>=25000) {
+                var tax = ((5/100)*total);
+                console.log("5% Tax on " + total + " is " +tax  );
+            }else{
+                console.log("No tax Applicable !");
+            }
+        }else if (emp_gender=="Female"){
+            if(total>=100000){
+                var tax = (10/100)*total;
+                console.log("15% Tax on " + total + " is " +tax  );
+            }else if (total>=50000){
+                var tax = (5/100)*total;
+                console.log("10% Tax on " + total + " is " +tax  );
+            }else{
+                console.log("No tax Applicable !")
+            }
+        }else{
+            console.log("please try again")
+        }
+        
+
+    </script>
+    
+</body>
+</html>

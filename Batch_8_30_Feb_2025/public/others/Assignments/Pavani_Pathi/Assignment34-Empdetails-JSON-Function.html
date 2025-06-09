@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var empDetails = {
+            empName: 'JSON',
+            loc: 'Hyderabad',    
+            gender: 'male',
+            age:20,
+            basic_sal: 2000000,
+            getPf() {
+                this.pf = 1.4 * empDetails.basic_sal
+                this.getHRA()
+            },
+            getHRA() {
+                this.HRA = 2.4 * this.basic_sal
+                this.getTotalSal()
+            },
+            getTotalSal() {
+                this.totalsal = this.pf + this.basic_sal + this.HRA
+                this.getTax()
+            },
+            getTax() {
+            this.tax = 0;     
+            if(this.gender == 'male')
+            {
+               if (this.basic_sal >= 100000)
+                {
+                    this.tax = parseFloat((this.basic_sal * 15)/100)
+                }
+                else if (this.basic_sal >= 50000)
+                {
+                    this.tax = parseFloat((this.basic_sal * 10)/100)
+                }
+               else if (this.basic_sal >= 20000)
+                {
+                    this.tax = parseFloat((this.basic_sal * 5)/100)
+                }
+                else
+                {
+                    this.tax = 0
+                }
+            }
+            else if(this.gender == 'female')
+            {
+                if (this.basic_sal >= 100000)
+                {
+                    this.tax = parseFloat((this.basic_sal * 10)/100)
+                }
+                else if (this.basic_sal >= 50000)
+                {
+                    this.tax = parseFloat((this.basic_sal * 5)/100)
+                }
+                else
+                {
+                    this.tax = 0
+                }
+            }
+           this.displayEmpDeatils();
+        },
+            displayEmpDeatils() {
+                console.log("emp name" +  this.empName)
+                console.log("employee location" + this.loc)
+                console.log("employee age is " , this.age)
+                console.log("basic sal is " + this.basic_sal)
+                console.log("pf is " + this.pf)
+                console.log("HRA is " + this.HRA)
+                console.log("Total salary" + this.totalsal)
+                console.log("Tax is " , this.tax)
+            }
+        }
+    
+        empDetails.getPf();
+    </script>
+</body>
+</html>

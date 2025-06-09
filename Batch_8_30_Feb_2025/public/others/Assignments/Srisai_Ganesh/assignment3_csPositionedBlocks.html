@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioned Blocks</title>
+    <style>
+        .header {
+            border: 2px solid;
+            text-align: center;
+            width: 1500px;
+            height: 30px;
+            line-height: 200%;
+            position: relative;
+            left: 200px;
+        }
+        .footer {
+            border: 2px solid;
+            text-align: center;
+            line-height: 160%;
+            height: 30px;
+            width: 1500px;
+            position: absolute;
+            top: 980px;
+            left: 150px;
+        }
+        .block1,
+        .block2,
+        .block3,
+        .block4,
+        .block5,
+        .block6,
+        .block7,
+        .block8,
+        .block9,
+        .block10,
+        .block11,
+        .block12,
+        .block13 {
+            border: 2px solid;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            line-height: 900%;
+        }
+        .block1 {
+            background-color: yellow;
+            float: left;
+            z-index: 10;
+        }
+        .block2 {
+            background-color: blue;
+            position: relative;
+            left: 100px;
+            top: 70px;
+            opacity: 0.7;
+            z-index: 9;
+        }
+        .block3 {
+            background-color: blue;
+            position: relative;
+            float: right;
+            z-index: 101;
+            opacity: 0.7;
+        }
+        .block4 {
+            background-color: yellow;
+            float: right;
+            position: absolute;
+            left: 1680px;
+            top: 120px;
+            z-index: 100;
+        }
+        .block5 {
+            background-color: orange;
+            height: 170px;
+            width: 170px;
+            position: absolute;
+            left: 885px;
+            top: 500px;
+            opacity: 0.7;
+            z-index: 102;
+        }
+        .block6 {
+            background-color: brown;
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            left: 820px;
+            top: 450px;
+            z-index: 99;
+        }
+        .block7 {
+            background-color: grey;
+            height: 150px;
+            width: 120px;
+            position: absolute;
+            left: 1000px;
+            top: 420px;
+        }
+        .block8 {
+            background-color: grey;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 840px;
+            top: 600px;
+        }
+        .block9 {
+            background-color: purple;
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            left: 1000px;
+            top: 600px;
+        }
+        .block10 {
+            background-color: purple;
+            height: 120px;
+            width: 120px;
+            position: absolute;
+            top: 850px;
+            opacity: 0.7;
+            z-index: 103;
+        }
+        .block11 {
+            background-color: brown;
+            height: 130px;
+            width: 170px;
+            position: absolute;
+            top: 800px;
+            left: 100px;
+            z-index: 98;
+        }
+        .block12 {
+            background-color: brown;
+            height: 130px;
+            width: 100px;
+            position: absolute;
+            top: 800px;
+            left: 1680px;
+        }
+        .block13 {
+            background-color: grey;
+            height: 120px;
+            width: 150px;
+            position: absolute;
+            left: 1700px;
+            top: 850px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Cs Positioned Block</div>
+    <div class="block1"></div>
+    <div class="block3"></div>
+    <div class="block2"></div>
+    <div class="block4"></div>
+    <div class="block5"></div>
+    <div class="block6"></div>
+    <div class="block7"></div>
+    <div class="block8"></div>
+    <div class="block9"></div>
+    <div class="block10"></div>
+    <div class="block11"></div>
+    <div class="block12"></div>
+    <div class="block13"></div>
+    <div class="footer">&#169; Copyrights 2025</div>
+</body>
+</html>

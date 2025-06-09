@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var monthNames = ['Jan', 'Feb', 'Mar', 'Apr'];
+        var monthFullNames = ['January', 'February', 'March', 'April'];
+        var dayFullNames = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+        var todayDate = new Date();
+        var monthNumber = todayDate.getMonth()
+        var monthName = monthNames[monthNumber]
+        var monthFullName = monthFullNames[monthNumber]
+        var day = todayDate.getDay();
+        var dayFullName = dayFullNames[day]
+        var myDateFormat1 = monthName + " " + todayDate.getDate() + 'th ' + todayDate.getFullYear();
+        var myDateFormat2 = monthName + " " + todayDate.getDate() + 'th,' + todayDate.getFullYear();
+        var myDateFormat3 = dayFullName + "  " + todayDate.getDate() + 'th ' +
+            monthFullName + "," + todayDate.getFullYear();
+        var myDateFormat4 = dayFullName + ", " + todayDate.getDate() + '|' +
+            monthFullName + "|" + todayDate.getFullYear();
+        var myDateFormat5 =  todayDate.getDate() + 'th ' +
+            monthFullName + "," + todayDate.getFullYear() + " " + todayDate.getHours() +":"
+            + todayDate.getMinutes() +":" + todayDate.getSeconds()
+        var myDateFormat6 =  todayDate.getDate() + '| ' +
+            todayDate.getMonth() + "|" + todayDate.getFullYear() + " " + todayDate.getHours() +":"
+            + todayDate.getMinutes() +":" + todayDate.getSeconds()
+        console.log("Date : " + myDateFormat1)
+        console.log("Date : " + myDateFormat2)
+        console.log("Date : " + myDateFormat3)
+        console.log("Date : " + myDateFormat4)
+        console.log("Date : " + myDateFormat5)
+        console.log("Date : " + myDateFormat6)
+    </script>
+</body>
+</html>

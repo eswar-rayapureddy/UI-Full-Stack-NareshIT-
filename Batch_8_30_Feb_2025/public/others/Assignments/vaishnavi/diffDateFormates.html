@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+       <script>
+             var monthNames = ["Jan", 'Feb', 'Mar', 'Apr', 'May','Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+               var monthNames_full = ['Janaury', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+               var weekNames = ["Monday", 'Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+               var mySymDate = new Date();
+               console.log(mySymDate);
+               console.log(mySymDate.getFullYear());
+               console.log(mySymDate.getDay());
+               console.log(mySymDate.getMonth());
+               var weekIndex = (mySymDate.getDay())
+               console.log(weekNames[weekIndex]);
+               var monthIndex = (mySymDate.getMonth());
+               console.log(monthNames_full[monthIndex]);
+               var myCustomDateFormat = mySymDate.getMonth() + '-' + mySymDate.getDate() + '-' + mySymDate.getFullYear();
+               console.log(myCustomDateFormat);
+               var customizedDate = prompt("enter your selection (Mar 28th 2025) : , (March 28th, 2025) : , (Friday 28th March, 2025) : , (Friday 28/March/2025) : , (Friday, 28/03/2025) : , (28th March, 2025 8:37:50) : , (28/03/2025 8:37:50) : , (28/03/2025) : ");
+              switch (customizedDate) {
+                case 'Mar 28th 2025' :
+                   console.log(monthNames[monthIndex] + ' ' + mySymDate.getDate() + ' ' + mySymDate.getFullYear());
+                   break;
+                case 'March 28th, 2025' : 
+                   console.log(monthNames_full[monthIndex] + ' ' + mySymDate.getDay() + 'th' + ',' + ' ' + mySymDate.getFullYear());
+                   break;
+                case 'Friday 28th March, 2025' :
+                   console.log(weekNames[weekIndex] + ' ' + mySymDate.getDate() + 'th ' + monthNames_full[monthIndex] + ',' + mySymDate.getFullYear());
+                   break;
+                case 'Friday 28/March/2025' :
+                   console.log(weekNames[weekIndex] + ' ' + mySymDate.getDate() + '/' + monthNames_full[monthIndex] + '/' + mySymDate.getFullYear());
+                   break;
+                case 'Friday 28th March, 2025' :
+                   console.log(weekNames[weekIndex] + ' ' + mySymDate.getDate() + 'th' + monthNames_full[monthIndex] + '' + mySymDate.getFullYear());
+                   break;
+                case 'Friday, 28/03/2025' :
+                   console.log(weekNames[weekIndex] + ', ' + mySymDate.getDate() + '/' + mySymDate.getDate() + '/' + mySymDate.getFullYear());
+                   break;
+                case '28th March, 2025 8:37:50' :
+                   console.log( mySymDate.getDate() + 'th' + monthNames_full[monthIndex] + ',' + mySymDate.getFullYear() + ' ' + mySymDate.getTime());
+                   break;
+                case '28/03/2025 8:37:50' :
+                   console.log(mySymDate.getMonth() + '/' + mySymDate.getDate() + '/' + mySymDate.getFullYear() + ' ' + mySymDate.getTime());
+                   break;
+                case '28/03/2025' :
+                   console.log(mySymDate.getMonth() + '/' + mySymDate.getDate() + '/' + mySymDate.getFullYear());
+                   break;
+                default :
+                   console.log("Wrong option choosen")
+               }
+       </script>
+   </body>
+</html>

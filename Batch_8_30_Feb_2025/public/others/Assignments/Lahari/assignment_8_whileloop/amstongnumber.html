@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var n = prompt("enter the number");
+    n = parseInt(n);
+    console.log(n);
+    var count = 0;
+    var num = n;
+    var sum = 0;
+    while(n > 0){
+        n = n / 10;
+        n = parseInt(n);
+        count++;
+
+    }
+    n = num;
+    while(n > 0){
+        var rem = n % 10;
+        n = n / 10;
+        n = parseInt(n);
+        sum = sum + Math.pow(rem , count);
+    }
+    console.log(sum)
+    if(sum == num){
+        console.log("it is an amstrong number");
+    }else{
+        console.log("it is not an amstrong number");
+    }
+
+   </script> 
+</body>
+</html>

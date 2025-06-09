@@ -1,0 +1,13 @@
+
+DOM 
+    Document Objec Model 
+
+        Tree structure representation of the webpage 
+
+
+        html
+            head 
+                <title> ... </title> HTML DOM element
+
+
+Debugging Tool 

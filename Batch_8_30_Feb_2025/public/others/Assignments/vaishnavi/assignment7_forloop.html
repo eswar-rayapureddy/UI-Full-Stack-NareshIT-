@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+     </head>
+     <body>
+         <script>
+             // display the numbers from 1-100
+             for(var i = 1; i <= 100; i ++ ){
+                 console.log(i);
+           }
+             //  sum of the numbers between 90-51
+             var count =0;
+             for(var i = 90; i >= 51; i -- ){          
+                 count += i;
+           }   console.log("the sum is",count)
+             //  odd no from 1-100
+             for(var i = 1; i <=100; i ++ ){
+                if(i % 2 != 0){
+                 console.log(i)
+                }
+           }
+             //  even no from 100-1
+             for(var i = 100; i >=1; i -- ){
+                 if(i % 2 == 0){
+                 console.log(i);
+                 }
+           }
+             //  sum  of the even no from 1000-200
+             var count = 0 ;
+             for(var i = 1000; i>=200; i-- ){
+                 if(i % 2 == 0){
+                     count += i;       
+             }console.log("the sum is",count)
+             //if given number is prime no or not
+             var c = 0;
+             var n =prompt("enter the number");
+             n = parseInt(n);
+             for(var i = 1; i <= n; i++ ){
+                 var rem = n % i;
+                 if(rem == 0){
+                     c ++ ;
+                 }
+             }
+             if(c == 0){
+                 console.log("is a prime no",n);
+             }else{
+                 console.log("is not a prime no")
+             }
+           } 
+           // display all the prime no from 1-100
+            for(var j = 1; j <= 100; j ++ ){
+             var count = 0;
+             for(var i = 1; i <= j; i ++ ){
+                 var rem = j % i;
+                 if(rem == 0){
+                     count ++ ;
+                 }
+             }
+             if(count == 2){
+                 console.log("it is a prime no",j);
+             }
+           }
+            // sum of the prime numbers between 10-100
+            var sum=0;
+            for(var j = 10; j <= 100; j ++ ){
+             var count = 0;
+             for(var i = 1; i <= j; i ++ ){
+                 var rem = j % i;
+                 if(rem == 0){
+                     count ++ ;
+                 }
+             }
+             if(count == 2){
+                 console.log("is a prime no",j);
+                 sum += j;
+                 console.log(sum);
+             }
+           }    console.log("sum of the prime numbers is: ",sum);
+             //sum of the prime numbers between 200-20
+            var sum=0;
+            for(var j = 200; j >= 20; j -- ){
+             var count = 0;
+             for(var i = 1; i <= j; i ++ ){
+                 var rem = j % i;
+                 if(rem == 0){
+                     count ++ ;
+                 }
+             }
+             if(count == 2){
+                 console.log("is a prime no",j);
+                 sum += j;
+                 console.log(sum);
+              }
+            }
+         </script>
+     </body>
+     </html>

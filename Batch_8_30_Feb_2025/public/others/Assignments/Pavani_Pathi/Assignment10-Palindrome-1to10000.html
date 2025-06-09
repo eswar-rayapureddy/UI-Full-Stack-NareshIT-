@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+                      
+        for( var j = 1; j <= 1000; j++)
+        {
+            var m = demo = j;
+            var revNumber = 0;
+            
+            while(m > 0) {
+                var rem = m % 10;
+                m = m / 10;
+                revNumber = (revNumber * 10) + rem;
+                m = parseInt(m);
+            }
+        
+            if(demo == revNumber){  
+                console.log("Palindrome umber" + demo)
+            }
+           
+           
+         }
+    
+    </script>
+</body>
+</html>

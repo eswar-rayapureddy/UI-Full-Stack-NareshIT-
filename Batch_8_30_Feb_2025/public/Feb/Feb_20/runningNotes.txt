@@ -1,0 +1,86 @@
+style attribute: 
+
+<tagname style="..value...">
+</tagname>
+
+id="one value"
+
+name="one msg"
+
+style="multiple css prop"
+
+style="cssporp1:value; cssprop2:value2; cssprop3:value3;..."
+
+style="color:blue; font-size:20px; background-color: blue; .. . . . . ."
+
+diff ways of applyng colors:
+    color: blue; -> direct colorname 
+
+    color: rgb(20, 30, 60) -> 0 - 255
+
+    color: hashcode -> # - - - - - -; #ab2acd
+
+    #3/6
+    #ccc
+    # ab 12 c3
+
+
+
+    RGBA 
+    HSL
+    ASCII 
+
+    border: size type color;
+
+    border: 2px solid green; solid.\, dotted, dashed , double....
+
+-----------
+
+
+text-align: left, right, center
+
+    in 
+    px 
+    rm 
+    em 
+    etc.
+---------------------------------------
+
+install Git client - Git desktop 
+
+inline css -> CSS been applied to html elements through style attribue 
+
+    limitation of inline css:
+        1. DAta duplicaiton
+        2. maintainability 
+
+CSS Classes: 
+
+{
+    ..
+    .
+    .
+    .
+    .
+}
+
+Syntax:
+    .classname {
+        csspropname: value;
+        csspropname:  value;
+        ...
+        ...
+    }
+
+Eg:
+    .pageTitle {
+        border: 1px solid;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+Eg:
+
+    <div class="abc test sample userdetails">
+        ...
+    </div>

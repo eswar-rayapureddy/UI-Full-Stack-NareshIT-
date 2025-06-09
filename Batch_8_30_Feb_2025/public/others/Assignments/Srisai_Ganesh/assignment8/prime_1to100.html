@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime_numbers</title>
+</head>
+
+<body>
+    <script>
+        for (var i = 2; i <= 100; i++) {
+            count = 0;
+            // console.log(i);
+            for (var j = 1; j <= i; j++) {
+                // console.log(j);
+                if (i % j == 0) {
+                    count = count + 1;
+                }
+            }
+            
+            if (count === 2) {
+                console.log(i);
+            }
+        }
+    </script>
+</body>
+
+</html>

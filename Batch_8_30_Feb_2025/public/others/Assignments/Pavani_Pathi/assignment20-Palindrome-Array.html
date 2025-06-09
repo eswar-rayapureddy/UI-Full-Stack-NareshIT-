@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a = [111,123,321,444,12321];
+    var rem = 0;
+    for ( var i = 0 ; i < 5 ; i++)
+    {
+        var m = num = a[i];
+        while(m > 0)
+        {
+             var n = m % 10
+             rem = rem * 10  + n
+            m = m / 10;
+            m = parseInt(m);
+        }
+        if (num == rem)
+        {
+            console.log("The number " + a[i] +" is palindrome")
+        }
+        rem = 0;
+          
+    }   
+    </script>
+</body>
+</html>

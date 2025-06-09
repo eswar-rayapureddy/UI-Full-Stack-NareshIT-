@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of All Numeric Values</title>
+</head>
+<body>
+    
+    <script>
+        var numericValues = () =>{
+        var a = [];
+        var n = parseInt(prompt("enter how many numeric values do you want sum"))
+        var sum = 0;
+        for(var i = 0; i < n; i++){
+            var value = parseInt(prompt("enter the values of the position" + i));
+            a[i] = value;
+            console.log("given values are" + a[i]);
+            sum += a[i];    
+        }
+        console.log(sum);
+        }
+        numericValues();
+    </script>
+</body>
+</html>

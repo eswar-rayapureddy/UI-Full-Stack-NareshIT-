@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide Show</title>
+        <style>
+            .imgBlock{
+                border: 2px solid black;
+                width: 250px;
+                height: 250px;
+                position: absolute;
+                top: 35%;
+                right: 5%;
+                animation: mySlideShow 5s infinite;
+                background-size: 100% 100%;
+        }
+
+        @keyframes mySlideShow {
+            0%{
+                left: 10%;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRutA6bltI-obOd4NQYdQN5oiV4JclrOW6nbw&s);
+            }
+            25%{
+                left: 20%;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWSlAUDMRyCvkllkm0qZrs6qWrn35D-M8-bgAITpcT6AzosIxseBUJgnMWi0zkjiq16WU);
+            }
+            50%{
+                left: 40%;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbW-GrUS6qqTWROA_jkIdtoBUWINrZs2xmTg&s);
+            }
+            75%{
+                left: 60%;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiubMsL9kiZ3v2O-DcmDOb26RijIx9TiE8QA&s);
+            }
+            100%{
+                left: 80%;
+                background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJXU4nuTuVBZrG4DBr5b_xCAVYVgCpvw_vTg&s);
+            }
+        }
+        </style>
+
+    </head>
+    <body style="background-color: black;">
+        <div class="imgBlock"></div>
+    </body>
+</html>

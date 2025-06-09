@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+    <script>
+        var evenNumbersInTheGivenArray = () =>{
+        
+            var a = [];
+            var n = parseInt(prompt("enter how many integers do you want to enter"));
+            console.log("the even numbers are");
+            for(var i = 0; i < n; i++){
+                var value = parseInt(prompt("enter the values of the position" + i));
+                a[i] = value;
+                // console.log("given values are" + a[i]);
+                
+                if(value % 2 == 0){
+                    console.log( value);
+                }
+            }
+
+        }
+        evenNumbersInTheGivenArray();
+
+    </script>
+       
+   </body>
+</html>

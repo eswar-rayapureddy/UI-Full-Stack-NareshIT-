@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details JSON</title>
+</head>
+
+<body>
+    <script>
+        var readEmployeeDetails = () => {
+            var empDetails = {};
+            empDetails.ename = prompt("Enter Employee name ");
+            empDetails.gender = prompt("Enter Employee gender (Female or Male)");
+            empDetails.loc = prompt("Enter employee location");
+            empDetails.depart = prompt("Enter employee department");
+            empDetails.basicsal = parseInt(prompt("Enter employee basic salary"));
+            var totalsal_Details = getPf_Hra_TotalSal(empDetails.basicsal);
+            empDetails.pf = totalsal_Details[0];
+            empDetails.hra = totalsal_Details[1];
+            empDetails.total_salary = totalsal_Details[2];
+            var tax = totalTax(empDetails.gender, empDetails.total_salary);
+            empDetails.tax = tax[0];
+            empDetails.taxper = tax[1];
+            displayEmpDetails(empDetails);
+        }
+        var getPf_Hra_TotalSal = (basicsal) => {
+            var pf, hra, total_sal = 0;
+            pf = basicsal * (12 / 100);
+            hra = basicsal * (24 / 100);
+            total_sal = basicsal + pf + hra;
+            return [pf, hra, total_sal];
+        }
+        var totalTax = (gender, total_salary) => {
+            var gen = gender.toLowerCase();
+            var taxper = 0;
+            var tax = 0;
+            if (gen == "male" || gen == "m" || gen == "mal" || gen == "ma") {
+                if (total_salary >= 100000) {
+                    taxper = 15;
+                }
+                else if (total_salary >= 50000) {
+                    taxper = 10;
+                }
+                else if (total_salary >= 25000) {
+                    taxper = 5;
+                }
+                else {
+                    taxper = 0;
+                }
+
+            }
+            else {
+                if (total_salary >= 100000) {
+                    taxper = 10;
+                }
+                else if (total_salary >= 50000) {
+                    taxper = 5;
+                }
+                else {
+                    taxper = 0;
+                }
+            }
+            tax = total_salary * (taxper / 100);
+            return [tax, taxper];
+        }
+        var displayEmpDetails = (empDetails) => {
+            console.log("Employee name is " + empDetails.ename);
+            console.log("Employee gender is " + empDetails.gender);
+            console.log("Employee location is " + empDetails.loc);
+            console.log("Employee department is " + empDetails.depart);
+            console.log("Employee salary is " + empDetails.total_salary);
+            console.log("Employee tax is " + empDetails.tax);
+            console.log("Employee tax% is " + empDetails.taxper);
+        }
+
+        readEmployeeDetails();
+    </script>
+</body>
+
+</html>

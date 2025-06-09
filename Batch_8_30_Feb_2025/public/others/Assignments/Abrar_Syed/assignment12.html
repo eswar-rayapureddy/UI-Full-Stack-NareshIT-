@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Program to read a number from the user and check whether it is a Armstrong
+      Number or not
+    </title>
+  </head>
+  <body>
+    <script>
+      var num = parseInt(prompt("Enter any number"));
+      var sum = 0;
+      var rem;
+      var temp = num;
+      var digits = num.toString().length;
+      while (num > 0) {
+        rem = num % 10;
+        sum = sum + Math.pow(rem, digits);
+        num = parseInt(num / 10);
+      }
+      if (temp == sum) {
+        console.log(temp + " is a Armstrong Number");
+      } else {
+        console.log(temp + " is not a Armstrong Number");
+      }
+    </script>
+  </body>
+</html>

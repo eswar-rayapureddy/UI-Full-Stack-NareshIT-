@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .mainContainer {
+            border: 2px solid rebeccapurple;
+            height: 600px;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 150px auto auto 80px;
+            grid-template-rows: 100px auto 100px ;
+            /* column-gap: 20px;
+            row-gap: 30px; */
+            gap: 20px 10px;
+
+            /* justify-content: space-evenly/space-around/space-between/center/start/end */
+            justify-content: center;
+
+            /* align-content: space-evenly/space-around/space-between/center/start/end */
+            align-content: center;
+        }
+
+        .mainContainer div {
+            border: 1px solid darkorange;
+            margin: 5px;
+            padding: 5px;
+        }
+
+
+    </style>
+    <body>
+        
+        <h3>Grid Property</h3>
+
+        <div class="mainContainer">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>
+            <div>Item 11</div>
+            <div>Item 12</div>
+        </div>
+
+    </body>
+</html>
+
+<!-- 
+
+    Display: grid;
+    ----------------
+    Container: 
+        
+        grid-template-columns: auto auto;
+        grid-template-rows: 80px 200px;
+        
+        column-gap
+        row-gap
+        gap - combination of both row and column
+        
+        justify-content: space-evenly/space-around/space-between/center/start/end
+        align-content: space-evenly/space-around/space-between/center/start/end
+
+-->

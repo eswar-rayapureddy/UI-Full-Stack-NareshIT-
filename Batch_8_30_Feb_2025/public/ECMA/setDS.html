@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // var s1 = new Set([2, 3, 4, 5, 7]);
+            var s1 = new Set();
+            s1.add(90);
+            s1.add("hello");
+            s1.add(100);
+            s1.add(true)
+            s1.add(90);
+            s1.add(90);
+            s1.add(90);
+            s1.add(90);
+            s1.add(90);
+            // s1.clear(); // empty
+            s1.delete(100);
+            console.log(s1.size);
+            console.log(s1);
+
+            var data = [20, 30, 20, 40, 80, 20, 30 , 40, 22, 11];
+            var s1 = new Set(data);
+            data = [...s1]
+            console.log(s1);
+            console.log(data);
+
+            var studentDetails = ["raj", 20, 'Male'];
+            var collegeDetails = ['Abc college', 'Hyderabad', 3];
+
+            var completeDetails = [...studentDetails, ...collegeDetails, 'bookanme', 2000];
+            console.log(completeDetails);
+        </script>
+    </body>
+</html>

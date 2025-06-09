@@ -1,0 +1,30 @@
+body{
+    background-color: greenyellow;
+}
+
+.logincontainer{
+    border: 2px solid;
+    width: 360px;
+    height: 240px;
+    margin: 100px 480px;
+    background-color: #ccc;
+    text-align: center;
+}
+input{
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid;
+    font-style: italic;
+    background-color: lightpink;
+}
+h2{
+    text-align: center;
+    color: blue;
+}
+#welcomeblock{
+    display: none;
+    margin-top: 35%;
+    text-align: center;
+    color: red;
+    font-weight: 800;
+}

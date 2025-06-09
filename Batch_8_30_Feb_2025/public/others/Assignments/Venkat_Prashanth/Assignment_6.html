@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment_6</title>
+    </head>
+    <body>
+        <h3>Assignment_6</h3>
+        <script>
+            var ename = prompt("Enter ename")
+            var gender = prompt("Enter Gender")
+            var loc = prompt("Enter the loc")
+            var basicsal = prompt("Enter the basic salary")
+            basicsal = parseInt(basicsal)
+
+            var pf =  (basicsal * 12) / 100;
+            var hre = ( basicsal * 12) / 100;
+            var total = pf + hre + basicsal;
+
+            console.log(ename);
+            console.log(gender);
+            console.log(loc);
+            console.log(basicsal);
+            console.log(pf);
+            console.log(hre);
+            console.log("Total salary is", total);
+
+            
+
+            if( gender == "male" || gender == "m"){
+                if( total >=100000){
+                    console.log("tax percent is 15%");
+                }
+                else if( total >= 50000){
+                    console.log("tax percent is 10%");
+                }
+                else if( total >= 25000){
+                    console.log("tax percent is 5%");
+                
+                }
+                else{
+                    console.log("tax percent is zero");
+                }
+            }
+
+            if( gender =="female" || gender == "f"  ){
+                if( total >= 100000){
+                    console.log("tax percent is 15%");
+                }
+                else if( total >= 50000){
+                    console.log("tax percent is 10%");
+                }
+                else{
+                    console.log("tax percent is Zero");
+                }
+            }
+        </script>
+    </body>
+</html>

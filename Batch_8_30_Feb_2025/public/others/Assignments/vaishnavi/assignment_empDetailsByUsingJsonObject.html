@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+        <script>
+            var readEmployeeDetails = () => {
+              var  empDetails = {}
+              empDetails.name = prompt ("enter name");
+              empDetails.gender = prompt ("enter gender is male / female");
+              empDetails.loc = prompt ("enter location");
+              empDetails.Dep = prompt ("enter department");
+              empDetails.basicSal = parseInt(prompt("enter basicsalary"));
+              var salDetails = PfAndHra(empDetails.basicSal);
+              empDetails.pf = salDetails [0];
+              empDetails.hra = salDetails [1];
+              empDetails.totalsal = getTotalSalary (empDetails);
+              empDetails.totalTax = getTaxPercent (empDetails.gender , empDetails.totalsal);
+              displayEmpDetails (empDetails);
+          }
+            function PfAndHra (basicSal){
+                var pf = (12 * basicSal) / 100;
+                var hra = (24 * basicSal) / 100;
+                return[pf , hra];
+            }
+                var getTotalSalary = (empDetails) => {
+                   var totalsal = empDetails.basicSal + empDetails.pf + empDetails.hra;
+                    return totalsal;
+                }
+                var getTaxPercent = (gender , totalsal) => {
+                    var taxpecent = 0;
+                    if (gender == 'male'){
+                 if (totalsal > 100000){
+                     taxpercent = (totalsal * 15) / 100;
+                 }else if (totalsal > 50000){
+                     taxpercent = (totalsal * 10) / 100;
+                 }else if ( totalsal > 25000){
+                     taxpercent = (totalsal * 5) / 100;
+                 }else {
+                     taxpercent = 0;
+                 }
+             }
+             if (gender == 'female'){
+                 if (totalsal > 100000){
+                     taxpercent = (totalsal * 10) / 100;
+                 }else if (totalsal > 50000){
+                     taxpercent = (totalsal * 5) / 100;
+                 }else {
+                     taxpercent = 0;
+                 }
+             }
+             return taxpercent;
+         }
+         function displayEmpDetails (empDetails) {
+            console.log("name is",empDetails.name);
+            console.log("gender is",empDetails.gender);
+            console.log("location is",empDetails.loc);
+            console.log("department is",empDetails.Dep);
+            console.log("basicsalary is",empDetails.basicSal);
+            console.log("pf is",empDetails.pf);
+            console.log("hra is",empDetails.hra);
+            console.log("totalsalary is",empDetails.totalsal);
+            console.log("taxpecent is",empDetails.totalTax);
+         }
+         readEmployeeDetails();
+     </script>
+  </body>
+</html>

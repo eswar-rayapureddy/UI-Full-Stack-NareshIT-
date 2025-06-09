@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <title>Assignment</title>
+    </head>
+    <body>
+        <script>
+            var PersonalDetails = {
+                name : 'Jhon',
+                age : 20,
+                conatactDeatils : [98899887 , 9090908877, 8090809080],
+                Address : { 
+                    PermenentAddress : {
+                    DNO : '1/58' ,
+                    Street : 'Manimeswram' ,
+                    District : 'Krishna',
+                    Mandal : 'Bantumilli',
+                    PinCode : 521369
+        
+                },
+                CurrentAddress : {
+                    DNO : '1/128' ,
+                    Street : 'Machilipatnam' ,
+                    District : 'Krishna',
+                    Mandal : 'Machilipatnam',
+                    PinCode : 521001
+                },
+                residentAddress : {
+                    DNO : '1/128' ,
+                    Street : 'Machilipatnam' ,
+                    District : 'Krishna',
+                    Mandal : 'Machilipatnam',
+                    PinCode : 521001
+                }
+                }
+            }
+            function ittarteOverJSON(data) {
+                for (var tempkey in data) {
+                    if (typeof(data[tempkey]) == 'object' && data[tempkey].length == undefined) {  
+                        ittarteOverJSON(data[tempkey]);
+                    } else {
+                        console.log(tempkey+ ":" +data[tempkey]);
+                    }
+                }
+            }
+            ittarteOverJSON(PersonalDetails)
+        </script>
+    </body>
+</html>

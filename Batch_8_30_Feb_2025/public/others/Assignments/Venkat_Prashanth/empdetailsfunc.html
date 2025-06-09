@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>empdetails_func</title>
+    </head>
+    <body>
+        <script>
+            var empname, empage, basicsal, pf, hre;
+            var totalsal; 
+            
+            function empdetails() {
+                 empname = prompt("enter the empname")
+                 empage = parseInt(prompt("enter the empage"))
+                 basicsal = prompt("enter the basic sal")
+                 basicsal = parseInt(basicsal)
+                 emppf();
+                
+
+            } 
+            function emppf() {
+                 pf = (basicsal * 12 ) / 100;
+                    pf = parseInt(pf)
+                 hre = (basicsal * 12 ) / 100;
+                    hre = parseInt( hre)
+                totalsal();
+                  
+            }   
+            function totalsal() { 
+                 totalsal = basicsal + pf + hre;
+                 taxpercent();    
+                
+            } 
+
+            function taxpercent() {
+                if( totalsal >= 100000){
+                console.log("the tax percent is 15%");
+                } else if ( totalsal >= 50000){
+                    console.log("tax percent is 10%"); 
+                }else{
+                    console.log("the tax percent is zero");
+                }
+            } 
+            
+            function displayempdetails(){
+                empdetails();
+                console.log("the empname is ", empname);
+                console.log("the empage is ", empage);
+                console.log("the basicsal is ", basicsal);
+                console.log("the pf is ", pf);
+                console.log("the hre is ", hre);
+                console.log("the total sal is ", totalsal);
+            } 
+            
+           
+           
+           
+            displayempdetails();
+
+
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        WAP to to get student deatils using using function with parameter and
+        return keyword.
+    </p>
+    <script>
+        var readStudentDetails = () => {
+            var sname, m1, m2, m3;
+            sname = prompt("Enter the Student Name:");
+            m1 = parseInt(prompt("Enter the Marks 1 is:"));
+            m2 = parseInt(prompt("Enter the Marks 2 is:"));
+            m3 = parseInt(prompt("Enter the Marks 3 is:"));
+            var avg1 = getTotalAvg(m1, m2, m3);
+            var grade2 = getGrade(avg1);
+            getDetails(grade2, sname, m1, m2, m3, avg1);
+        };
+
+        var getTotalAvg = (m1, m2, m3) => {
+            var total = m1 + m2 + m3;
+            var avg = total / 3;
+            console.log("Total marks is:", total);
+            return avg;
+        };
+
+        var getGrade = (avg) => {
+            if (avg >= 75) {
+                return "grade A+";
+            }
+            if (avg >= 60) {
+                return "grade A";
+            }
+            if (avg >= 40) {
+                return "grade B";
+            } else if (avg >= 33) {
+                return "grade C";
+            } else {
+                return "Fail";
+            }
+        };
+
+        var getDetails = (grade2, sname, m1, m2, m3, avg1) => {
+            console.log("Student Name is:", sname);
+            console.log("Marks 1 is:", m1);
+            console.log("Marks 2 is:", m2);
+            console.log("Marks 3 is:", m3);
+            console.log("Avg marks is:", avg1);
+            console.log("Grade is : ", grade2);
+        };
+        readStudentDetails(); 
+    </script>
+</body>
+
+</html>

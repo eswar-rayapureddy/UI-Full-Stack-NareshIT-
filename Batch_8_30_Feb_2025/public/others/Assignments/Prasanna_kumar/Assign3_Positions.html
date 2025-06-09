@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1.header{
+        text-align: center;
+        background-color:purple;
+        width: 800px;
+        height: 50px;
+        margin-left: 250px;
+        padding-top: 10px ;
+      }
+      div{
+        width: 150px;
+        height: 150px;
+        border: 1px solid;
+        text-align: center;
+      }
+      
+      .block1{
+        position: relative;
+        background-color:blue;
+      }
+      .block2{
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: aqua;
+      }
+      .block3{
+        position: relative;
+        left: 1150px;
+        bottom: 150px;
+        background-color: blue;
+      }
+      .block4{
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background-color: aqua;        
+      }
+      #hide{
+        position: relative;
+        top: 100px;
+        left: 550px; 
+      }
+             
+      
+      .block5{
+        position: absolute;
+        background-color: orangered;
+        z-index: 10;
+      }
+      .block6{
+        position: absolute;
+        bottom: 120px;
+        right: 120px;
+        background-color: rgba(84, 146, 33, 0.847);
+       
+      }
+      .block7{
+        position: absolute;
+        bottom: 120px;
+        left: 120px;
+        background-color: rgb(129, 143, 117);       
+      }
+      .block8{
+        position: absolute;
+        top: 120px;
+        right: 120px;
+        background-color: rgb(25, 37, 26);        
+      }
+      .block9{
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        background-color:rgb(195, 218, 162);        
+      }
+
+      .block10{
+        position: relative;
+        top: 300px;
+        left: 100px;
+        background-color:aqua;
+      }
+      .block11{
+        position: absolute;
+        top: 50px;
+        right: 100px;
+        background-color: yellow;
+      }
+
+      .block12{
+        position: relative;
+        left: 1160px;
+        bottom: -125px;
+        background-color: aqua;
+      }
+      .block13{
+        position: absolute;
+        top: 900px;
+        right: 50px;
+        background-color: yellow;        
+      }
+
+     
+    </style>
+    </head>
+    <body>
+    <h1 class="header">CSS Positioned Elements</h1>
+
+    <div class="block1">block 1</div>
+    <div class="block2">block 2</div>
+   
+    <div class="block3">block 3</div>
+    <div class="block4">block 4</div>
+   
+    
+    <div id="hide"> 
+      <div class="block5">block 5</div>
+      <div class="block6">block 6</div>
+      <div class="block7">block 7</div>
+      <div class="block8">block 8</div>
+      <div class="block9">block 9</div>
+    </div>
+
+    <div class="block10">block 10
+    <div class="block11">block 11</div>
+    </div>
+
+    <div class="block12">block 12</div>
+    <div class="block13">block 13</div>
+   
+    
+    
+  </body>
+</html>

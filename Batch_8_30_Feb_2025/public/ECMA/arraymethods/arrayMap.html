@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var a = [33, 44, 55, 66, 77, 8];
+            // old
+           /* var temp = [];
+            for ( var i = 0 ; i < a.length; i++) {
+                temp.push(a[i] * 2);
+            }            
+            console.log(temp); */ 
+
+            var temp = a.map((a) => {
+                return a * 2;
+            });
+            console.log(temp);
+
+        </script>
+    </body>
+</html>

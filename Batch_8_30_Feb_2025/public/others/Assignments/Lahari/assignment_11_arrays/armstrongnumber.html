@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+     </head>
+     <body>
+        <script>
+            var amstrongNumber = () =>{
+
+            
+            var data = [];
+            var n = parseInt(prompt("enter how mnay values"));
+            for (var i = 0 ; i < n; i++) {
+              data[i] = parseInt(prompt("enter value for position" + i));
+              value = data[i];
+              var isArmstrong = checkingAmstrongNumberOrNot(data[i]);
+              console.log(isArmstrong + ":" + data[i]);
+
+            }
+            
+            console.log(data);
+            }
+            var checkingAmstrongNumberOrNot = (value) =>{
+                
+                var n = value;
+                var len = value.toString().length;
+                // console.log(len);
+                var sum = 0;
+                // n = i;
+                while(value > 0){
+                    var rem = value % 10;
+                    value = parseInt(value / 10);
+                    sum = sum + (rem ** len);
+                }
+                // console.log(sum);
+                if(n == sum){
+                    console.log("it is the amstrong number" + sum);
+                }
+
+        
+            }
+            amstrongNumber();
+        </script>
+         
+     </body>
+</html>

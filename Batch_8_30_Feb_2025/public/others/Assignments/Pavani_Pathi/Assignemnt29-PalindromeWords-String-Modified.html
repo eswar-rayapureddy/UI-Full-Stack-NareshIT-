@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stringData = "aaa bab eee eerrdd www"    
+        var singleWordArray  = []; var reverseWordArray = [];
+        var singleWordJoin; var reverseWordJoin;
+        
+        var i = j =  0
+        var count = 0
+        function palindromeCheck(singleWordJoin)
+        {
+            
+            len = singleWordJoin.length;
+            var n = 0
+            reverseWordArray = []
+            for(k = len; k > -1; k--)
+            {
+                reverseWordArray[n] = singleWordJoin[k] 
+                n = n + 1
+            }
+            reverseWordJoin = reverseWordArray.join("")
+            
+            if(reverseWordJoin == singleWordJoin)
+            {
+            
+                count = count + 1
+            }
+        }
+        while(stringData[i] != null)
+        {
+            if (stringData[i] != " ")
+            {
+                singleWordArray[j] = stringData[i]
+                j = j + 1   
+            }
+            if (stringData[i] == " ")
+            {
+                singleWordJoin = singleWordArray.join("")
+                console.log(singleWordJoin)
+              palindromeCheck(singleWordJoin)
+                singleWordArray = [];
+                j = 0
+            }
+            i = i + 1
+        }
+            singleWordJoin = singleWordArray.join("")
+            console.log(singleWordJoin)
+            palindromeCheck(singleWordJoin)
+        
+        console.log("total palindromes  " + count)
+    </script>
+</body>
+</html>

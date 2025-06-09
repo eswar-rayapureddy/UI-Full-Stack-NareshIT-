@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsemployeedetails</title>
+</head>
+<body>
+    <script>
+        var empname = prompt("enter your name");
+        var empage = prompt("enter your age");
+        var empgen = prompt("enter the gender")
+        var empdep = prompt("enter your department");
+        var empbasicsal = prompt("enter the basic salary");
+        empbasicsal = parseFloat(empbasicsal);
+        var pf = empbasicsal*12/100;
+        var hra = empbasicsal*24/100;
+        var totalsal = empbasicsal+pf+hra;
+        console.log("employee name"+ empname);
+        console.log("employee age"+ empage);
+        console.log("employee gender"+ empgen);
+        console.log("employee department"+ empdep);
+        console.log("employee basic salary"+ empbasicsal);
+        console.log("total salary"+ totalsal);
+
+    </script>
+</body>
+</html>

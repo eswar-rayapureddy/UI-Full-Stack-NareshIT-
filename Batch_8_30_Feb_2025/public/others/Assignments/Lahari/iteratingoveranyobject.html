@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var studentDetails = {
+                name : 'hari',
+                age : 22,
+            }
+            var marks = {
+                location: 'Hyd',
+                total: 300,
+                avg: 45.6,
+                name: 'Prasad',
+                marks: [33, 44, 55, 66]
+            }
+            var bookDetails = {
+                bookname : "Something",
+                AuthorDetails : {
+                    name : 'krishna',
+                    age : 35,
+                    address : {
+                        location : 'hyderabad',
+                        state : 'telangana',
+                        pincode : 534260
+                    }
+                },
+                bookPrice : 2000,
+                discount : 20
+            }
+            var iteratingObject = (data) =>{
+                for(var i in data){
+                    if(typeof(data[i]) == 'object' && data[i].length == undefined){
+                        iteratingObject(data[i]);
+                    } else {
+                        console.log(i + ':' + data[i]);
+
+                    }
+                }
+            }
+            
+            iteratingObject(studentDetails);
+            iteratingObject(marks);
+            iteratingObject(bookDetails);
+        </script>
+    </body>
+</html>

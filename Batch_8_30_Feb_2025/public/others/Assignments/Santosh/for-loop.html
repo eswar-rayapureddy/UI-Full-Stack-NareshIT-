@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      console.log(
+        "**************Program Start Prime Numbers from 1 to 50***************"
+      );
+      for (var i = 0; i <= 50; i++) {
+        if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0) {
+          console.log(i);
+        }
+      }
+
+      console.log(
+        "################program start Sum of odd number from 999 to 101#################"
+      );
+      var odd_number = 0;
+      for (var a = 999; a >= 101; a--) {
+        if (a % 2 != 0) {
+          odd_number += a;
+        }
+      }
+      console.log("Sum of odd number from 999  to 101 is: " + odd_number);
+
+      console.log('@@@@@@@@@@@@@@@Input testing of prime Number@@@@@@@@@@@@@@@@@@@@@@')
+
+       var check_prime = parseInt(prompt("Please Enter a number to be checked Prime"));
+       
+       if (check_prime % 2 != 0 && check_prime % 3 != 0 && check_prime % 5 != 0) {
+
+        console.log( check_prime + "  is a Prime Number" );
+       } else {
+        console.log( check_prime + "  is NOT a Prime Number");
+       }
+       
+       console.log('$$$$$$$$$$$$$$Input testing of prime Number $$$$$$$$$$$$$$$$$$$$$$$')
+       var start_num = parseInt(prompt("Please Enter a start number to find Prime"));
+       var end_num = parseInt(prompt("Please Enter a end number to find Prime"));
+        if (start_num < end_num){
+            for(; start_num < end_num ; start_num++){
+                if(start_num % 2!=0 && start_num%3!=0 && start_num%5!= 0){
+                    console.log(start_num);
+                }
+            }
+        }else{
+            for(start_num; start_num>end_num ;start_num--){
+                if(start_num%2!=0 && start_num%3!=0 && start_num%5!= 0){
+                    console.log(start_num);
+                }
+            }
+        }
+
+
+
+    </script>
+  </body>
+</html>

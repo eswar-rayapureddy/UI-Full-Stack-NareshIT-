@@ -1,0 +1,88 @@
+
+<!-- Employee Details Using JSON object 
+ 
+var hra = ((24/100)*basic_salary);
+        var pf = ((12/100)*basic_salary);-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            var getdata = () => {
+                var empDetails = {};
+                empDetails.name = prompt("Enter Name of the Employee");
+                empDetails.age = prompt("Enter Employee's Age");
+                empDetails.department = prompt("Enter Department of Employee");
+                empDetails.gender = prompt("Enter Gender of Employee (Male/Female)");
+                empDetails.basicPay = parseInt(prompt("Enter Basic Pay of Employee "))
+                var salDetails = hra_and_pf(empDetails.basicPay);
+                empDetails.hra = salDetails[0];
+                empDetails.pf = salDetails[1];
+                empDetails.totalSalary = total_salary(empDetails);
+                empDetails.tax = taxCalcultion(empDetails.gender , empDetails.totalSalary);
+
+                display(empDetails);
+            }
+
+            function hra_and_pf (basicPay){
+                var hra = ((24/100)*basicPay);
+                var pf = ((12/100)*basicPay);
+                return [hra, pf];
+            }
+
+            var total_salary = (empDetails) => {
+                var totalSalary = (empDetails.basicPay + empDetails.hra + empDetails.pf);
+                return totalSalary; 
+            }
+
+            var taxCalcultion = (gender,totalSalary) => {
+                var tax = '';
+                if (gender == "Male" || gender == "male"){
+                    if(totalSalary > 100000){
+                        tax = ((15/100)*totalSalary);
+                    }else if (totalSalary > 50000){
+                        tax = ((10/100)*totalSalary);
+                    }else if (totalSalary > 25000){
+                        tax = ((5/100)*totalSalary);
+                    }else{
+                        console.log("No taxation !! ");
+                    }
+                }else if (gender == "Female" || gender == "female"){
+                    if(totalSalary > 100000){
+                        tax = ((10/100)*totalSalary);
+                    }else if (totalSalary > 50000){
+                        tax = ((5/100)*totalSalary);
+                    }else{
+                        console.log("No taxation !! ");
+                    }
+                }else{
+                    console.log("Incorrect Gender Choice !! ");
+                    tax = 'NA';
+                }
+
+                return tax;
+            }
+
+            var display = (empDetails) => {
+                console.log("Name of Employee is " + empDetails.name);
+                console.log("Age of Employee is " + empDetails.age);
+                console.log("Gender of Employee is " + empDetails.gender);
+                console.log("Department of Employee is " + empDetails.department);
+                console.log("Basic Salary is of Employee " + empDetails.basicPay);
+                console.log("HRA is " + empDetails.hra);
+                console.log("PF is " + empDetails.pf);
+                console.log("Total Salary of Employee is " + empDetails.totalSalary);
+                console.log("Tax Applicable is " + empDetails.tax);
+            }
+
+            getdata();
+
+        </script>
+    </body>
+</html>

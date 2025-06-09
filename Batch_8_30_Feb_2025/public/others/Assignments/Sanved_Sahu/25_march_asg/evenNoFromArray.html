@@ -1,0 +1,45 @@
+
+<!-- Finding all Even Numbers from array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getNoOfElemets = () => {
+            var elements = parseInt(prompt("Enter No. of Elemts You wants to Insert in Array "));
+            arrayInput(elements);
+        }
+
+        var arrayInput = (elements) => {
+            array=[];
+            for (let i = 0; i < elements; i++) {
+                var input = parseInt(prompt("Enter Element "));
+                array[i] = input ;
+            }
+            displayEvenNo(array,elements);
+        }
+
+        var displayEvenNo = (array,elements) => {
+            console.log("Array Elemts are : ");
+            for (var i=0 ; i<elements ; i++){
+                    console.log(array[i]);
+                }
+            console.log("Even numbers are : ");
+            for (let i=0 ; i <elements ; i++){
+                if((array[i])%2 == 0){
+                    console.log(array[i])
+                }
+            }
+        }
+
+        getNoOfElemets();
+
+
+    </script>
+</body>
+</html>

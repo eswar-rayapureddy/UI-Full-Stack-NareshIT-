@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of Prime Numbers between the given range</title>
+  </head>
+  <body>
+    <script>
+      var startingRange = parseInt(prompt("Enter Starting Range"));
+      var endingRange = parseInt(prompt("Enter Ending Range"));
+      var sum = 0;
+
+      for (var i = startingRange; i <= endingRange; i++) {
+        if (i <= 1) {
+          continue;
+        }
+        var isPrime = true;
+        for (var j = 2; j < i; j++) {
+          if (i % j == 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          sum += i;
+        }
+      }
+
+      console.log("Sum of Prime number between range is :", sum);
+    </script>
+  </body>
+</html>

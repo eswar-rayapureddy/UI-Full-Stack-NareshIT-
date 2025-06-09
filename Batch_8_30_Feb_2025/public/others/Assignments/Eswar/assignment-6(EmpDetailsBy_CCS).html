@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Assignment 6
+        </title>
+    </head>
+    <body>
+        <script>
+            var Ename = prompt("Enter Emp-name");
+            var Eage = prompt("Enter Emp-age");
+            var Egender = prompt("Enter emp-gender");
+            var ELocation = prompt("Enter emp-location ")
+            var EDepatment = prompt("Enter emp dept");
+            var Basic_salary = parseInt(prompt("Enter basic-sal of emp"));
+            var hrf = 24/100*Basic_salary;
+            var pf= 12/100 * Basic_salary;
+            var total_salary = Basic_salary+hrf+pf ;
+
+            var tax15M = 15/100 * total_salary;
+            var tax10M = 10/100 * total_salary;
+            var tax5M = 5/100 * total_salary;
+
+            var tax10F = 10/100 * total_salary;
+            var tax5F = 5/100 * total_salary;
+
+
+
+            console.log("Employee name is",Ename);
+            console.log("Employee age is",Eage);
+            console.log("Employee gender is",Egender);
+            console.log("Employee department is",EDepatment);
+            console.log("Employee total salary is",total_salary);
+
+            if (Egender == "male"|| Egender == "Male" ) {             // 1 if
+                if (total_salary >= 100000) {                              // 2 if
+                  console.log("Total tax (15%) he pay is : ",tax15M);      // 2 if statement
+                }else if (total_salary >= 50000) {                        // 3 if
+                    console.log("Total tax(10%) he pay is : ",tax10M);     // 3 if statement
+                }else if (total_salary >= 25000) {                        // 4 if
+                    console.log("Total tax (5%) he pay is : ",tax5M);      // 4 if statement
+                } else {
+                    console.log("Total tax(0%) he pay is : 0");          // 4 if else statement
+                }
+            } else if(Egender=="female"|| Egender == "Female") {  // 1 if else and 5 if
+                   if (total_salary >= 100000) {                      // 6 if
+                       console.log("Total tax (10%) she pay is : ",tax10F);      // 6 if statement
+                   } else if (total_salary >= 50000) {                  // 7 if
+                    console.log("Total tax (5%) she pay is : ",tax5F);    // 7 if statement
+                   } else {          
+                    console.log("Total tax (0%) she pay is : 0 ");      // 7 if else  statement
+                   }
+
+            }         // 5 if closing
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // display the count of individual digits 
+            var count = 0;
+            var n = 25341;
+            while (n > 0){
+                var rem = n % 10;
+                var n = parseInt(n / 10);
+                count++;
+            }
+            console.log("count of individual digits :", count);
+        </script>
+    </body>
+</html>

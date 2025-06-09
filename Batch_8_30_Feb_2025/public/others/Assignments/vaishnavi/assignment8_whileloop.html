@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+       <script>
+        // find the reverse of given number
+           var n = prompt("enter the number");
+           n = parseInt(n);
+           console.log(" entered number is",n);
+           var revnum = 0;
+           while(n>0){
+               var rem = n % 10;
+               n = n / 10;
+               n = parseInt(n);
+               revnum =(revnum * 10)+ rem;
+         } console.log("reverse number is",revnum)
+            // the sum individual digits of given number
+            var n = prompt("enter the number");
+            n = parseInt(n);
+            console.log("entered number is",n)
+            var sum = 0;
+            while(n > 0){
+               var rem = n % 10;
+               n = n / 10;
+               n = parseInt(n);
+               sum = sum + rem;
+          } console.log("sum is",sum); 
+           // // check given number is palindrome number or not
+           var n = prompt("enter the number");
+               n = parseInt(n)
+           console.log("entered number is",n);
+           var temp = n;
+           var palnum = 0;
+           while(n > 0){
+               var rem = n % 10;
+               n = n / 10;
+               n = parseInt(n);
+               palnum = (palnum * 10) + rem;
+           }
+           if(temp == palnum){
+               console.log("is a palindrome no",palnum)
+            }else{
+               console.log("is not a palindrome number");
+           }
+            // 1-100 palindrome numbers
+             for(i = 1; i <= 1000; i ++){
+               var n = i;
+               var temp = n;
+               var palnum = 0;
+               while(n > 0){
+                   var rem = n % 10;
+                   n = n /10;
+                   n = parseInt(n);
+                   palnum = (palnum * 10) + rem;
+               }if(temp == palnum){
+                   console.log(palnum)
+               }
+           }
+            // check given number is armstrong number or not
+              var n = prompt("enter the number");
+              n = parseInt(n);
+              console.log("entered number is",n);
+              var len = n.toString().length;
+              var temp = n;
+              var armsnum = 0;
+              while(n > 0 ){
+                  var rem = n % 10;
+                  n = n / 10;
+                  n = parseInt(n);
+                  armsnum = (rem ** len) + armsnum;
+            }
+             if(armsnum == temp){
+               console.log("is a armstrong number",temp)
+             }else{
+               console.log("is not a armstrong number");
+           }
+           // find the total number of digits in given number
+               var n =prompt("enter the number");
+               n = parseInt(n);
+               console.log("entered number is",n);
+               var totalnum = 0;
+               while(n > 0){
+                   var rem = n % 10;
+                   n = n / 10;
+                   n = parseInt(n);
+                   totalnum ++;
+               } console.log("the total numbers are",totalnum);
+           // find the lucky number of a given numbers
+                var n = prompt("enter the number");
+                console.log("entered no is",n);
+                var sum = 0;
+                while(n > 0){
+                    var rem = n % 10;
+                    n = n / 10;
+                    n = parseInt(n);
+                    sum = sum + rem;
+                if(n == 0 && sum > 9){
+                    n = sum;
+                    sum = 0;
+                } 
+            }console.log("lucky number is",sum)      
+       </script>
+   </body>
+</html>

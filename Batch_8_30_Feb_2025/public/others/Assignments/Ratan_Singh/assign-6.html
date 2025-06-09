@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details Assign-6</title>
+  </head>
+  <body>
+    <script>
+      var ename = prompt("Enter the Employee Name:");
+      var gender = prompt("Enter the Gender :");
+      var address = prompt("Enter Your Location");
+      var depart = prompt("Enter Your Department");
+      var salary = parseInt(prompt("Enter your Base Salary"));
+      var pf = (salary * 12) / 100;
+      var HRA = (salary * 24) / 100;
+      var total = salary + pf + HRA;
+
+      if (gender == "male") {
+        if (total >= 100000) {
+          var taxpercent = (total * 15) / 100;
+        } else if (total >= 50000) {
+          var taxpercent = (total * 10) / 100;
+        } else {
+          var taxpercent = 0;
+        }
+      }
+      if (gender == "female") {
+        if (total >= 100000) {
+          var taxpercent = (total * 10) / 100;
+        } else if (total >= 50000) {
+          var taxpercent = (total * 5) / 100;
+        } else {
+          var taxpercent = 0;
+        }
+      }
+
+      console.log("Employee Name is: ", ename);
+      console.log("Gender is :", gender);
+      console.log("Location is :", address);
+      console.log("Department is :", depart);
+      console.log("Base Salary is :", salary);
+      console.log("The PF is :", pf);
+      console.log("HRA is :", HRA);
+      console.log("Total taxpercent is :", taxpercent);
+      console.log("Total Salary is :", total);
+    </script>
+  </body>
+</html>

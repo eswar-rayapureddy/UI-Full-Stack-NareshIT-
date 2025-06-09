@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <script>
+        var empname = prompt("Enter your name");
+        var empgen = prompt("Enter the gender");
+        var emploc = prompt("Enter your location");
+        var empdep = prompt("Enter your department");
+        var empbasicsal = prompt("Enter the basic salary");
+        empbasicsal = parseFloat(empbasicsal);
+        
+        var pf = empbasicsal * 12 / 100;
+        var hra = empbasicsal * 24 / 100;
+        var totalsal = empbasicsal + pf + hra;
+        
+        console.log("Employee Name: " + empname);
+        console.log("Employee Gender: " + empgen);
+        console.log("Employee Location: " + emploc);
+        console.log("Employee Department: " + empdep);
+        console.log("Employee Basic Salary: " + empbasicsal);
+        console.log("Total Salary (Including PF and HRA): " + totalsal);
+        
+        var taxpercent = 0;
+        
+        if (empgen.toLowerCase() === "male") {
+            console.log("Gender: Male");
+            if (totalsal >= 100000) {
+                console.log("Tax percentage is 15%");
+                taxpercent = totalsal * 15 / 100;
+            } else if (totalsal >= 50000) {
+                console.log("Tax percentage is 10%");
+                taxpercent = totalsal * 10 / 100;
+            } else if (totalsal >= 25000) {
+                console.log("Tax percentage is 5%");
+                taxpercent = totalsal * 5 / 100;
+            } else {
+                console.log("Tax percentage is 0%");
+            }
+        } else {
+            console.log("Gender: Female");
+            if (totalsal >= 100000) {
+                console.log("Tax percentage is 10%");
+                taxpercent = totalsal * 10 / 100;
+            } else if (totalsal >= 50000) {
+                console.log("Tax percentage is 5%");
+                taxpercent = totalsal * 5 / 100;
+            } else {
+                console.log("Tax percentage is 0%");
+            }
+        }
+        
+        console.log("Tax applied: " + taxpercent);
+        
+        var finalSalary = totalsal - taxpercent;
+        console.log("Final Salary after tax: " + finalSalary);
+    </script>
+</body>
+</html>

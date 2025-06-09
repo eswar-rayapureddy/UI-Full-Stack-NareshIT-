@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primes in an array</title>
+</head>
+
+<body>
+    <script>
+    
+        var checkForPrimeNumber = (n) => {
+            var count = 0;
+            for (var i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    count++;
+                    break;
+                }
+            }
+            if (count    == 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        
+        var doJob = () => {
+            var data = [];
+            var n = parseInt(prompt("Enter how many value you want to inert in an array "));
+            // var data = [22, 44, 55, 66, 77, 99, 97, 5];
+
+            for (let i = 0; i < n; i++) {
+                data[i] = parseInt(prompt("Enter position " + i));
+            }
+
+            for(var i = 0; i < data.length; i++) {
+                var isPrime = checkForPrimeNumber(data[i]);
+                console.log(isPrime + ' ' + data[i]);
+            }
+        }
+        
+        doJob();
+
+        // var isPrime = checkFOrPrimeNumber(5);
+        // console.log(isPrime);
+
+    </script>
+</body>
+
+</html>

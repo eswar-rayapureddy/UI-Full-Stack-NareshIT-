@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment using 24-03-2025</title>
+    <style>
+      p {
+        border: 2px solid;
+        padding: 4px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>WAP to find the employee details using function concept.</p>
+    <script>
+      var InputFromUser = () => {
+        var emp, gender, local, depart, sal;
+        emp = prompt("Enter the Employee Name:");
+        gender = prompt("Enter the Employee gender:");
+        local = prompt("Enter Location of the Employee");
+        depart = prompt("Employee Department is:");
+        sal = parseInt(prompt("Enter the Salary of Employee"));
+
+        CalculateTax(emp, gender, local, depart, sal);
+      };
+
+      var CalculateTax = (emp, gender, local, depart, sal) => {
+        var pf, HRA;
+        pf = (sal * 12) / 100;
+        HRA = (sal * 24) / 100;
+        TotalSalary(emp, gender, local, depart, sal, pf, HRA);
+      };
+
+      var TotalSalary = (emp, gender, local, depart, sal, pf, HRA) => {
+        total = sal + pf + HRA;
+        DisplayDetails(emp, gender, local, depart, sal, pf, HRA, total);
+      };
+
+      var GetTax = (gender) => {
+        if (
+        typeof gender === "string" &&
+        (gender.toLowerCase() === "male" || gender.toLowerCase() === "female")
+      ) {
+        if(gender == 'male'){
+          if (salary ) {
+            
+          }
+        }
+      }
+      };
+      var DisplayDetails = (
+        emp,
+        gender,
+        local,
+        depart,
+        sal,
+        pf,
+        HRA,
+        total
+      ) => {
+        console.log("Employe Name is: ", emp);
+        console.log("Employe Name is: ", gender);
+        console.log("Employe Name is: ", local);
+        console.log("Employe Name is: ", depart);
+        console.log("Employe Name is: ", sal);
+        console.log("Employe Name is: ", pf);
+        console.log("Employe Name is: ", HRA);
+        console.log("Employe Name is: ", total);
+      };
+      InputFromUser();
+    </script>
+  </body>
+</html>

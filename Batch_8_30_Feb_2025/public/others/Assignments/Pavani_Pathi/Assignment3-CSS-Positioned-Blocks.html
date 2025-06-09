@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body , html{
+
+            position: relative;
+            height: 100%;
+        }
+        h1
+        {
+            text-align: center;
+            border: 2px solid;
+        }
+        #c-block
+        {
+            width:150px;
+            height:150px;
+            border:2px solid;
+            position:absolute;
+            top: 50%;
+            left:50%;
+            z-index: 100;
+
+        }
+        #c-block1,#c-block2,
+        #c-block3,#c-block4
+        {
+            width:50%;
+            height:50%;
+            border:2px solid;
+            position: absolute;
+            z-index: 2; 
+
+        }
+        #c-block
+        {
+            background-color: hsl(143, 100%, 50%);
+            
+            
+        }
+        #c-block1
+        {
+            background-color: rgb(255, 0, 0);
+            top: 70%;
+            right: 70%;
+            
+        }
+        #c-block2
+        {
+            top: 70%;
+            left: 70%;
+            background-color: rgb(51, 221, 230);
+        }
+        #c-block3
+        {
+            background-color: rgb(64, 0, 255);
+            bottom: 70%;
+            left: 70%;
+        }
+        #c-block4
+        {
+            background-color: rgb(255, 0, 187);
+            bottom: 70%;
+            right: 70%;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Positioned Blocks</h1>
+    
+    <div>
+        <div id="c-block">
+            <div id="c-block1"></div>
+            <div id="c-block2"></div>
+            <div id="c-block3"></div>
+            <div id="c-block4"></div>
+        </div>
+    </div>
+</body>
+</html>

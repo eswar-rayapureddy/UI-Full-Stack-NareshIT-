@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   
+
+        var readstudentdetails=()=> {
+            var sname,m1,m2,m3;
+            var total,avg,grade;
+            sname =prompt("enter the student name");
+            m1 =prompt("enter the sub1");
+            m2 =prompt("enter the sub 2 marks");
+            m3 =prompt("enter the sun 3 marks");
+            m1=parseInt(m1);
+            m2=parseInt(m2);
+            m3=parseInt(m3);
+           var avg= gettotalavg(m1,m2,m3);
+           var grade= getgrade(avg);
+           displaydetails(sname,avg,grade);
+        } 
+        gettotalavg=(m1,m2,m3)=> {
+            var total=m1+m2+m3;
+            var avg=total/3;
+            return avg;
+            
+
+        }
+        getgrade=(avg)=>{
+            if(avg >=40){
+                grade='you passes';
+                if(avg>=90){
+                    grade='distinction';
+                }else{
+                    grade='first class';
+                }
+            }
+            else{
+                grade='you are suprised';
+            }
+            return grade;
+        }
+        displaydetails=(sname,avg,getgrade)=> {
+        
+            console.log("student details");
+            console.log("students name : "+sname);
+          //  console.log("total :"+total);
+            console.log("AVG is : "+avg);
+            console.log("grade : "+grade);
+        }
+        readstudentdetails()
+    </script>
+    
+</body>
+</html>

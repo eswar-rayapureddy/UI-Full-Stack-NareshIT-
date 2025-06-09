@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Set Data Structure</title>
+    </head>
+    <body>
+        <script>
+
+            /**
+             *  IQ   -> Remove duplicate element from an array 
+             *  soln -> convert the array into set
+             *  It will return a set wihout duplicate value
+             *  using spread operator convert the set into an aray 
+            **/
+
+            var data = [11, 22, 22, 33, 44, 55, 55, 66, 77];
+            console.log(data);
+
+            var d1 = new Set(data);
+            console.log(d1);
+
+            data = [...d1]; // converting set to an array
+            console.log(data);
+
+
+        </script>
+    </body>
+</html>

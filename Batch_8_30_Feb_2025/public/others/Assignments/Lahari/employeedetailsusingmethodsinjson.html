@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+       <script>
+        var employeeDetails = {
+            readEmployeeDetails() {
+                this.name = prompt("enter the name of the employee");
+                this.loc = prompt("enter location");
+                this.depatment = prompt("enter the depatment");
+                this.gender = prompt("enter the gender");
+                this.basicSalary = parseInt(prompt("enter the basic salary"));
+                this.calculatingTotalSalary();
+
+            },
+            calculatingTotalSalary() {
+                var pf = this.basicSalary * 12 / 100;
+                var hra = this.basicSalary * 24 / 100;
+                this.totalsal = this.basicSalary + pf + hra;
+                this.getTaxPercent();
+            },
+            displayingDetails() {
+                this.readEmployeeDetails();
+                console.log("Name of the employee" + this.name);
+                console.log("location is" + this.loc);
+                console.log("department is" + this.depatment);
+                console.log("gender :" + this.gender);
+                console.log("Basic Salary :" + this.basicSalary);
+                console.log("total salary :" + this.totalsal);
+            },
+            getTaxPercent(){
+                var taxpercent = 0;
+                if (this.gender == "male") {
+                    console.log("gender is male");
+                    if (this.totalsal >= 100000) {
+                        console.log("taxpercent is 15% on totalsalary");
+                        taxpercent = this.totalsal * 15 / 100;
+                        console.log("By applying taxpercent, taxpercent is " + taxpercent);
+                    } else if (this.totalsal >= 50000) {
+                        console.log("taxpercent is 10% on totalsalary");
+                        taxpercent = this.totalsal * 10 / 100;
+                        console.log("By applying taxpercent, taxpercent is " + taxpercent);
+                    } else if (this.totalsal >= 25000) {
+                        console.log("taxpercent is 5% on totalsalary");
+                        taxpercent = this.totalsal * 5 / 100;
+                        console.log("By applying taxpercent, taxpercent is " + taxpercent);
+                    } else {
+                        console.log("taxpercent is 0");
+                        console.log("By applying taxpercent, taxpercent is " + this.totalsal);
+                    }
+                } else {
+                    console.log("gender is female");
+                    if (this.totalsal >= 100000) {
+                        console.log("taxpercent is 10% on totalsalary");
+                        taxpercent = this.totalsal * 10 / 100;
+                        console.log("By applying taxpercent, taxpercent is " + taxpercent);
+                    } else if (this.totalsal >= 50000) {
+                        console.log("taxpercent is 5% on totalsalary");
+                        taxpercent = this.totalsal * 5 / 100;
+                        console.log("By applying taxpercent, taxpercent is " + taxpercent);
+                    } else {
+                        console.log("taxpercent is 0");
+                        console.log("By applying taxpercent, taxpercent is " + this.totalsal);
+                    }
+                }
+            }            
+
+        }
+        employeeDetails.displayingDetails();
+
+       </script>
+   </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Sum</title>
+</head>
+<body>
+    <script>
+        var num1 = prompt("enter num1 in range")
+        var num2 = prompt("enter num2 in range")
+        var sum=0 , count=0;
+        for (var i = num1; i < num2; i++)
+         {
+            count=0;
+            for( var j=2;j<i;j++)
+            {
+            var rem = i % j;
+                 if (rem == 0) 
+                {
+
+                    count++;
+                    break;
+                }
+            }
+            if (count == 0) 
+            { // twice it got zero reminder
+                sum=sum + i   
+                console.log("sum is :" , sum)        
+            } 
+         }
+         console.log("sum is :" , sum)
+       
+
+    </script>
+</body>
+</html>

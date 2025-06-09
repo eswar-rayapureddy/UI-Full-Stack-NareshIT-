@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading value dyanamically in an array</title>
+</head>
+<body>
+    <script>
+        var userprompt = () => {
+            let val = parseInt(prompt("Enter your desired value from 1 to 10"));
+            let data = info();
+            res(val, data);
+        }
+
+        var info = () => {
+            let data = [11, 22, 33, 44, 55, 66, 77, 88, 99, 1010, 1111];
+        }
+
+        var res = (val, data) => {
+            console.log(data[val - 1]);
+            alert("Your desired number is " + data[val - 1]);
+        }
+
+        userprompt();
+
+    </script>
+</body>
+</html>

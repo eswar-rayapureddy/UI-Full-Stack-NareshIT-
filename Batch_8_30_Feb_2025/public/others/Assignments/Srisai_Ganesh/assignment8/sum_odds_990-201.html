@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of odds</title>
+</head>
+<body>
+    <script>
+        var sum = 0;
+        for (var i = 990; i >= 201; i--) {
+            if (i % 2 == 1) {
+                // console.log(i);
+                sum = sum + i;
+            }
+        }
+        console.log("Sum of odds is "+ sum);
+     </script>
+</body>
+</html>

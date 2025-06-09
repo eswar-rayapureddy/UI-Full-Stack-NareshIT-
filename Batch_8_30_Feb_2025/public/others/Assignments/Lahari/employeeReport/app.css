@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+    color: violet;
+    border: 2px solid;
+    padding: 10px;
+}
+
+ul {
+    width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: lavender;
+}
+
+li {
+    list-style: none;
+    border: 1px solid;
+    margin: 10px;
+    background-color: lavender;
+    padding: 10px;
+}

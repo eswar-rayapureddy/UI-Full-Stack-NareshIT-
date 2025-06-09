@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .block {
+                border: 3px solid beige;
+                height: 40px;
+                padding: 30px;
+                text-align: center;
+                font-size: 20px;
+                width: 250px;
+                background-color: yellow;
+                font-weight: bold;
+                position: absolute;
+                top: 40%;
+                left: 45%;
+                background-image: url(https://startrides.com/assets/images/slider/n2.jpg);
+                background-size: 100% 100%;
+                /* transition: transform 3s; */
+            }
+            .block:hover {
+                /* transform: rotate(120deg); */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block">Hello</div>
+
+        <script>
+            var degValue = 0;
+            var x = 5;
+            var y = 10;
+            var z = 15;
+            setInterval(() => {
+                x++;
+                y++;
+                z++;
+                degValue += 5;
+                // document.querySelector('.block').style.transform = `rotateY(${degValue}deg)`;
+                document.querySelector('.block').style.transform = `rotate3d(${x},${y} , ${z} , ${degValue}deg)`;
+                if (degValue == 360) {
+                    degValue = 0;
+                }
+            }, 100);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake store API</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../Library/jquerylib.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../Library/axios.js"></script>
+</head>
+
+<body>
+    <h2>Fakestore fake products</h2>
+    <input type="button" value="Get fake products" onclick="loadFakeProducts()">
+    <table width="100%" border="1px solid orange" cellspacing="10px" cellpadding="10px">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Image</th>
+                <th>Rating</th>
+                <th>Rating count</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+            
+        </tbody>
+    </table>
+</body>
+
+</html>

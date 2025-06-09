@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+     </head>
+     <body>
+         <script>
+                 var EmpName = prompt("enter name");
+                 var gender = prompt("enter gender is male/female");
+                 var Age = prompt("enter age");
+                 var Address = prompt("enter location");
+                 var Department = prompt("enter dep");
+                 var BasicSalary = parseFloat(prompt("enter basicsalary"));
+                 var pf = (12 * BasicSalary)/100;
+                 var hra = (24 * BasicSalary)/100;
+                 var TotalSal = BasicSalary+pf+hra;
+                 if(gender == 'male'){
+                     if(TotalSal > 100000){
+                         var TaxPercent = (TotalSal * 15) / 100;
+                     }else if(TotalSal > 50000){
+                         var TaxPercent = (TotalSal * 10) / 100;
+                     }else if(TotalSal > 25000){
+                         var TaxPercent = (TotalSal * 5) / 100;
+                     }else{
+                         var TaxPercent= 0;
+                     }              
+                 }
+                 if(gender == 'female'){
+                     if(TotalSal > 100000){
+                         var TaxPercent = (TotalSal * 10) / 100;
+                     }else if(TotalSal > 500000){
+                         var TaxPercent = (TotalSal * 5) / 100;
+                     }else{
+                         var TaxPercent = 0;
+                     }          
+                 }
+                 console.log("name is",EmpName);
+                 console.log("gender is",gender);
+                 console.log("age is",Age);
+                 console.log("location is",Address);
+                 console.log("department is",Department);
+                 console.log("basicsalary is",BasicSalary);
+                 console.log("pf is",pf);
+                 console.log("hra is",hra);
+                 console.log("taxpercent is",TaxPercent);
+                 console.log("totalsalary is",TotalSal);    
+         </script>
+    </body>
+ </html>
+                

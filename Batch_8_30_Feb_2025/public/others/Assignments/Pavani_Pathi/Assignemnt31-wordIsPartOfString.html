@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var word = 'appel'
+        var stringData = 'I am apple in red'
+        var j = 0
+        var len = stringData.length
+        var revString = [];
+        for(var i = 0; i < (len + 1); i++)
+        {
+            if (word[j] == stringData[i] && ((word[j] != null) && (stringData[i] != null)))
+            {
+                console.log("word[j]" + word[j])
+
+                j = j + 1
+                continue
+            }
+            else if((word[j] != stringData[i]) && ((word[j] != null) && (stringData[i] != null)))
+            {
+                j = 0
+                continue
+            }
+            else if((word[j] == null) ||
+                    ((stringData[i] == null) && (word[j] == null)))
+            {
+                var matchFound = true 
+                console.log("match found")
+            }
+            else if ((stringData[i] == null) && (word[j] != null))
+            {
+                var matchFound = false
+                console.log("Sorry ! No match for word in the string")
+            }
+            
+        }
+
+        
+    </script>
+</body>
+</html>

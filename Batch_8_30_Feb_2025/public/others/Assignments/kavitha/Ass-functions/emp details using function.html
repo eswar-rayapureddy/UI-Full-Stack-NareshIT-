@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <script>
+           var empname, basicsal,gender;
+            var pf , hra ,totalsal ,tax;
+         
+        function readEmpDetails(){
+                        empname = prompt("enter the name");
+                        gender=prompt("enter the gender");
+                        basicsal = prompt( "enterthesalery" );
+                        basicsal = parseInt(basicsal);
+                        department=prompt("enter the department");
+              getPfAndHra();
+                        }
+        function getPfAndHra(){
+                        pf = (basicsal*0.02);
+                        hra =(basicsal*0.24);
+                        getTotalSal();
+                    }
+         function getTotalSal(){
+                        totalsal = (pf + hra);
+                        getEmpTaxDetails();
+                 }
+       function  getEmpTaxDetails() {
+                        if ( gender == 'male')
+                        {
+                        if(totalsal >= 100000)
+                            {
+                            tax = totalsal*0.15;
+                            }
+                            else if(totalsal >= 50000){
+                                tax = totalsal*0.1;
+
+                            }
+                            else if(totalsal >= 25000){
+                                tax = totalsal*0.5;
+                            }
+                            else{
+                            tax=0;
+                            }
+                        }
+                        if( gender == 'female')
+                        
+                            if(totalsal >= 100000) {
+                                tax = totalsal*0.1;
+                            }
+                            else if(totalsal >= 50000){
+                                tax = totalsal*0.5;
+                            }
+                        else{
+                            tax =0;
+                          }}
+        function displayEmpDetails() {
+            readEmpDetails();
+                   console.log("Name:",empname);
+                    console.log("gender:",gender);
+                    console.log("department",department);
+                    console.log("basic salary:",basicsal);
+                    console.log("pf:",pf);
+                    console.log("hra:",hra);
+                    console.log("totalsal",totalsal);
+                    console.log("tax" , tax);
+              
+        }
+        displayEmpDetails();
+
+          
+
+
+    
+             
+         
+         
+    </script>
+    
+</body>
+</html>

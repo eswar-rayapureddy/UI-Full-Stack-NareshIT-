@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Interprolization</title>
+    </head>
+    <body>
+        <script>
+
+            var name = 'Jack';
+            var age = 24;
+            var userLocation = 'Hyderabad';
+            var companyDetails= {
+                name: 'Abc Company',
+                country: {
+                    name: 'India',
+                    code: 'IN'
+                }
+            }
+
+            /*
+            var msg = "Employee name is "+name +" and age is "+ age +" He worked at "+ companyDetails.name+ " in " +userLocation  +" city in " +companyDetails.country.name
+
+            console.log(msg);
+            */
+
+            var msg = `Employee name is ${name} and age is ${age}. He worked at ${companyDetails.name} in ${userLocation} city in ${companyDetails.country.name}`
+            console.log(msg);
+
+        </script>
+    </body>
+</html>

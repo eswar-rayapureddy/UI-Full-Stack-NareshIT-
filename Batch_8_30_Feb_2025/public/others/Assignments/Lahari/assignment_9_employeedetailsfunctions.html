@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var empname,empgen,emploc,empdep,empbasicsal;
+            var pf,hra,totalsal,taxpercent;
+            function displayDetails(){
+                empname=prompt("enter your name");
+                empgen=prompt("enter the gender");
+                emploc=prompt("enter your location");
+                empdep=prompt("enter your department");
+                empbasicsal=prompt("enter the basic salary");
+                empbasicsal=parseInt(empbasicsal);
+                calHraAndPfAndTotalsal();
+            }
+            function calHraAndPfAndTotalsal(){
+                pf=empbasicsal*12/100;
+                hra=empbasicsal*24/100;
+                totalsal=empbasicsal+pf+hra;
+                displayingDetails();
+            }
+            function displayingDetails(){
+                console.log("employee name"+ empname);
+                console.log("employee gender"+ empgen);
+                console.log("employee location"+ emploc)
+                console.log("employee department"+ empdep);
+                console.log("employee basic salary"+empbasicsal);
+                console.log("total salary"+totalsal);
+                maleOrFemale();
+
+            }
+            function maleOrFemale(){
+                taxpercent=0;
+      
+                if(empgen == "male"){
+                    console.log("gender is male");
+                    if(totalsal >= 100000){
+                        console.log("taxpercent is 15% on totalsalary")
+                        var taxpercent = totalsal*15/100;
+                        console.log(" By applying taxpercent, taxpercent is"+ taxpercent);
+                    }
+                    else if(totalsal >= 50000){
+                        console.log("taxpercent is 10% on totalsalary");
+                        var taxpercent=totalsal*10/100;
+                        console.log("By applying taxpercent, taxpercent is"+ taxpercent);  
+                    }
+                    else if(totalsal >= 25000){
+                        console.log("taxpercent is 5% on totalsalary");
+                        var taxpercent=totalsal*5/100;
+                        console.log("By applying taxpercent, taxpercent is"+ taxpercent);
+                    }
+                    else{
+                        console.log("taxpercent is 0");
+                        console.log("By applying taxpercent, taxpercent is"+ totalsal);
+                    }
+                }else{
+                console.log("gender is female");
+                if(totalsal >= 100000){
+                    console.log("taxpercent is 10% on totalsalary")
+                    var taxpercent = totalsal*10/100;
+                    console.log(" By applying taxpercent, taxpercent is"+ taxpercent);
+                }else if(totalsal >= 50000){
+                    console.log("taxpercent is 5% on totalsalary");
+                    var taxpercent=totalsal*5/100;
+                    console.log("By applying taxpercent, taxpercent is"+ taxpercent);  
+                }
+                else{
+                    console.log("taxpercent is 0");
+                    console.log("By applying taxpercent, taxpercent is"+ totalsal);
+                }
+            }
+        }
+
+        displayDetails();
+        </script>
+        
+    </body>
+</html>

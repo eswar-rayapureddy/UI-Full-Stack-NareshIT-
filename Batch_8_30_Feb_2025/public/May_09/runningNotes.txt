@@ -1,0 +1,41 @@
+Responsive Webpges:
+
+    @media typeofdevice dimentions {
+
+    }
+
+type of devices:
+    screen -> any color device 
+    all -> any device
+    print -> 
+    handheld 
+    etc. 
+
+dimentions:
+    min-width 
+    max-width 
+    min-height 
+    max-height
+
+
+        Eg:
+
+            @media screen (min-height : 400px) and (max-height: 600px) {
+                ...
+                ...
+                .....
+            }
+
+        350X600 -> device_4inc.css 
+        ..     -> device_6inc.css 
+                device_8inc.css
+        ..
+        .
+        .
+        ..
+        .
+
+        .
+ <link rel="stylesheet" href="device_4inc.css" media="min-width:500px;max-width:600px">
+ <link rel="stylesheet" href="device_6inc.css" media="min-width:800px;max-width:900px">
+    

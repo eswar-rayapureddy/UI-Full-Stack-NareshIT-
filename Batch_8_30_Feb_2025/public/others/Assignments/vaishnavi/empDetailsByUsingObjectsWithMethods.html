@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+      </head>
+      <body>
+          <script>
+              var empDetails = {
+                  readEmpDetails() {
+                  this.name = prompt("enter name");
+                  this.gender = prompt("enter gender male / female");
+                  this.loc = prompt("enter location");
+                  this.department = prompt("enter department");
+                  this.basicsal = parseInt(prompt("enter basicsalary"));
+                  this.getPfAndHra();
+              },
+               getPfAndHra() {
+                  this.pf = (12 * this.basicsal) / 100;
+                  this.hra = (24 * this.basicsal) / 100;
+                  this.getTotalsal();
+              },
+               getTotalsal() {
+                  this.totalsal = this.basicsal + this.pf + this.hra;
+                  this.getTaxPercent();
+               },
+                getTaxPercent() {
+                   this.taxpecent = 0;
+                          if (this.gender == 'male'){
+                       if (this.totalsal > 100000){
+                           this.taxpercent = (this.totalsal * 15) / 100;
+                       }else if (this.totalsal > 50000){
+                           this.taxpercent = (this.totalsal * 10) / 100;
+                       }else if (this.totalsal > 25000){
+                           this.taxpercent = (this.totalsal * 5) / 100;
+                       }else {
+                           this.taxpercent = 0;
+                       }
+                   }
+                   if (this.gender == 'female'){
+                       if (this.totalsal > 100000){
+                           this.taxpercent = (this.totalsal * 10) / 100;
+                       }else if (this.totalsal > 50000){
+                           this.taxpercent = (this.totalsal * 5) / 100;
+                       }else {
+                           this.taxpercent = 0;
+                       }
+                    }
+                 },
+                 displayEmpDetails() {
+                  this.readEmpDetails();
+                  console.log("emp name is" + ' : ' + this.name);
+                  console.log("emp gender is" + ' : ' + this.gender);
+                  console.log("emp location" + ' : ' + this.loc);
+                  console.log("department" + ' : ' + this.department);
+                  console.log("basicsalary is" + ' : ' + this.basicsal);
+                //   console.log("pf is" + ' : ' + this.pf);
+                //   console.log("hra is" + ' : ' + this.hra);
+                  console.log("totalsalary is" + ' : ' + this.totalsal);
+                  console.log("taxpercent is" + ' : ' + this.taxpercent)
+                 }
+                };
+                empDetails.displayEmpDetails();
+       </script>
+   </body>
+</html>

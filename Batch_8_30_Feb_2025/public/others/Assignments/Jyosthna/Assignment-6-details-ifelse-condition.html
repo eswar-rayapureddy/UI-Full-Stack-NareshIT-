@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if_else</title>
+</head>
+
+<body>
+    <script>
+        name = prompt("Enter employee name");
+        gender = prompt("Enter employee gender");
+        loc = prompt("Enter employee location");
+        depart = prompt("Enter employee department");
+        var baicsal = prompt("Enter employee basic salary");
+        baicsal = parseInt(baicsal);
+
+        gen = gender.toLowerCase();
+
+        var pf = baicsal * (10 / 100);
+        var hra = baicsal * (50 / 100);
+        var totalsal = baicsal + pf + hra;
+
+        console.log("Employee name: " + name);
+        console.log("Employee gender: " + gender);
+        console.log("Employee location: " + loc);
+        console.log("Employee PF: " + pf);
+        console.log("Employee department: " + depart);
+        console.log("Employee HRA: " + hra);
+        console.log("Employee total salary: " + totalsal);
+
+            if (gen == "male" || gen == "m" || gen == "mal" || gen == "ma") {
+                 if (totalsal >= 250000) {
+                taxper = 15;
+                tax = totalsal * (taxper / 100);
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+               }
+             else if (totalsal >= 250000) {
+                taxper = 10;
+                tax = totalsal * (taxper / 100);
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+             }
+             else if (totalsal >= 15000) {
+                taxper = 5;
+                tax = totalsal * (taxper / 100);
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+             }
+             else {
+                taxper = 0;
+                tax = 0;
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+             }
+        }
+        else {
+            if (totalsal >= 250000) {
+                taxper = 10;
+                tax = totalsal * (taxper / 100);
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+            }
+            else if (totalsal >= 40000) {
+                taxper = 5;
+                tax = totalsal * (taxper / 100);
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+            }
+            else {
+                taxper = 0;
+                tax = 0;
+                console.log("Tax for employee " + name + " is " + tax + " and employee's tax % is " + taxper);
+            }
+        }
+    </script>
+</body>
+
+</html>

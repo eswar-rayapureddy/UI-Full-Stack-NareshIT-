@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <script>
+        // Script updated by GitHub Copilot
+        var ename, egender, edept, esal;
+        ename = prompt("Enter employee name:");
+        egender = prompt("Enter gender:");
+        edept = prompt("Enter department name:");
+        esal = parseFloat(prompt("Enter basic salary:"));
+
+        var pf = esal * 0.15;
+        var hra = esal * 0.5;
+
+        console.log("Employee Details:");
+        console.log("Employee Name: " + ename);
+        console.log("Gender: " + egender);
+        console.log("Department: " + edept);
+        console.log("Basic Salary: " + esal);
+        console.log("PF: " + pf);
+        console.log("HRA: " + hra);
+    </script>
+</body>
+</html>

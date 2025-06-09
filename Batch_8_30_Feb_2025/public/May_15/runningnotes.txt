@@ -1,0 +1,25 @@
+NODE JS 
+    1. To implement services/webservices
+
+    2. To host resources
+
+NODEJS 
+    using js as programming lng
+
+    v8 chrome js engine, very faster in reponse 
+
+    open source and platform independent 
+
+    support from universe
+ 
+    IO based even looping mechanism
+
+----------------------------------------------------
+
+    #include <stdio.h>
+
+    import io.*
+
+    <script src="abc.js">
+
+    require("http")

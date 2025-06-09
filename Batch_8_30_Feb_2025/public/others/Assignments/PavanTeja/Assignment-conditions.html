@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-Conditions</Assignment-Conditions></title>
+</head>
+<body>
+    </body>
+        <script>
+        var empname = prompt("Enter Employee Name ");
+        var empgender = prompt("Enter Employee Gender ");
+        var empdept = prompt("Enter Employee Dept");
+        var basicsal = prompt("Enter BasicSalary ");
+        basicsal = parseInt(basicsal);
+    
+        var pf = (basicsal * 12) / 100;
+        var hra = (basicsal * 24) / 100;
+        var totalsal = basicsal + hra + pf; 
+        
+
+        console.log("Employee Name is " + empname);
+        console.log("Employee Gender is " + empgender);
+        console.log("Employee Dept is " + empdept);
+        console.log("PF is " + pf);
+        console.log("HRA is " + hra);
+        console.log("TotalSalary is " + totalsal);
+
+        if (empgender == "male" || empgender == "MALE" || empgender == "Male" || empgender == "M" || empgender == "m")
+            {
+                if (totalsal >= 100000)
+                    {
+                        //taxpercent = 15;
+                        totaltax = (totalsal * 15) / 100;
+                        console.log ("Total Tax is " + totaltax + " Tax % is 15% ");
+                    }
+                else if (totalsal >= 50000)
+                    {
+                        //taxpercent = 10;
+                        totaltax = (totalsal * 10) / 100;
+                        console.log ("Total Tax is " + totaltax + "Tax % is 10% ");   
+                    }
+                else if (totalsal >= 25000)
+                    {
+                        //taxpercent = 5;
+                        totaltax = (totalsal * 5) / 100;
+                        console.log ("Total Tax is " + totaltax + " Tax % is 5% ");    
+                    }        
+                else
+                 {
+                    console.log ("No Tax ");
+                 }    
+            }
+        if (empgender == "female" || empgender == "FEMALE" || empgender == "Female" || empgender == "F" || empgender == "f")
+            {
+                if (totalsal >= 100000)
+                    {
+                        //taxpercent = 10;
+                        totaltax = (totalsal * 10) / 100;
+                        console.log ("Total Tax is " + totaltax + " Tax % is 10% ");
+                    }
+                else if (totalsal >= 50000)
+                    {
+                        //taxpercent = 5;
+                        totaltax = (totalsal * 5) / 100;
+                        console.log ("Total Tax is " + totaltax + " Tax % is 5% ");
+                    }    
+                else
+                 {
+                    console.log ("No Tax ");
+                 }    
+            }   
+        </script>
+</body>
+</html>

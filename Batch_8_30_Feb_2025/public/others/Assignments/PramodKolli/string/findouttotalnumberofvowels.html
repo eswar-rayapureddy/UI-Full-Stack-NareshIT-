@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            var str =  prompt("enter a sentence");
+            var strSplit = str.split(" ");
+            console.log(strSplit);
+            var temp = 0;
+            var vowelCount = 0;
+            for (var j = 0; j < strSplit.length; j++) {
+                temp  = strSplit[j];
+                // console.log(temp);
+                for ( k = 0; k < temp.length; k++) {
+                    tempSlice = temp[k];
+                    if(tempSlice == "a" || tempSlice == "e" || tempSlice == "i" || tempSlice == "o" || tempSlice == "u"||
+                    tempSlice == "A" || tempSlice == "E" || tempSlice == "I" || tempSlice == "O" || tempSlice == "U"  ) {
+                   
+                        vowelCount++;
+                    }
+                }
+            }
+            console.log(vowelCount);
+    </script>
+</body>
+</html>

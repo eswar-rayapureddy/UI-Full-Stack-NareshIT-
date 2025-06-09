@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>looping contol structures</title>
+</head>
+        <body>
+            <script>
+                var n = prompt( " enter the value ");
+                n = parseInt(n)
+                 var sum = 0;
+                 var count = 0;
+                
+                while(n>0){
+                    var rem = n%10;
+                    n = n/10;
+                    n = parseInt(n);
+                    sum = sum + rem ;
+                    count++
+                }
+             console .log ("sum is" + sum);
+             console .log ("count is" + count);
+
+              if(count >1 ){
+                var lucky = 0;
+                var i = sum %10;
+                sum = sum / 10;
+                sum = parseInt(sum); 
+                lucky =sum + i;
+
+              }
+            console .log("the lucky no is",lucky)
+
+            </script>
+            
+        </body>
+</html>

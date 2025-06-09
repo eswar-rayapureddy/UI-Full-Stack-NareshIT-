@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = prompt("enter the number");
+        n = parseInt(n);
+        console.log("the number is" + n);
+        var reversenum = 0;
+        while(n > 0){
+            var rem = n % 10;
+            n = n / 10;
+            n = parseInt(n);
+            reversenum = (reversenum * 10) + rem;
+        }
+        console.log(reversenum);
+    </script>
+</body>
+</html>

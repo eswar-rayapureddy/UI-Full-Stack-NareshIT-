@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .detailsContainer > li{
+            list-style: none;
+            border: 1px solid;
+            width: 300px;
+            height: 500px;
+        }
+        h3{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: yellow;
+            margin: 5px;
+            padding: 10px;
+        }
+        li > img {
+            height:200px;
+            width: 250px;
+            margin: 10px;
+        }
+        .detailsContainer ol > li {
+                margin:10px;
+                list-style: none;
+                background-color: #ccc;
+                padding: 10px;
+        }
+        ul, ol {
+            margin:5px;
+            padding:5px;
+        } 
+    </style>
+    <body>
+        <h3>Product Details </h3>
+        <div id="Container">
+            <ul class="detailsContainer">                              
+            </ul>
+        </div>
+        <script>
+            var productDetails =[
+            {
+                url: "ffile:///C:/Users/Deepu/Downloads/Full%20stack/UI_Full_Stack_Training/GitHub/UIClasses/Batch_8_30_Feb_2025/public/others/Assignments/Deepak/DHTML/img.avif",
+                price: 3000,
+                name: 'satndard laptop',
+                manufactureer: 'Dell',
+                rating: '4/5',
+
+            },
+            {
+                url: "file:///C:/Users/Deepu/Downloads/Full%20stack/UI_Full_Stack_Training/GitHub/UIClasses/Batch_8_30_Feb_2025/public/others/Assignments/Deepak/DHTML/img.avif",
+                price: 3000,
+                name: 'satndard laptop',
+                manufactureer: 'Dell',
+                rating: '4/5',
+
+            },
+            {
+                url: "file:///C:/Users/Deepu/Downloads/Full%20stack/UI_Full_Stack_Training/GitHub/UIClasses/Batch_8_30_Feb_2025/public/others/Assignments/Deepak/DHTML/img.avif",
+                price: 3000,
+                name: 'satndard laptop',
+                manufactureer: 'Dell',
+                rating: '4/5',
+
+            }
+        ];
+            
+
+            var loadProductDetails= (product) => {
+                var mainLi = document.createElement("li");
+                var olTag= document.createElement("ol")
+                var li1= document.createElement("li")
+                var imgTag= document.createElement("img");
+                imgTag.setAttribute("src",product.url);
+                li1.append(imgTag);
+                olTag.append(li1);
+
+                var li2= document.createElement("li");
+                li2.innerText= "Product Name: "+ product.name;
+                olTag.append(li2);
+
+                var li3= document.createElement("li");
+                li3.innerText= "Product Price: "+ product.price;
+                olTag.append(li3);
+
+                var li4= document.createElement("li");
+                li4.innerText= "manufactureer: "+ product.manufactureer;
+                olTag.append(li4);
+
+                var li5= document.createElement("li");
+                li5.innerText= "rating: "+ product.rating;
+                olTag.append(li5);
+
+                console.log(olTag);
+                mainLi.append(olTag);
+
+                document.querySelector(".detailsContainer").append(mainLi);
+
+
+
+
+            }
+            for( var i = 0; i < productDetails.length; i++){
+                loadProductDetails(productDetails[i]);
+            }
+            
+        </script>
+    </body>
+</html>

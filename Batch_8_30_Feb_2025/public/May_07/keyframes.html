@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .container {
+                border: 5px solid greenyellow;
+                width: 180px;
+                height: 180px;
+                text-align: center;
+                background-color: blueviolet;
+                position: absolute;
+                right: 10px;
+                animation: myStyles 
+                5s infinite;
+                
+            }
+
+            @keyframes myStyles {
+                1% {
+                    background-color: yellow;
+                    border-radius: 20px;
+                    width: 200px;
+                    height: 200px;
+                    left: 10%;
+                    top: 50%;
+                }
+
+                19% {
+                    background-color: red;
+                    border-radius: 5px;
+                    width: 100px;
+                    height: 100px;
+                    top: 10%;
+                    left: 30%;
+                }
+
+                43% {
+                    background-color: pink;
+                    border-radius: 35px;
+                    width: 500px;
+                    height: 200px;
+                    top: 90%;
+                    left: 5%;
+                }
+                60% {
+                    background-color: aquamarine;
+                    border-radius: 40%;
+                    width: 200px;
+                    height: 180px;
+                    top: 20%;
+                    left: 15%;
+                }
+                90% {
+                    background-color: burlywood;
+                    border-radius: 50%;
+                    width: 300px;
+                    height: 380px;
+                    top: 80%;
+                    left: 5%;
+                }
+            }
+            .block {
+                background-color: yellow;
+                width: 600px;
+                height: 500px;
+                border: 3px solid blueviolet;
+                margin: 20px auto;
+                background-size: 100% 100%;
+                animation: myslideshow 10s infinite;
+            }
+            @keyframes myslideshow {
+                2% {
+                    background-image: url(https://cdn.siasat.com/wp-content/uploads/2024/01/Untitled-design-43-2.jpg);
+                }
+              
+                50% {
+                    background-image: url('https://i.ytimg.com/vi/zEr-mm8OSGo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAm0vvR3Ud4t5gSl4BF1LoxWA70Cw');
+                }
+                60% {
+                    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_R326MJgW3IQRDho4VGmJZmk3xbfZ82xThg&s');
+                }
+                90% {
+                    background-image: url(https://images10.gaadi.com/usedcar_image/4360339/original/processed_8791cfc6f6f390195a0c3c0352c27094.jpg?imwidth=320);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="block"></div>
+        <div class="container">
+            Hello
+        </div>
+    </body>
+</html>

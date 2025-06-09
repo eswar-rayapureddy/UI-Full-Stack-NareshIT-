@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthmetic Operations, data from user</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li style="text-align: center;">
+            Enter the two numbers to do operation
+        </li>
+        <li>
+            Enter value 1:
+            <input type="text" id="val1">
+        </li>
+        <li>
+            Enter value 2:
+            <input type="text" id="val2">
+        </li>
+        <li class="button-group">
+            <input type="button" value="+" onclick="sum()">
+            <input type="button" value="-" onclick="sub()">
+            <input type="button" value="*" onclick="mul()">
+            <input type="button" value="/" onclick="div()">
+        </li>
+        <li id="resBlock">
+            The result is <span>...</span>
+        </li>
+    </ul>
+    <script>
+        var sum = () => {
+            var first = parseInt(document.querySelector('#val1').value);
+            console.log(first);
+            var sec = parseInt(document.querySelector('#val2').value);
+            console.log(sec);
+            var res = first + sec;
+
+            document.querySelector('span').innerText = res;
+
+            document.querySelector("#resBlock").style.display = 'block';
+        }
+        var sub = () => {
+            var first = parseInt(document.querySelector('#val1').value);
+            console.log(first);
+            var sec = parseInt(document.querySelector('#val2').value);
+            console.log(sec);
+            var res = first - sec;
+
+            document.querySelector('span').innerText = res;
+
+            document.querySelector("#resBlock").style.display = 'block';
+        }
+        var mul = () => {
+            var first = parseInt(document.querySelector('#val1').value);
+            console.log(first);
+            var sec = parseInt(document.querySelector('#val2').value);
+            console.log(sec);
+            var res = first * sec;
+
+            document.querySelector('span').innerText = res;
+
+            document.querySelector("#resBlock").style.display = 'block';
+        }
+        var div = () => {
+            var first = parseInt(document.querySelector('#val1').value);
+            console.log(first);
+            var sec = parseInt(document.querySelector('#val2').value);
+            console.log(sec);
+            var res = first / sec;
+
+            document.querySelector('span').innerText = res;
+
+            document.querySelector("#resBlock").style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

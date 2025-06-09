@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Details using if-else</title>
+  </head>
+  <body>
+    <script>
+      var name = prompt("Enter Employee Name");
+      var gender = prompt("Enter Gender").toLowerCase();
+      var loc = prompt("Enter Location");
+      var department = prompt("Enter Department");
+      var basicSal = parseInt(prompt("Enter Basic Salary"));
+
+      var pf = basicSal * 0.12;
+      var hra = basicSal * 0.24;
+
+      var totalSal = basicSal + hra + pf;
+      var taxpercent;
+
+      if (gender == "male") {
+        if (totalSal >= 100000) {
+          taxpercent = totalSal * 0.15;
+        } else if (totalSal >= 50000) {
+          taxpercent = totalSal * 0.1;
+        } else if (totalSal >= 25000) {
+          taxpercent = totalSal * 0.05;
+        } else {
+          taxpercent = 0;
+        }
+      }
+      if (gender == "female") {
+        if (totalSal >= 100000) {
+          taxpercent = totalSal * 0.1;
+        } else if (totalSal >= 50000) {
+          taxpercent = totalSal * 0.05;
+        } else {
+          taxpercent = 0;
+        }
+      }
+
+      console.log("Employee Name: ", name);
+      console.log("Gender: ", gender);
+      console.log("Location: ", loc);
+      console.log("Department: ", department);
+      console.log("Basic Salary: ", basicSal);
+      console.log("PF: ", pf);
+      console.log("HRA: ", hra);
+      console.log("Total Salary: ", totalSal);
+      console.log("Tax: ", taxpercent);
+    </script>
+  </body>
+</html>

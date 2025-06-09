@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment_5</title>
+    </head>
+    <body>
+        <h3>
+            Assignment_5
+        </h3>
+        
+        <script>
+            var empname = prompt("Enter the employe name")
+            var empage = prompt("Enter the age of employe")
+            empage = parseInt(empage)
+
+            var basicsalary = prompt("Enter the basic salary of employee")
+            basicsalary = parseInt(basicsalary)
+
+            var pf = (basicsalary * 12) / 100
+            var hre = (basicsalary * 12) / 100
+            var totalsalary = basicsalary + pf + hre
+
+            console.log("The emp_name is ", empname);
+            console.log("The age of emp is ", empage);
+            console.log("Basic salary is ", basicsalary);
+            console.log("The pf is", pf);
+            console.log("The hre is ", hre);
+            console.log("The total salary would be", totalsalary);
+            
+            
+        </script>
+        
+    </body>
+</html>

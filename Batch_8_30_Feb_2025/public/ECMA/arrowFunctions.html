@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*var displayDetails = function() {
+                console.log("hello")
+            }
+            displayDetails();
+
+            var displayDetails = () => {
+                console.log("second one")
+            }
+            displayDetails(); */ 
+
+            class StudentDetails {
+                constructor() {
+                    this.name = 'Krishna';
+                    this.age = 20;
+                }
+                displayStudentDetails() {
+                    console.log("STudent name is " + this.name);
+                    console.log("Studetn age " + this.age);
+
+                    setTimeout(() => {
+                        console.log("STudent name is " + this.name);
+                        console.log("Studetn age " + this.age);
+                    }, 3000);
+                }
+            }
+
+            var s1 = new StudentDetails();
+            s1.displayStudentDetails();
+            
+        </script>
+    </body>
+</html>
+
+callstack 

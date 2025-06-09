@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+          <link rel="stylesheet" href="app.css">
+            <style>
+              .selectContainer{
+                 width: 400px;
+                 height: 400px;
+                 margin: 5px;
+                 border: 2px solid;
+                 background-color: #ccc;
+                 float: inline-start;
+                 text-align: center;
+              }
+          </style>
+      </head>
+      <body>
+        <div id="mainContainer">
+            <div class="selectContainer"  name="womens" id="womenContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)" >Women'sBlock : </div>
+            <div class="selectContainer" name="mens" id="menContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)">men'sBlock : </div>
+            <div class="selectContainer"  name="kids" id="kidContainer" ondragover="itemDragOver(event)" ondrop="itemDropped(event)">Kids'sBlock :  </div>
+        </div>
+        <div class="ShoppingContainer"> 
+            <div> Women's Shopping : 
+               <img id="w_prod_1" name ='womens' class="womensContainer" src="https://www.beatitude.in/cdn/shop/articles/DSC_2173_720x_dec1d27e-c2a7-4ce7-8b21-654c0ca12e43_1024x.webp?v=1675162397" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)">
+               <img id="w_prod_2" name ='womens' class="womensContainer" src="https://m.media-amazon.com/images/I/71W9MsyqDZL._SX695_.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)">
+               <img id="w_prod_3" name ='womens' class="womensContainer" src="https://m.media-amazon.com/images/I/71Rzrj1XRoL._SY695_.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)"> 
+               <img id="w_prod_4" name ='womens' class="womensContainer" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSt85B4x01AfzVu2WsDaXxB79kiI6b1pTxOQrWf4Rz6hkOpEZV63lsah2wsi0gBlDk-UZWrSK6p3YntOtYef91qb-m9me8GYDO96OyC7qw" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)"> 
+               <img id="w_prod_5" name ='womens' class="womensContainer" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRaV89SHjLmIH-MwqEpL3EqgLYupNqW7Qnd7veQw2ATN1WptC4xb3U-GNgE9YX2nzYzSue0SZlU7D8UImqh1XSwNQ_HcxoqF2MQE1N3ilc" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)"> 
+               <img id="w_prod_6" name ='womens' class="womensContainer" src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRFTBISEINIY4Vg4a05NWIasMMVDz-vuQz7fN7-yXAIf0CJFso6mPa-RVCIGmthy5wVQc-1P1eqsbIQCHtWbrmQ6-iXOn8uFk4IS0qa5eeC_byz50QfaLfJTQU" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)"> 
+           </div>
+           <div> Men's Shopping :  
+            <img id="m_prod_1" name ='mens' class="mensContainer" src="https://media-uk.landmarkshops.in/cdn-cgi/image/h=1200,w=1200,q=85,fit=cover/max-new/1000008708615-Grey-Blackbrown-1000008708615-3052020_01-2100.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+            <img id="m_prod_2" name ='mens' class="mensContainer" src="https://media.landmarkshops.in/cdn-cgi/image/h=1200,w=1200,q=85,fit=cover/max-new/1000015161826-Blue-NAVY-1000015161826_01-2100.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+            <img id="m_prod_3" name ='mens' class="mensContainer" src="https://media.landmarkshops.in/cdn-cgi/image/h=1200,w=1200,q=85,fit=cover/max-new/1000015233406-Blue-INDIGO-1000015233406_01-2100.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" > 
+            <img id="m_prod_4" name ='mens' class="mensContainer" src="https://m.media-amazon.com/images/I/71dKzG4iFPL.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+            <img id="m_prod_5" name ='mens' class="mensContainer" src="https://img.tatacliq.com/images/i10/1316Wx1468H/MP000000016536170_1316Wx1468H_202302211348161.jpeg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+            <img id="m_prod_6" name ='mens' class="mensContainer" src="https://salty.co.in/cdn/shop/files/ElectrostormShimmerChain_1.jpg?v=1689058886&width=1800" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+           </div>
+            <div> Kids's Shopping :  
+               <img id="k_prod_1" name ='kids' class="kidsContainer" src="https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/15092022/410264092001_1.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+               <img id="k_prod_2" name ='kids' class="kidsContainer" src="https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:600,w:600)/data/mothercare/15122022/410265976001_1.JPG" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+               <img id="k_prod_3" name ='kids' class="kidsContainer" src="https://cdn.pixelspray.io/v2/black-bread-289bfa/XUefL6/wrkr/t.resize(h:1355,w:1080)/data/mothercare/17oct2024/494377292-01.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" > 
+               <img id="k_prod_4" name ='kids' class="kidsContainer" src="https://kidspark.co.in/cdn/shop/files/22-12-202302161.jpg?v=1706176989&width=1100" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+               <img id="k_prod_5" name ='kids' class="kidsContainer" src="https://puntoonkids.com/cdn/shop/files/front.jpg?v=1690528086&width=823" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+               <img id="k_prod_6" name ='kids' class="kidsContainer" src="https://m.media-amazon.com/images/I/71mYS41qn0L._SX679_.jpg" style="width: 120px; height: 120px;" draggable="true" ondragstart="dragIsStarted(event)" >
+           </div>
+        </div>
+        <script>
+            var produtId;
+            var dragIsStarted = (event) => {
+                console.log("Drag is Started ");
+                produtId = event.target.getAttribute('id');
+                console.log(produtId);
+            }
+            var itemDropped = (event) => {
+                produtId = '#' + produtId;
+                var containerName = event.target.getAttribute('name');
+                var productName = document.querySelector(produtId).getAttribute('name');            
+                
+                var productClass = document.querySelector(produtId).getAttribute('class');
+                console.log(productClass);
+                
+                if (containerName == productName) {
+                    if (productClass == 'mensContainer'){
+                        document.querySelector('#menContainer').append(document.querySelector(produtId))
+                    } else if(productClass == 'womensContainer'){
+                        document.querySelector('#womenContainer').append(document.querySelector(produtId))
+                    } else if(productClass == 'kidsContainer'){
+                        document.querySelector('#kidContainer').append(document.querySelector(produtId))
+                    }
+                } else {
+                    alert("Sorry ! You Choose Wrong Block");
+                }
+                event.preventDefault();
+                console.log("Item got Dropped ");
+            }
+    
+            var itemDragOver = (event) => {
+                event.preventDefault();
+                console.log("From itemDragOver ");
+            }
+      </script>
+   </body>
+</html>

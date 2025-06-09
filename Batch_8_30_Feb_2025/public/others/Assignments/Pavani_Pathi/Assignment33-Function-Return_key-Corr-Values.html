@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var getDetails = () => {
+        var sDetails = {};
+        for(i = 0;i < 1; i++)
+        {
+            sDetails.sname = prompt("Enter student name");
+            sDetails.age = prompt("entr student age");        
+            sDetails.gender = prompt("Enter Gender");
+        }
+        console.log("sdetails" + sDetails) // Can't I access directly the object
+        console.log("sDeatils 1" + Object.keys(sDetails))
+        for(var tempkey in sDetails)
+        {
+            console.log(tempkey + ":" + sDetails[tempkey])
+        }
+        console.log(Object.values(sDetails))
+        console.log(Object.entries(sDetails))
+        showDetails(sDetails);
+    }
+    var showDetails = (sDetails) =>
+    {
+        console.log("sDeatils" + sDetails)
+        for(i = 0; i < 1; i++)
+        {
+            console.log("Name is " + sDetails.sname)
+            console.log("gender is " + sDetails.gender)
+            console.log("age is " + sDetails.age)
+        }
+    }
+    getDetails();
+</script>
+</body>
+</html>

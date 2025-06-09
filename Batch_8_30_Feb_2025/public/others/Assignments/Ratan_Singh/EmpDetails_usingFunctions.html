@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmpDetails_usingFunctions</title>
+  </head>
+  <body>
+    <script>
+      var emp, gender, local, sal;
+      var pf, HRA, total;
+      function EmpDetails() {
+        emp = prompt("Enter the employee name:");
+        gender = prompt("Enter the gender male / female :");
+        local = prompt("Enter the Emp Location ");
+        sal = parseInt(prompt("Enter the base salary"));
+      }
+
+      function pfAndHra() {
+        pf = (sal * 12) / 100;
+        HRA = (sal * 24) / 100;
+      }
+
+      function total() {
+        total = sal + pf + HRA;
+      }
+
+      function displayDetails() {
+        console.log("Employee is :" + emp);
+        console.log("Gender is", gender);
+        console.log("Employee Location is:", local);
+        console.log("Base Salary is :", sal);
+        console.log("PF is :", pf);
+        console.log("HRA is :", HRA);
+        console.log("Total salary is :", total);
+      }
+      function show() {
+        EmpDetails();
+        pfAndHra();
+        total();
+        displayDetails();
+      }
+      show();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>EmployeeReportGenerator</title>
+         <link rel="stylesheet" href="app.css">
+         <script src="app.js"></script>
+         <script src="jquery.js"></script>
+     </head>
+     <body>
+        <h2>EMPLOYEE REPORT GENERATOR</h2>
+        <div id="container"></div>
+        <ul>
+            <li>
+                Employee Name :
+                <input type="text" id="ename">
+            </li>
+            <li>
+                Employee Age :
+                <input type="text" id="eage">
+            </li>
+            <li>
+                Employee Location :
+                <select name="" id="locationname">
+                    <option >Location</option>
+                    <option value="hyd">Hyderabad</option>
+                    <option value="ban">Banglore</option>
+                    <option value="che">Chennai</option>
+                    <option value="pun">Pune</option>
+                </select>
+            </li>
+            <li>
+                Employee Gender : 
+                <input type="radio" name="gender" value="Male" > Male
+                <input type="radio" name="gender" value="Female"> Female
+            </li>
+            <li>
+                Employee Department :
+                <input type="text" id="edep">
+            </li>
+            <li>
+                Employee Salary :
+                <input type="text" id="esal">
+            </li>
+            <li>
+                <input type="button" value="Generate employee report" onclick="generateEmployeeReport()">
+            </li>
+        </ul>
+        <div>
+            <ul>
+                <li class="title">
+                     REPORT
+                </li>
+                <li>
+                    Employee name is : <span id="dname"></span>
+                </li>
+                <li>
+                    AGe: <span id="dage"></span>
+                </li>
+                <li>Location: <span id="dlocation"></span></li>
+                <li>
+                    Gender: <span id="dgender"></span>
+                </li>
+                <li>
+                    Department: <span id="ddepartment"></span>
+                </li>
+                <li>
+                    salary: <span id="salary"></span>
+                </li>
+                <li>
+                    TaxPercent : <span id="taxpercent"></span>
+                </li>
+
+            </ul>
+        </div>
+
+    
+     </body>
+</html>

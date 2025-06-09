@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Document</title>
+         <link rel="stylesheet" href="app.css">
+     </head>
+     <body>
+     <ul>
+         <li>
+             enter first value :
+             <input type="text" id="firstVal">
+         </li>
+         <li>
+             enter second value :
+             <input type="text" id="secondVal">
+         </li>
+         <li>
+             enter third value :
+             <input type="text" id="thirdVal">
+         </li>
+         <li>
+            <input type="button" value="Get sum" onclick="doTheSum()">
+            <input type="button" value="Get sub" onclick="doTheSub()">
+            <input type="button" value="Get mul" onclick="doTheMul()">
+            <input type="button" value="Get div" onclick="doTheDiv()">
+         </li>
+         <li id="resultBlock">
+             <span>.....</span>
+         </li>
+     </ul>
+     <script>
+         var doTheSum = () => {
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue + secondValue + thirdValue;
+             document.querySelector('span').innerText = 'sum is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheSub = () => {
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue - secondValue - thirdValue;
+             document.querySelector('span').innerText = 'substraction is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheMul = () => {
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue * secondValue * thirdValue;
+             document.querySelector('span').innerText = 'multiplication is : ' +result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+         var doTheDiv = () => {
+             var firstValue = document.querySelector("#firstVal").value;
+             firstValue = parseInt(firstValue);
+             var secondValue = document.querySelector("#secondVal").value;
+             secondValue = parseInt(secondValue);
+             var thirdValue = document.querySelector("#thirdVal").value;
+             thirdValue = parseInt(thirdValue);
+             var result = firstValue % secondValue % thirdValue;
+             document.querySelector('span').innerText = 'division is : ' + result;
+             document.querySelector('#resultBlock').style.display = 'block';
+         }
+      </script>
+  </body>
+</html>

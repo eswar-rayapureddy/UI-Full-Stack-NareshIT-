@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Arrow Function Normal Function</title>
+    </head>
+    <body>
+        <script>
+            // Difference bw Arrow Function and Normal Function
+
+            /*
+            var display = function () {
+                console.log("Normal function");
+            }
+            display();
+
+            var display2 = () => {
+                console.log("Arrow function");
+            }
+            display2();
+            */
+
+            class StudentDetails {
+                constructor(){
+                    this.name = 'Mikkel',
+                    this.age = 18
+                    console.log("From constructor");
+                }
+
+                  displayStudentDetails () {
+                    console.log("Student name is "+this.name);
+                    console.log("Student age is "+this.age);         
+                    /*
+                    setTimeout(function() { // not store ref of obj in callstack
+                        console.log("Student name is "+this.name);
+                        console.log("Student age is "+this.age);         
+                    }, 2000);
+                    */
+                    setTimeout(() => { // store ref of obj in callstack
+                        console.log("Student name is "+this.name);
+                        console.log("Student age is "+this.age);         
+                    }, 2000);
+                }
+                
+            }
+
+            var s1 = new StudentDetails();
+            s1.displayStudentDetails(); 
+
+        </script>
+    </body>
+</html>
+

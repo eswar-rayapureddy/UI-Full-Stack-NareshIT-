@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Assignment 
+        </title>
+    </head>
+    <body>
+        <script>
+            var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            var months_Full = ["January", "February","March","April","May","June", "July","August", "September", "October", "November", "December"];
+            var weeks = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var monthsInNumbers = ['01', '02', '03', '05', '06', '07', '08', '09',10,11,12];
+            var createDate = new Date();
+            // Mar 28th 2025
+            var indexOFmonth = createDate.getMonth();
+            var monthIn3Words = months[indexOFmonth];
+            console.log(monthIn3Words+" "+createDate.getDate()+"th"+" "+createDate.getFullYear());
+            // March 28th, 2025
+            var monthInFull = months_Full[indexOFmonth];
+            console.log(monthInFull+" "+createDate.getDate()+"th"+" "+createDate.getFullYear());
+              // Friday 28th March, 2025
+            var indexOFday = createDate.getDay();
+            var toGetweek = weeks[indexOFday];
+            console.log(toGetweek+" "+createDate.getDate( )+ "th"+" "+ monthInFull +" "+ createDate.getFullYear());
+             // Friday 28/March/2025
+            console.log(toGetweek + " " + createDate.getDate( )+"/"+ monthInFull + "/" + createDate.getFullYear());
+              // Friday, 28/03/2025
+            var indexOFmonthInNums = createDate.getMonth();
+            var toGetMonthsInNums = monthsInNumbers[indexOFmonthInNums];
+            console.log(toGetweek +","+ " " + createDate.getDate( )+"/"+ toGetMonthsInNums + "/" + createDate.getFullYear());
+            // 28th March, 2025 8:37:50
+            var time = createDate.getHours() +":"+ createDate.getMinutes() +":"+ createDate.getSeconds();
+            console.log(createDate.getDate()+"th"+" "+ monthInFull  +","+" "+createDate.getFullYear()+" "+ time); 
+            // 28/03/2025 8:37:50
+            console.log( createDate.getDate( )+"/"+ toGetMonthsInNums + "/" + createDate.getFullYear()+" "+ time);
+             // 28/03/2025
+            console.log(createDate.getDate( )+"/"+ toGetMonthsInNums + "/" + createDate.getFullYear())
+        </script>
+    </body>
+</html>

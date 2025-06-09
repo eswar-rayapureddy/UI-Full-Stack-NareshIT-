@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+
+li {
+    padding: 10px;
+    margin: 1px;
+}
+
+#header {
+    list-style: none;
+    text-align: center;
+}
+

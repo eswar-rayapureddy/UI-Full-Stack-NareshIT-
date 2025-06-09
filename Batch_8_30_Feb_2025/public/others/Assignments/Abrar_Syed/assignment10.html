@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program to check whether a given number is palindrome or not</title>
+  </head>
+  <body>
+    <script>
+      var num = parseInt(prompt("Enter any number"));
+      var rev = 0;
+      var rem;
+      var temp = num;
+      while (num > 0) {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = parseInt(num / 10);
+      }
+      if (temp == rev) {
+        console.log(temp + " is a Palindrome Number");
+      } else {
+        console.log(temp + " is not a Palindrome Number");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            console.log("STart");
+                var userPaidFee = true;
+                var mypromise;
+                async function dojob() {
+                    mypromise = new Promise((resolve, reject) => {
+                        if (userPaidFee == true) {
+                            setTimeout(() => {
+                                resolve("You already got registered");
+                            }, 4000)
+                            
+                        } else {
+                            reject("You are not registered yet");
+                        }
+                    });
+                
+                    await mypromise.then((response) => {
+                        console.log(response);
+                    }).catch((error) => {
+                        console.log(error);
+                    });
+                    console.log("End");
+                }
+                
+                dojob();
+
+            
+
+            </script>
+    </body>
+</html>

@@ -1,0 +1,278 @@
+13 feb 2025 DAY1
+
+   Brief Introduction on UI(MERN stack)
+   Introduction on UI
+    Differance between UI Developer and UX Designer
+    Roles of designer and Developer
+    What is webpage
+    Topic coverd in the course and the time frame
+    UI, front end, back end, lab+ react, tools 
+--------------------------------------------------------------------------------------------------
+14 feb 2025 DAY2 
+
+    How to signup/signin to GIT account
+    Installation of VS code
+    Difference between Static and Dynamic webpage
+    Difference between MEAN& MERN STACK
+    What is Full stack development?
+---------------------------------------------------------------------------------------------------
+17 feb 2025 DAY3 
+
+    Architecture of webpage(client-database-server)
+    How each technology is usefull
+    Difference between scripting language and type script 
+---------------------------------------------------------------------------------------------------
+18 feb 2025 DAY4
+   
+    What do u mean by a markup language?
+    what is html?
+    What is tag?
+    Predefined tags
+    Topic on Attributes - id, class, style, class
+    Basic structure of HTML 
+    Information on File extension
+----------------------------------------------------------------------------------------------------
+19 feb 2025 DAY5
+
+    Difference between HTML element and tag
+    Usage of <br and h1 to h6,<p,space, body, title, head tags.
+    HTML attributes -  id , name, style 
+    Types of Tags: Block level, Inline level
+    Topic on attribute - title
+--------------------------------------------------------------------------------------------------
+20 feb 2025 DAY6
+    Differance between Tag and element
+    Adding css properties on elements  (text decoration:underline;border:size type value;)
+    Topics on Inline CSS , Internal CSS
+    Limitations of Inline CSS
+    Different ways to apply CSS
+    Css Classes -style tag , style attribute
+    Topic on colors - color, border-top, background-color
+---------------------------------------------------------------------------------------------------
+21 feb 2025 DAY7
+    intro of git repo.
+    how was the workflow in git repo
+    how to access the data from git repo
+    Different ways of defining CSS class
+---------------------------------------------------------------------------------------------------
+22 feb 2025 DAY8 
+    class revision about id,class,tagname,applying colors
+    what is anchor (a) tag and how to work
+    what is <img> tag and how to work
+---------------------------------------------------------------------------------------------------
+24 feb 2025 DAY9
+    
+    Concept on code repository of git hub - Downloading the software Git desktop of git client -Cloning to local and pulling.
+    what is DOM
+    (Important topic****Brief discussion on Debugging tool****)
+    what is use of Debugging tool
+    how it's working on Debugging tool
+---------------------------------------------------------------------------------------------------
+25 feb 2025 DAY10
+
+    CRUD OPERATIONS
+    Installation of Nodejs and STEPS
+    Assignment1:-create 10 students Details
+----------------------------------------------------------------------------------------------------
+26 feb 2025 Day 11
+
+    (Important topic****Brief discussion on Block level and inline level elements****)
+    Difference between Inline and Block level element
+    Usage of Block and Inline Elements
+    css priority order
+    css overflow prop 
+----------------------------------------------------------------------------------------------------
+27 feb 2025 Day 12
+
+    Configuring Webserver(Node js)
+    what is Webserver
+    create the Webserver
+    how to run the server and examples
+    how many types to run the server
+----------------------------------------------------------------------------------------------------
+28 feb 2025 Day 13
+
+    CSS Margin and Padding proprties (top,left,right,bottom,auto)
+    css box modeling
+    Short note on div and span element
+    Introduction on pseudo classes
+     Topic on Pseudo classes(:visited,:hover,:active,:empty,:first-child etc...)
+
+----------------------------------------------------------------------------------------------------
+01 mar 2025 Day 14
+
+    Introduction on Pseudo Elements
+    pseudo elements(::first-line, ::selected, ::after, ::before etc..)
+    Difference between Pseudo classes and Pseudo elemnts
+    css float prop
+    css display
+    diff between visiblility hidden and display none
+    Assignment2:- block element(float)
+-----------------------------------------------------------------------------------------------------
+03 mar 2025 Day 15
+    
+    css Display prop : none/Block/Inline/inline-block/flex/grid 
+    What is HTML table and predefinedtags supported in html--(<table>,<thead>,<tbody>,<th>,<tr>,<td>,<tfoot>)
+    structure of basic table in HTML
+    tableStructureThroughDivTag
+-----------------------------------------------------------------------------------------------------
+ 04 mar 2025 Day 16
+
+    intro on css position by using css prop(top,left,right,button)
+    css position to control the position of any DOM element,we have some values(static,relative,absolute,fixed,sticky)
+    what is position static and example
+    what is position relative and example
+    what is position absolute and example
+------------------------------------------------------------------------------------------------------
+05 mar 2025 Day 17
+
+    what is position fixed and example
+    what is position sticky and example
+    what is z-index and example
+    what is css Opacity prop
+    what is html UL tag
+    what is html OL tag
+    Assignment3:- css position 
+----------------------------------------------------------------------------------------------------------
+07 mar 2025 Day 18
+
+    how to move the container to center of web page.
+    how to make responsive webpage by replace the px to %.
+    what are the html input elements and explain with example--(<input type="text/password/radio/select/button/..etc">)
+--------------------------------------------------------------------------------------------------------------------------
+08 mar 2025 Day 19
+
+   what are the html form tag --[method,action]
+   what are the types of communication --[POST,GET]
+   what is scripting language
+   what is JavaScript 
+---------------------------------------------------------------------------------------------------------------------------------
+09 mar 2025 Day 20
+
+   what is the variable
+   how to assign variables.
+   About var
+   limitations of variable names
+   sum of 2 numbers using alert method
+   student details using console method.
+----------------------------------------------------------------------------------------------------------------------------------
+10 mar 2025 Day 21
+
+Data types been supported in JS :-Number, string,  Boolean , undefined ,null, function, Object , Symbol .
+Typecasting:
+Dynamically Reading data from user .
+Prompt Method()
+----------------------------------------------------------------------------------------------------------------------------------
+13 mar 2025 Day 22
+
+Type Casting Method :
+1.ParseInt()
+2.ParseFloat()
+Assignment : Read and Display Employee Details using Prompt Method.
+
+----------------------------------------------------------------------------------------------------------------------------------
+14 mar 2025 Day 23
+JavaScript Control Structures:
+Types of Control Structure:
+1.Conditional CS :
+ 			if, else, nested if , nested if-else, else-if .
+2. Looping CS 
+			 for,  while, do while , for each,  for of, for in.
+3.Case CS 
+		 switch case 
+Assignments:  
+Student Details Using Conditional Control Structure.
+----------------------------------------------------------------------------------------------------------------------------------
+17 mar 2025 Day 24
+Diff b/w =, == and === operators
+true && true -> true 
+Looping CS :
+    for loop
+Practice Question:
+1. WAP to display the all number b/w 10 to 90.
+2. WAP to find the Sum of no. b/w 90 to 51.
+3. WAP to display all Odd no. b/w 1 to 100.
+----------------------------------------------------------------------------------------------------------------------------------
+18 mar 2025 Day 25
+Post Increment and Pre Increment
+post Increment -a++
+pre Increment- ++a
+
+Question:
+1. Finding Even Number within range
+2. Find the Prime Number 
+----------------------------------------------------------------------------------------------------------------------------------
+19 mar 2025 Day 26
+while Loop Control Structure 
+
+while(condition) {
+        ..
+        .
+        .
+        .
+
+    }
+
+finding Reverse of given number
+finding sum of individual digits
+comparing  for loop with while loop
+----------------------------------------------------------------------------------------------------------------------------------
+20 mar 2025 Day 27
+----------------------------------------------------------------------------------------------------------------------------------
+21 mar 2025 Day 28
+Variable Hoisting 
+Function
+Assignment: 
+1 WAP to display the Employee details using function.
+----------------------------------------------------------------------------------------------------------------------------------
+22 mar 2025 Day 29
+Variable Scope
+Different way of function creation:-
+Type I
+function displayDetails() {
+    ...
+}
+
+Type II:
+var displayDetails = function() {
+
+}
+
+Type III
+
+var displayDetails = () => {
+    ...
+}
+----------------------------------------------------------------------------------------------------------------------------------
+24 mar 2025 Day 30
+Accessing Private data of a function into another function 
+Sharing private data within the functions
+    1. Passing parameters from a function 
+    2. Returning values from a function 
+    3. Both passing params and returning values from a  function
+Assignment :
+1. Employee Details Using Function with parameter.
+----------------------------------------------------------------------------------------------------------------------------------
+25 mar 2025 Day 31
+
+
+
+
+
+               
+
+                 
+
+
+               
+
+                
+
+                
+
+               
+
+                
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Enter a value to check Armstrong "); // 234
+        var len = n.length; // 3, can be used on .length property
+        var temp = n;
+        // var n = 234; // if it is a number
+        // var len = n.toString(n);
+
+        var armStrongNo = 0;
+        while (n > 0) {
+            var rem = n % 10;
+            armStrongNo = rem ** len + armStrongNo;
+            n = parseInt(n / 10);
+        }
+        if (armStrongNo == temp) {
+            console.log("Its an Armstrong number "+ temp);
+        }
+    </script>
+</body>
+</html>

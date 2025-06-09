@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WhileLoop</title>
+    </head>
+    <body>
+        <script>
+            var i = 567;
+            var sum=0;
+            var count= 0;
+            var reverse= "";
+            while(i>0) {
+                var rem = i % 10 ;
+                console.log(rem)
+                reverse=reverse+rem;
+                
+                i = i/10 ;
+                i = parseInt(i);
+                sum= sum + rem;
+                count++
+                
+            }
+                
+                console.log(sum)
+                console.log(count)
+                console.log(reverse)
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,55 @@
+CORS - 
+
+XMLHTTPrequest.send
+
+fetch()
+
+---------------------------------
+
+const, 
+let
+var
+------------------------------------
+
+new looping CS 
+    for , while, dowhile, for in 
+
+    for of, foreach
+    --------------------------
+    foreach
+-------------------
+
+new Data structures:
+    : existing DS -> Array, JSON
+
+    MAP, Set
+-----------
+
+serialization and deserializtion
+REST parameter 
+default param values
+
+-----------------
+
+Map - JSON
+-------------
+
+arrowfunctions
+import and export 
+promises
+async await 
+
+-----------
+
+import and export
+-------------------
+
+
+new methods on top of array 
+
+    sort()
+    find 
+    map 
+    filter 
+    includes
+    

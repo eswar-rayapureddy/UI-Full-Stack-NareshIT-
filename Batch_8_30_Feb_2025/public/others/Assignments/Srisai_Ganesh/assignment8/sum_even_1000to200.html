@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even from 1000 to 200</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0;
+        for (var i = 1000; i >= 200; i--) {
+            if (i % 2 == 0) { // reminder
+                // console.log(i);
+                sum = sum + i;
+            }
+        }
+        console.log("Sum of all even numbers from 1000 to 200 is " + sum);
+    </script>
+</body>
+
+</html>

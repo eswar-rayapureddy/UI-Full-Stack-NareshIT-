@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var readDeatails= () =>{
+            var name = prompt('enter your name');
+            var gender = prompt('enter your gender, male or female' );
+            var locat = prompt('enter your location');
+            var department = prompt('enter your department');
+            var basicsalary = parseInt(prompt('enter your basicsalary'));
+            var pf = emppf(basicsalary);
+            var hra = emphra(basicsalary);
+            var totalsalary = emptotalsalary(basicsalary,pf,hra);
+            var gen = gender ;  
+            var tax = emptax(gender,totalsalary);
+            displaydeatials(name,gender,locat,department,pf,hra,totalsalary,tax);
+
+         }
+        var emppf = (basicsalary) =>{
+            pf = (basicsalary*12)/100;
+            return pf;
+           
+        }
+        var emphra = (basicsalary) => {
+            hra = (basicsalary*24)/100;
+            return hra;
+        }
+        var emptotalsalary = (basicsalary,pf,har) =>{
+            totalsalary = basicsalary + pf + hra;
+            return totalsalary;
+        }
+        var emptax = (gen,totalsalary) =>{
+            if (gen == 'male') {
+                if (totalsalary >= 100000){
+                    var taxpercent = 15;
+                    var tax = (taxpercent/100)*totalsalary;
+                    return tax;
+                }
+                else if (totalsalary >= 50000){
+                    var taxpercent = 10;
+                    var tax = (taxpercent/100)*totalsalary;
+                    return tax;
+                }
+                else if (totalsalary >= 25000){
+                    var taxpercent = 5;
+                    var tax = (taxpercent/100)*totalsalary; 
+                    return tax;
+                }
+                else {
+                    var taxpercent = 0;
+                    
+                    return taxpercent;
+                }
+            }
+            else if(gen == 'female'){
+                if (totalsalary >= 100000){
+                    var taxpercent = 10;
+                    var tax = (taxpercent/100)*totalsalary;
+                    return tax;
+                }
+                else if (totalsalary >= 50000){
+                    var taxpercent = 5;
+                    var tax = (taxpercent/100)*totalsalary;
+                    return tax;
+                    
+                }
+                else {
+                    var taxpercent = 0;
+                    return taxpercent;
+                    
+                }
+            }
+            else{
+                console.log("please enter correct value")
+            }
+        };
+        var displaydeatials = (name,gender,locat,department,pf,hra,totalsalary,tax) => {
+            console.log("Employee name: " + name);
+            console.log("Employee gender: " + gender);
+            console.log("Employee location: " + locat);
+            console.log("Employee department: " + department);
+            console.log("Employee PF: " + pf);
+            console.log("Employee HRA: " + hra);
+            console.log("Employee total salary: " + totalsalary);
+            console.log("Employee tax: " + tax);
+        
+        }
+       
+            readDeatails();
+    </script>
+</body>
+</html>

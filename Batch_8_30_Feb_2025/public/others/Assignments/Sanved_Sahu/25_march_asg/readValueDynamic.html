@@ -1,0 +1,37 @@
+<!-- To Read th value dynamically into an array -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            var getdata = () => {
+                var elemets = parseInt(prompt("Enter the No. of Elements You want to insert in array "));
+                arrayInput(elemets);
+            }
+               
+            var arrayInput = (elements) => {
+                var array=[];
+                for (var i=0 ; i<elements ; i++){
+                    var input = parseInt(prompt("Enter Element : "));
+                    array[i]=input;
+                }
+                display(array,elements);
+            }
+
+            var display = (array,elements) =>{
+                for (var i=0 ; i<elements ; i++){
+                    console.log(array[i]);
+                }
+            }
+
+            getdata();
+
+        </script>
+    </body>
+</html>

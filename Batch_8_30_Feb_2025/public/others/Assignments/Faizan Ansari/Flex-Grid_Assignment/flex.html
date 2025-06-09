@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+            .mainContainer{
+                border: 2px solid green;
+                height: 400px;
+
+                display: flex;  /* none, inline, block, inline-block */
+                
+                /* flex-direction -> column, row(deafult), column-reverse, row-reverse */
+                /* flex-direction: row; */
+                /* flex-wrap - wrap, no-wrap(deafult), wrap-reverse */
+                /* flex-wrap: wrap; */
+                /* flex-flow -> combination of wrap and direction */
+                flex-flow: row wrap;
+
+                /* justify-content - center, flex-start, flex-end, space-around, space-between, space-evenly */
+                justify-content: space-evenly;
+
+                /* align-items - center, flex-start, flex-end, stretch  */
+                align-items: center;
+            
+            }
+
+            .mainContainer div{
+                border: 1px solid red;
+                width: 70px;
+                height: 30px;
+                margin: 10px;
+                padding: 5px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h3 style="text-align: center; color: brown;">Flex Container Property</h3>
+
+        <div class="mainContainer">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>
+            <!-- <div>Item 11</div>
+            <div>Item 12</div>
+            <div>Item 13</div>
+            <div>Item 14</div>
+            <div>Item 15</div>
+            <div>Item 16</div>
+            <div>Item 17</div>
+            <div>Item 18</div>
+            <div>Item 19</div>
+            <div>Item 20</div> -->
+        </div>
+
+    </body>
+
+</html>
+
+<!-- 
+
+IQ - how do u render an element to the center of the container
+sol - using justify-content: center and align-items: center 
+
+
+Flex Box:
+
+After block, inline, table and position layout, we go for flex layout to create flexible containers
+
+Display: flex - > makes container as flex container
+
+Flex container:
+    flex-direction -> column, row, column-reverse, row-reverse
+
+    flex-wrap - wrap, no-wrap, wrap-reverse
+    flex-flow -> combination of wrap and direction
+    justify-content - center, reverse, flex-start, flex-end, space-around, space-between, 
+    align-items - center, flex-start, flex-end, stretch 
+    align-content - The align-content property is used to align the flex lines.
+        space-between, space-around, center, flex-start, flex-end
+
+    perfect centering
+-->

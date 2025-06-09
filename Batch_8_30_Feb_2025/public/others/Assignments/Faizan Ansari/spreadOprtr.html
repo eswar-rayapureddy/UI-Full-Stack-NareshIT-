@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spread Operator</title>
+    </head>
+    <body>
+        <script>
+
+        // Spread Operator -> combine 2 array into a new single array with additional value
+        // Spread Operator -> convert set into an array
+
+            var studentDetails = ["Raj", 21, 'Male'];
+            var collegeDetails = ['Abc college', 'Hyderabad', 3];
+
+            console.log("Student Details -> "+studentDetails);
+            console.log("College Details -> "+collegeDetails);
+
+            var completeDetails = [...studentDetails, ...collegeDetails, 'Computer Dept', true, 45000]
+            console.log("Complete Details -> "+completeDetails);
+
+        </script>
+    </body>
+</html>

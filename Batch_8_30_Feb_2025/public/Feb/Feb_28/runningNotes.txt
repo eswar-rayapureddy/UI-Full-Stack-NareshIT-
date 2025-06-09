@@ -1,0 +1,71 @@
+margin
+
+padding prop 
+
+margin padding prop 
+
+    margin: 10px;
+
+    margin-top: 30px;
+    margin-left
+    margin-right 
+    mnargin-bottom
+
+    margin: 20px 40px;
+
+    margin: 20px 30px 50px 60px;
+    --------------------------------------
+
+
+    margin: gap/space ouside of the border of container
+    Padding: gap/space withing the contianer, above the text and below the border
+
+    padding: 40px 
+
+    padding: 20px 10px
+------------------
+
+Dev/ Sandbox
+
+SIT 
+
+UAT 
+
+PROD / BCP+
+----------------------
+CSS box modeling 
+    While the page is calculting the dimentions of any html element, it considers margin, padding, border and its given dimentions
+
+    .container {
+        border: 11px solid;
+        width: 111px;
+        height: 134px;
+        margin: 11px 9px;
+        padding: 11px 20px 21px 32px;
+        bacground-color: green;
+    }
+
+    left marg + left border + left padding + width + right padding + right border + right margin
+    9 + 11 + 32 + 111 + 20 + 11 + 9 -> 203
+    <div class="container">Hello</div>
+
+
+        
+-------------
+
+Pseudo Classes and Pseudo Elements :
+
+    Pseudo Classes:
+        active
+        hover 
+        blur 
+        focus 
+        .. 
+        .. 
+
+
+        Syntax:
+            selector:<Pseudo classname > {
+                .... 
+                /./
+            }

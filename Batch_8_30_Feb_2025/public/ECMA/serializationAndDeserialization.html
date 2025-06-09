@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var studentDetails = [23, "raj", 'Hyd', true];
+            var collegeDetails = [ "abc college", 'Pune',' test Univ'];
+
+            var cmpltDetails = [...studentDetails, ...collegeDetails];
+            console.log(cmpltDetails);
+
+            var studentDetails = {
+                name: 'Raj',
+                age: 20,
+                gender: 'Male'
+            };
+
+            var collegeDetails = {
+                cname: 'Abc college',
+                cLoc: 'Hyd'
+            };
+
+            var cmpltObj = {
+                ...studentDetails, ...collegeDetails
+            }
+
+            console.log(cmpltObj);
+
+            var bookname = 'My Dear Dreams';
+            var bookPrice = 3000;
+            var publisher = 'ABC publisher';
+
+            // var bookDetails = {bookname: bookname, bookPrice: bookPrice, publisher: publisher};
+            var bookDetails = {bookname, bookPrice, publisher};
+            console.log(bookDetails);
+
+
+            var studentDetails = ["raj", 20, 'Male'];
+            // var sname = studentDetails[0];
+            // var sage = studentDetails[1];
+            // var gender = studentDetails[2];
+
+            [sname, sage, gender, abc] = ["raj", 20, 'Male', [33, 44, 55]]
+
+            console.log(sname, sage, gender);
+
+            var univDetails = {
+                uniVName: 'Andhra Univ',
+                univRank : '2/10',
+                univLocation: 'Vizag'
+            }
+            var {uniVName, univRank, abc} = univDetails;
+            console.log(uniVName);
+            console.log(univRank);
+            console.log(abc);        </script>
+    </body>
+</html>

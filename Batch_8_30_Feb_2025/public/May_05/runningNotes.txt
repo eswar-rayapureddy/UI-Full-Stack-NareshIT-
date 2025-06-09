@@ -1,0 +1,27 @@
+Canvas and SVG tags
+
+<Canvas></Canvas>
+
+<svg></svg>
+
+    Could able to draw any graphical objects on the page...
+
+--------------------------------------------
+
+localstorage and sessionStorage
+semantic tags 
+new input elements 
+doctype 
+drag drop 
+navigator 
+geolocaiton 
+webworkers 
+Canvas 
+SVG 
+application cache 
+
+Audio 
+video 
+--------------------------------
+CSS3
+

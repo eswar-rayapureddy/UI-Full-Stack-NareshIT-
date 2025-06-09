@@ -1,0 +1,138 @@
+Control structures: Logical ability will increase by having clear understanding of control structures
+
+3 types:
+Conditional - If-else, nested if-else,else if
+Looping  - for,do-while,for each, for of, for in
+Case  - Switch case
+
+Conditional control structre:
+Anything you want to perform based on condition
+When we wrote instructions in the program it may kip or execute based on the given condition
+
+if(condition)-- condition can be one or more
+{
+------
+}
+if (true){
+console.log("----");
+}
+if (false)
+{
+console.log("-----");
+}
+if(avg>=40){
+console.log("if got executed")
+}
+if(avg<=40){
+console.log("average less than 40")
+}
+
+Based on codnition either to execute set of instructions or skip is done by conditional control structures.
+
+*************************************************************************************
+DEBUGGING
+
+Go to Inspect - Click on Source tab.
+Source tab :It contains list of all source code which is needed for the current web page.
+
+Now go to the line number where you want to put break point. Click on the line number and number will be highlighted which means break pint is set at that particular position.
+Similarly where ever you want to put breakpoint please click that line number and breakpoint will be set.
+
+Play button: used to toggle between break points
+Next button: moves  to next commdn in execution
+Watch- Click on + and add variables for which we like to see the values during execution
+mouse over to see the value
+if(condition)
+{
+---}
+else
+{----}
+
+The if condition is executed when the condition becomes true and when it is false the else part get executed. Instead of giving multiple if conditions 
+if we give else we are saving time to check multiple if .
+For example: If I want to check for Male and Female - instead of checking - if(male),if(female) -- we can use - if(male){}else{}; Instead of tow if getting executed we are doing this with one if using else condition.
+NESTED IF CONDITON CONTROL STRUCTURE:
+if(condition){
+------
+	if(condition){
+		------
+		     }
+	}
+Putting if in another if 
+if(avg>=40)
+{
+	console.log("student passed");
+	console.log("Student got first class");
+}
+else
+{
+	console.log("Student is failed")
+}
+The above if can be rewritten using nested if as
+if(avg>=40)
+{
+	console.log("student passed");
+	if(avg>=60)
+		{ console.log("Student got first class")
+		}
+}
+else
+{
+	console.log("Student is failed")
+}
+
+
+ELSE IF CONDITIONAL STRUCTURE
+I don't want to execute ELSE directly and in the ELSE also I want to check the condition.
+
+Example:
+if (avg >= 40) 
+{
+     console.log("Student got passed");
+
+      if (avg >= 90) 
+	{
+          console.log("you got distinction")
+       } else if (avg >= 60) {
+          console.log("student got First class");
+       } else {
+          console.log("you gor second class")
+       }
+} else
+ {
+    console.log("student got failed");
+}
+
+
+assignment:
+Write a program to work with employee details like empname,gender,location,basic salaray,total sal=pf+hra+basic salary
+get total tax
+  gnder is male 
+
+        totalsal >= 100000
+
+            taxpercent is 15% on total sal 
+
+        totaalsal >= 50000
+            taxpercent  10%
+
+        totaalsal >= 250000
+            taxpercent is 5% 
+
+        else    
+            taxpercent 0 
+
+ gnder is female 
+
+        totalsal >= 100000
+
+            taxpercent is 10%
+
+        totaalsal >= 50000
+            taxpercent  5%
+
+        else    
+            taxpercent 0 
+
+
+*************************************************** Thank you**********************************************************

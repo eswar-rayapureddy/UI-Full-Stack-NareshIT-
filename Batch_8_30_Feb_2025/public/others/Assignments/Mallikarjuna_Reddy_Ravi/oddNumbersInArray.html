@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Odd Numbers in Array</title>
+    </head>  
+
+    <body>
+        <h2>Displaying Odd Numbers in an Array</h2>
+        <script>
+            // Printing odd numbers in an Array..
+            var size = prompt('enter the Size of the Array :');
+            var arr = [];
+            for(i=0; i<size;i++){
+               arr[i] = parseInt(prompt("Enter element - "+(i+1)+" :"));
+
+            }
+            console.log('the Elements of the Array is :',arr);
+            console.log('The Odd Numbers in Array are : ')
+            for(i = 0; i < size; i++){
+                if(arr[i] % 2 != 0){
+                    console.log(arr[i]);
+                }
+            }
+
+        </script>
+    
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt("Enter name");
+        var gender = prompt("Enter Gender");
+        var genderLowerCase = gender.toLowerCase();
+        alert("gender" + genderLowerCase);
+        var loc = prompt("Enter Location"); 
+        var department = prompt("Enter department");
+        var salary = prompt("Enter Basic Sal"); 
+        var basicSalary = parseInt(salary);
+        alert(basicSalary);
+        
+        var pf = .25 * basicSalary;
+        var hra = .15 * basicSalary;
+        var totalSalary = basicSalary + pf + hra;
+        var taxpercent;
+
+        if (gender.toLowerCase() == 'male') {
+            alert("male");
+            if (totalSalary >= 250000) {
+                taxpercent = .5 * totalSalary;
+            } else if (totalSalary >= 100000) {
+                taxpercent = .15 * totalSalary;
+            } else if (totalSalary >= 50000) {
+                taxpercent = .1 * totalSalary;
+            } else {
+                taxpercent = 0;
+            }
+        } else if (gender.toLowerCase() == 'female') {
+            alert("female");
+            if (totalSalary >= 250000) {
+                taxpercent = .5 * totalSalary;
+            } else if (totalSalary >= 100000) {
+                taxpercent = .1 * totalSalary;
+            } else if (totalSalary >= 50000) {
+                taxpercent = .05 * totalSalary;
+            } else {
+                taxpercent = 0;
+            }
+        } else {
+            alert("give proper gender");
+        }
+        
+        console.log("Name:", name);
+        console.log("gender:", gender);
+        console.log("department", department);
+        console.log("Location:", loc);
+        console.log("basic salary:", basicSalary);
+        console.log("pf:", pf);
+        console.log("hra:", hra);
+        console.log("Total salary:", totalSalary);
+        console.log("taxPercent:", taxpercent);
+    </script>
+</body>
+</html>

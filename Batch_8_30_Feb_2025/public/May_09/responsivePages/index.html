@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating Media quries
+        </title>
+        <script src="../../lib/jquery.js"></script>
+        <link rel="stylesheet" href="app.css">
+    </head>
+    <body>
+        <header>
+            Shopping Page
+            <span>
+                <img src="https://toppng.com/uploads/preview/menu-icon-png-3-lines-11552739310fjzs2n2wxt.png" alt="" onclick="toggleMenu()">
+            </span>
+        </header>
+        <main>
+            <div class="tabContainer">
+                <div>Home</div>
+                <div>Careers</div>
+                <div>Contact us</div>
+                <div>Address</div>
+                <div>Our Clients</div>
+
+            </div>
+            <div class="statusMsgBlock">
+                Go and check teh notifications for today...
+            </div>
+            <div class="addsblock">
+                <marquee behavior="" direction="">ADS about to ome</marquee>
+            </div>
+        </main>
+        <footer>@copyrights 2025</footer>
+        <script>
+            var toggleMenu = () => {
+                $(".tabContainer div").toggle();
+            }
+        </script>
+    </body>
+</html>

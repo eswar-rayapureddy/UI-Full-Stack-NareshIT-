@@ -1,0 +1,52 @@
+
+#heading{
+    font-size: 20px;
+    text-align: center;
+    width: 700px;
+    border: 2px solid;
+    border-radius: 7px;
+    margin: 5px auto;
+    padding: 10px;
+    background-color: rgb(232, 231, 230);
+    margin-top: 15px;
+}
+
+ul {
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: rgb(178, 177, 176);
+}
+
+li{
+    font-size: 22px;
+    list-style: none;
+    padding: 20px;
+    margin: 15px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+#fval , #sval {
+    height: 25px;
+    width: 220px;
+    font-size: 18px ;
+}
+
+#click input {
+    height: 33px;
+    width: 90px;
+    font-size: 18px;
+    margin: 0px 5px;
+}
+
+input{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+#result{
+    display: none;
+}

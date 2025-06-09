@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var emp_name = prompt("Enter Name of employ ");
+            console.log( "emp name is" , emp_name);
+            var emp_age = prompt("Enter Age of employ ");
+            console.log( "emp age is" , emp_age);
+            var emp_gender = prompt("Enter Gender of Employee (Male/Female) ");
+            console.log( "emp gender is" , emp_gender);
+            var emp_department = prompt("Enter Department of employ");
+            console.log( "emp dept is" , emp_department);
+            var basic_salary = prompt("Enter basic sal of employ");
+            basic_salary = parseInt(basic_salary);
+            Console.log("basic salary is", basic_salary);
+            var hra = (0.24*basic_salary);
+            hra=parseInt(hra);
+            var pf = (0.12*basic_salary);
+            pf=parseInt(pf);
+            var total = (basic_salary + hra + pf); 
+            total=parseInt("total");
+            console.log("employee total salary is" , total);
+
+
+            if (emp_gender= 'Male'){
+                if(total>=100000)
+                {
+                    var taxPercent= 0.15*total;
+                    console.log("total for 15% tax is ", taxPercent);
+                }
+                    else if(total>=50000)
+                    {
+                        var taxPercent= 0.10 * total;
+                        console.log("total for 10% tax is " , taxPercent);
+                    }
+                    else if(total>=25000)
+                    {
+                        var taxPercent= 0.5 * total;
+                        console.log("total for 5% tax is " , taxPercent);
+                    }
+                else{
+                        console.log("no tax")
+                    }
+                }
+            else{
+                    if( emp_gender = 'Female')
+                        {
+                        if(total>=100000)
+                            {
+                            var taxPercent= 0.10*total;
+                            console.log("total for 10% tax is ", taxPercent);
+                                }
+                            else if(total>=50000)
+                            {
+                                var taxPercent= 0.5 * total;
+                                console.log("total for 10% tax is " , taxPercent);
+                            }
+                            else{
+                                console.log("no tax");
+                            }
+                        }
+                    }
+        </script>
+        
+    </body>
+</html>

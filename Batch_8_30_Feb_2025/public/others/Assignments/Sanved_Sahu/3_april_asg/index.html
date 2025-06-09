@@ -1,0 +1,47 @@
+
+<!-- Calculator having Javascript taking input from user  -->
+
+<!-- Doublts
+    1. what if we select input type number so do we need to use parseInt
+    2. how to give equal spaces in between Buttons 
+
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div id="heading">
+        Simple Calculator
+    </div>
+    <div>
+        <ul>
+            <li>
+                Enter 1st Value : 
+                <input type="text" id="fval" >
+                <!-- <input type="number" id="fval" > -->
+            </li>
+            <li>
+                Enter 2nd Value : 
+                <input type="text" id="sval" >
+                <!-- <input type="number" id="sval" > -->
+            </li>
+            <li id="click">
+                <input type="button" value="Add" onclick="doTheSum()">
+                <input type="button" value="Sub" onclick="doTheSub()">
+                <input type="button" value="Multiply" onclick="doTheMul()">
+                <input type="button" value="Div" onclick="doTheDiv()">
+                <input type="button" value="Rem" onclick="getRem()">
+            </li>
+            <li id="result">  
+                <span></span>
+            </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

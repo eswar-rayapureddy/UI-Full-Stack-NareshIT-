@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Sum of prime numbers
+        </title>
+    </head>
+    <body>
+        <script>
+            var primeCount = 0 ;
+            var start_value =parseInt(prompt("Enter Starting Value")) ;
+            var end_value =parseInt(prompt("Enter Ending  Value")) ;
+            if (start_value < end_value) {
+            for (i = start_value; i <= end_value; i++) {
+                var Remcount = 0 ;
+                if (i == 1) {
+                    continue;
+                }
+                for(j = 2; j < i; j++) {
+                    var rem = i % j ;
+                    if (rem == 0 ) {
+                        Remcount++;
+                        break;
+                    }
+                }
+                if ( Remcount == 0) {
+                    console.log (i);
+                    primeCount = primeCount + i ;
+                }
+            }
+            console.log("Total count of the printed prime numbers",primeCount);
+        } else {
+            for (i = start_value; i >= end_value; i--) {
+                var Remcount = 0 ;
+                if (i == 1) {
+                    continue;
+                }
+                for(j = 2; j < i; j++) {
+                    var rem = i % j ;
+                    if (rem == 0 ) {
+                        Remcount++;
+                        break;
+                    }
+                }
+                if ( Remcount == 0) {
+                    console.log (i);
+                    primeCount = primeCount + i ;
+                }
+            }
+            console.log("Total sum of the printed prime numbers",primeCount);
+        }
+        </script>
+    </body>
+</html>

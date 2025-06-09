@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .mainContainer{
+                border: 2px solid royalblue;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .mainContainer div{
+                border: 1px solid darkorange;
+                width: 50px;
+                height: 25px;
+                padding: 5px;
+                margin: 5px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <h3 style="text-align: center; color: brown;">Flex Items Property</h3>
+        
+        <div class="mainContainer">
+
+            <div style="order: 4; flex-shrink: 2;">Item 1</div>
+            <div style="order: 1;">Item 2</div>
+            <div style="order: 2; flex-basis: 150px;">Item 3</div>
+            <div style="order: 5;flex-grow: 2;">Item 4</div>
+            <div style="order: 3;flex-grow: 2;">Item 5</div>
+            <div>Item 6</div>
+            <div style="flex-grow: 2;">Item 7</div>
+            <div>Item 8</div>
+
+        </div>        
+
+    </body>
+
+</html>
+
+<!-- 
+
+    Flex items: 
+        order -specifies order of rendering
+        flex-grow: specifies how much has to be grown relevant to others (if space is availabe)
+        flex-shrink: specifies how much has to be shrink relevant to others (if space is not availabe) 
+        flex-basis -specifies the initial length of a flex item
+        flex - combination of flex-grow, flex-shrink, and flex-basis
+        align-self
+
+-->

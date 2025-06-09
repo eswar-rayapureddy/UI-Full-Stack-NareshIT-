@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emp Details</title>
+</head>
+<body>
+  <script>
+    var empName = prompt("enter the Employee Name :  ");
+    var Age = prompt('enter the age: ');
+    var department = prompt('enter the department: ');
+    var basicSalary = prompt('enter the Salary: ');
+    var hra = 0.24* basicSalary;
+    var da = 0.12* basicSalary;
+    var pf = 0.12* basicSalary;
+    var totalSalary = hra + da + pf;
+
+    console.log('the name of the Employee is ',empName);
+    console.log(' the Age of the Employee is: ',Age);
+    console.log('the Basic salary of the Employee is :',basicSalary);
+    console.log('the total salary of the Employee is: ',totalSalary)
+  </script>
+</body>
+</html>

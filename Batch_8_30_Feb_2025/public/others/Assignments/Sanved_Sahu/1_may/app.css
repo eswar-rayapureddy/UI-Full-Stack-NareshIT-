@@ -1,0 +1,45 @@
+#dpContainer{
+    margin-left: 20%;
+    /* margin-bottom: 10px; */
+}
+
+.dropContainer{
+    border: 1px solid black;
+    padding: 10px;
+    height: 350px;
+    width: 200px;
+    margin: 5px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.dragContainer{
+    clear: left; /* We must clear float left otherwise it will overlap */ 
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    height: 120px;
+    width: 500px;
+    overflow-y: auto;
+    white-space: nowrap; 
+    
+}
+
+.dragContainer > img {
+    margin: 0px 5px;
+    border: 1px solid;
+    padding: 7px;
+}
+
+img{
+    height: 80px;
+    width: 50px;
+}
+
+span{
+    text-align: center;
+    font-weight: bold;
+    margin: 2px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Map Data Structure</title>
+    </head>
+    <body>
+        <script>
+
+            // Map DS - similar to JSON ie key value pair
+            // Only diff is that it has predine method to insert and retrieve data
+            // for iteration of Map DS we use -> for of Looping Control structure
+
+            var m1 = new Map();
+            console.log(m1);
+
+            m1.set("name", "Jack");
+            m1.set("age", 21);
+            m1.set("location", "Pune");
+            m1.set("isFeePaid", true);
+            console.log(m1);
+            console.log(m1.size);
+
+            console.log(m1.has("location"));
+            console.log(m1.has("dept"));
+
+            m1.delete("age");
+            console.log(m1);
+            console.log(m1.size);
+
+            m1.set("empType", "Full Time");
+            m1.set("salary", 56000);
+            console.log(m1);
+
+            // m1.clear();
+            // console.log(m1);
+
+            for (var element of m1) {
+                console.log(element);
+            }
+
+            for (const [key, value] of m1) {
+                console.log(key +" --> "+value);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding even numbers in a given array</title>
+</head>
+<body>
+    <script>
+        var info = () => {
+            let data = ['a', 1, 2, 'b', 3, 'c', 4, 5, 6, 'd', 'e'];
+            console.log(data);
+            let evenN = even(data);
+        }
+
+        var even = (data) => {
+            for (let i = 0; i < data.length; i++) {
+                // console.log(data[i]);
+                if (typeof(data[i] === "number") && (data[i] % 2 == 0)) {
+                    console.log(data[i]);
+                }
+            }
+        }
+
+        info();
+    </script>
+</body>
+</html>

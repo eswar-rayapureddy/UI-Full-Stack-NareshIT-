@@ -1,0 +1,47 @@
+
+<!-- Sum of All the add Numbers Of array  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getNoOfelements = () => {
+            var elements = parseInt(prompt("Enter No. of elements to be inserted in array "));
+            arrayInput(elements);
+        }
+
+        var arrayInput = (elements) => {
+            array=[];
+            for (var i=0 ; i<elements ; i++){
+                var input = parseInt(prompt("Enter Element " + (i+1) + " : " ));
+                array[i]= input ;
+            }
+            sumOfOddNo(array,elements);
+        }
+
+        var sumOfOddNo = (array,elements) => {
+            console.log("Array Elemts are ");
+            for (var i = 0; i<elements ; i++ ){
+                console.log(array[i]);
+            }
+            console.log("Odd Elemts are : ");
+            sum = 0;
+            for (var i=0 ; i<elements ; i++){
+                if ((array[i]%2) != 0){
+                    console.log(array[i]);
+                    sum = sum + array[i];
+                }
+            }
+            console.log("Sum of all Odd Numbers are  " + sum);
+        }
+
+        getNoOfelements();
+
+    </script>
+</body>
+</html>

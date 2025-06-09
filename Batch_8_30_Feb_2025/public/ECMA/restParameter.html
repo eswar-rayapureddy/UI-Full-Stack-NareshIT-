@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var addValues = (a, b, ...temp) =>  {
+                console.log(temp);
+                var result = 0;
+                result = a + b;
+                temp.forEach((value) => {
+                    result += value;
+                })
+                return result;
+            }
+            var sum = addValues(30, 40, 400, 2,33 ,2,2,2,2,2,2,22,);
+            console.log(sum);
+            
+    </script>
+</html>

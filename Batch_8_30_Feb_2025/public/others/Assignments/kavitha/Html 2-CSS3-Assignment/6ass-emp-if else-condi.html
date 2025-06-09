@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=""width=device-width, initial-scale=1.0">
+    <title>conditonalcontrol</title>
+</head>
+<body>
+    <script>
+        var empname= prompt("enter the empname");
+        var gender=prompt("enter the gender");
+        var loc =  prompt("enter the loc");
+        var department =prompt("enter the dep");
+        var basicsal =prompt("enter the value");
+        basicsal = parseInt(basicsal);
+        if ( gender == 'male')
+        {
+           console.log ('gender is male');
+           console.log("name",empname);
+           console.log("department",department);
+             
+            if(basicsal>=100000)
+            {
+            console.log("tax is " ,(basicsal*0.15));
+            console.log("tax is 15%");
+
+            }
+             else if(basicsal>=50000){
+                console.log("tax is",(basicsal*0.1));
+                console.log("tax is 10%");
+
+            }
+             else if(basicsal>=25000){
+                console.log("tax is",(basicsal*0.5));
+                console.log("tax is 5%");
+
+            }
+            else{
+            console.log("tax is", 0);
+            }
+        }
+        if( gender == 'female')
+        {
+            console.log("gender is female");
+            console.log("name",empname);
+            console.log("department",department);
+           
+            if(basicsal>=100000) {
+            console.log("tax is " ,(basicsal*0.1));
+            console.log("tax is 10%");
+            }
+            else if(basicsal>=50000){
+                console.log("tax is",(basicsal*0.05));
+                console.log("tax is 5%");
+            }
+         else{
+                console.log("tax is",0);
+            }
+        }
+        
+
+          </script>
+</body>
+</html>

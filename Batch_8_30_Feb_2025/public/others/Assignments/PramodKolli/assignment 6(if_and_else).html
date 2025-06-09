@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt('enter your name');
+        var gender = prompt('enter your gender, male or female' );
+        var locat = prompt('enter your location');
+        var department = prompt('enter your department');
+        var basicsalary = parseInt(prompt('enter your basicsalary'));
+        var pf = (basicsalary*12)/100;
+        var hra = (basicsalary*24)/100;
+        var totalsalary = basicsalary + pf + hra
+        if (gender == 'male') {
+            if (totalsalary >= 100000){
+                var taxpercent = 15;
+                var tax = (taxpercent/100)*totalsalary;
+                console.log('employee tax-'+ tax);
+            }
+            else if (totalsalary >= 50000){
+                var taxpercent = 10;
+                var tax = (taxpercent/100)*totalsalary;
+                console.log('employee tax-'+tax);
+            }
+            else if (totalsalary >= 25000){
+                var taxpercent = 5;
+                var tax = (taxpercent/100)*totalsalary;
+                console.log('employee tax-'+tax);
+            }
+            else {
+                var taxpercent = 0;
+                console.log('employee tax-'+taxpercent);
+            }
+        }
+        else if(gender == 'female'){
+            if (totalsalary >= 100000){
+                var taxpercent = 10;
+                var tax = (taxpercent/100)*totalsalary;
+                console.log('employee tax-'+ tax);
+            }
+            else if (totalsalary >= 50000){
+                var taxpercent = 5;
+                var tax = (taxpercent/100)*totalsalary;
+                console.log('employee tax-'+tax);
+            }
+            else {
+                var taxpercent = 0;
+                console.log('employee tax-'+taxpercent);
+            }
+        }
+        else{
+            console.log("please enter correct value")
+        }
+
+    </script>
+</body>
+</html>

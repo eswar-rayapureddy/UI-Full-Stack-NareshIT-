@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("Enter a number to check Armstrong nunber");
+        len = n.length;
+        m = parseInt(n);
+        // console.log(len);
+        var a = 0;
+        var p = 0;
+        for (let i of String(n)) {
+            // console.log(i);
+            // console.log(typeof(i))
+            j = parseInt(i)
+            // console.log(typeof(j))
+            p = j ** len;
+            a = a + p;
+            // console.log(a);
+        }
+        if (a == m) {
+            console.log("The given number " + n + " is an Armstrong number.")
+        }
+        else {
+            console.log("The given number " + n + " is not an Armstrong number.")
+        }
+    </script>
+</body>
+
+</html>

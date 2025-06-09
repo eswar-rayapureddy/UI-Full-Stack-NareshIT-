@@ -1,0 +1,27 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <title>
+            Document
+        </title>    
+            <body>
+                <script>
+                    var n = 171;
+                    var rev = 0;
+                    var a = n;
+                    while (n > 0) {  //* 171 > 0
+                     var r = n % 10;    //* 171 % 10 -> 1
+                     rev = rev * 10 + r; //* 0 = 0 * 10 + 1 -? 1
+                     n = parseInt(n / 10); //* 171 = 171/10 -> 17
+                    }
+                    if (a == rev){
+                        console.log("Given number is pallindrome");    
+                    }
+                    else{
+                        console.log("Given number is not a pallindrome");
+                    }
+                     
+                </script>
+            </body>
+    </head>
+

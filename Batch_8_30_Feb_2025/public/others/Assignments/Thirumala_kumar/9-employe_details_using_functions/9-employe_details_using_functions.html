@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var name, gender, loc, department, basicsal;
+        var totalsal, pf, hra, taxpercent;
+        function readUserDetails(){
+            name = prompt("enter the name");
+            gender = prompt("enter the gender (male / female)");
+            loc = prompt("enter the location");
+            department = prompt("enter the department");
+            basicsal = parseInt(prompt("enter the basicsal"));
+            hraAndPf();
+        }
+        function hraAndPf(){
+            pf = (basicsal * 12) / 100;
+            hra = (basicsal * 24) / 100;
+            totalsal();
+        }
+        function totalsal(){
+            totalsal = basicsal + pf + hra;
+            taxpercent();
+        }
+        function taxpercent() {
+            if ( gender == 'male'){
+                if (totalsal > 100000){
+                    taxpercent = (totalsal * 15) / 100;
+                }else if (totalsal > 50000){
+                    taxpercent = (totalsal * 10) / 100;
+                }else if ( totalsal > 25000){
+                    taxpercent = (totalsal * 5) / 100;
+                }else {
+                    taxpercent = 0;
+                }
+            }
+            if (gender == 'female'){
+                if (totalsal > 100000){
+                    taxpercent = (totalsal * 10) / 100;
+                }else if (totalsal > 50000){
+                    taxpercent = (totalsal * 5) / 100;
+                }else {
+                    taxpercent = 0;
+                }
+            }
+        }
+        function displayDetails(){
+            readUserDetails();
+            console.log("name is : "+ name);
+            console.log("gender is : "+ gender);
+            console.log("location is : ", loc)
+            console.log("basicsal is :"+ basicsal);
+            console.log("pf is : "+ pf);
+            console.log("hra is : "+ hra);
+            console.log("totalsal is  : "+ totalsal);
+            console.log("taxpercent is : " + taxpercent);
+        } 
+        displayDetails();
+    </script>
+</body>
+</html>

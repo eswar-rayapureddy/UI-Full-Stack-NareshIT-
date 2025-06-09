@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getEmployeeDetails()
+        {
+            var name = prompt("Enter Emp name")
+            var gender = prompt("Enter gender")
+            var age = prompt("Enter age")
+            var dept = prompt("enter department")
+            var basic_sal = parseInt(prompt("enter salary"))
+            console.log("bsic sal" + basic_sal)
+            
+            calculatePfHra(basic_sal)
+            
+            calculateTotalTax(gender , basic_sal)
+            displayEmployeeDetails(name, age, gender, basic_sal, pf, hra, tax, totalSalary)
+        }
+        function calculatePfHra(basic_sal)
+        {
+            var pf =  1.5 * basic_sal
+            var hra = 2.5 * basic_sal
+            console.log("pf" , pf)
+            calculateTotalSal(basic_sal , pf , hra)
+        }
+        function calculateTotalSal(basic_sal , pf , hra)
+        {
+            var totalSalary = basic_sal + pf + hra
+        }
+        function calculateTotalTax(gender, basic_sal)
+        {
+            var tax=0;     
+            if(gender == 'male') {
+               if (basic_sal >= 100000)
+                {
+                    tax = parseFloat((basic_sal * 15)/100)
+                    console.log("the tax percent is :" + tax)
+                }
+                else if (basic_sal >= 50000)
+                {
+                    tax = parseFloat((basic_sal * 10)/100)
+                    console.log("the tax percent is :" + tax)
+                }
+               else if (basic_sal >= 20000)
+                {
+                    tax = parseFloat((basic_sal * 5)/100)
+                    console.log("the tax percent is :" + tax)
+                }
+                else
+                {
+                    console.log("the tax percent is zero")
+                }
+            }
+            else if(gender == 'female')
+            {
+                if (basic_sal >= 100000)
+                {
+                    tax = parseFloat((basic_sal * 10)/100)
+                    console.log("the tax percent is :" + tax)
+                }
+                else if (basic_sal >= 50000)
+                {
+                    tax = parseFloat((basic_sal * 5)/100)
+                    console.log("the tax percent is :" + tax)
+                }
+                else
+                {
+                    console.log("the tax percent is zero")
+                }
+            }
+           
+        }
+        function displayEmployeeDetails(name, age, gender, basic_sal, pf, hra, tax, totalSalary)
+        {
+            console.log("enter the name :" + name);
+            console.log("enter the age  :" + age);
+            console.log("enter the gender :" + gender);
+            console.log("enter the department :" + dept);
+            console.log("enter the basic salary :" + basic_sal);
+            console.log("enter the pf amount :" + pf);
+            console.log("enter the hra amount :" + hra);
+            console.log(typeof(tax));
+            console.log("enter the tax amount :" + tax);
+            console.log("the total salary amount :" + totalSalary);
+            
+        }
+        getEmployeeDetails()
+    </script>
+</body>
+</html>

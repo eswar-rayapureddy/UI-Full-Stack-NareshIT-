@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emp details using functions</title>
+</head>
+<body>
+    <script>
+        var readValues = () =>{
+            var empname, age, gender, department, basicsal,pf,hra,totalsal;
+            empname = prompt("Enter emp name");
+            age = prompt("Enter emp age");
+            gender = prompt("Enter emp gender male or female");
+            department = prompt("Enter emp department");
+            basicsal = parseInt(prompt("Enter basic salary of emp"));
+            pfper = parseInt(prompt("Enter pf percentage"));
+            hraper = parseInt(prompt("Enter hra percentage")); 
+            writevalues(empname,age,gender,department,basicsal,pfper,hraper);
+            var result = getvalues(pf,hra,totalsal,basicsal,pfper,hraper);
+        }
+        var writevalues = (empname,age,gender,department,basicsal,pfper,hraper) =>{
+            console.log("Emp name:",empname);
+            console.log("Emp age:",age);
+            console.log("Emp gender:",gender);
+            console.log("Emp department:",department);
+            console.log("Emp basic salary:",basicsal);
+        }
+        var getvalues = (pf,hra,totalsal,basicsal,pfper,hraper) => {
+            var pf = (basicsal * pfper) / 100;
+            var hra = (basicsal * hraper) /100;
+            var totalsal = basicsal + pf + hra;
+            console.log("The total salary of the Employee:",totalsal);
+            return (totalsal);
+        }
+        readValues();
+    </script>
+    
+</body>
+</html>

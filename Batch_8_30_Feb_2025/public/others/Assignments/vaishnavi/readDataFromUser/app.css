@@ -1,0 +1,17 @@
+ul {
+    width: 700px;
+    border: 2px solid rgb(255, 51, 0);
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #cccccc6b;
+}
+li  {
+    list-style: none;
+    border: 2px solid gold;
+    background-color: plum;
+    margin: 20px;
+    padding: 10px;
+}
+#resultBlock {
+    display: none;
+}

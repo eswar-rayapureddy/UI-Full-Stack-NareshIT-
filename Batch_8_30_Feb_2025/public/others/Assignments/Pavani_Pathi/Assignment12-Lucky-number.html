@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = prompt("Enter number")
+        var sum = 0;
+
+        n = parseInt(num)
+        while(n > 0)
+        {
+            var temp = n % 10
+            sum = sum + temp
+            n = n / 10
+            n = parseInt(n)
+            if( n == 0 && sum > 9)
+             {
+                n = sum;
+                sum = 0;
+             }
+        }
+        console.log("Lucky number is " + sum)
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var count=0;
+        //program to display the numbers 1 to 100
+        for (var i = 1;i <= 100; i++){
+            console .log(i);
+        }
+
+
+        //program to display sum of numbers between 1 to 100
+        for (var i =1;i <=100;i++){
+            count += i;
+        }
+        console.log(count);
+
+        //program to display sum of numbers between 90 to 51
+        for(var i=90;i>=51;i--){
+            count +=i;
+        }
+        console.log(count);
+
+        //program to display all the odd numbers from 1 to 100
+        for(var i=1;i<=100;i++){
+            if(i % 2 != 0){
+                console.log(i)
+
+            }
+        }
+
+        //program to display all the even numbers between 100 to 1
+        for(var i = 100;i >= 1;i--){
+            if(i % 2 == 0){
+                console.log(i);
+            }
+        }
+
+        //program to display sum of all the even numbers between 1000 to 200
+        var j=0;
+        for(var i = 1000;i >= 200;i--){
+            if(i % 2 == 0){
+                
+                j = j + i;
+            }
+        }
+        console.log(j)
+
+        //program to display wheather the given number is prime or not
+        var k=0;
+        var n = prompt("enter the number");
+        n = parseInt(n);
+        for(var i = 1; i <= n; i++){
+            var rem = n % i;
+            if(rem == 0){
+                k++;
+            }
+        }
+        if(k == 2){
+            console.log("it is a prime number" +n);
+        }else{
+            console.log("it is not a prime number");
+        }
+
+
+        //program to display prime numbers between 1 to 100
+        // var m=0;
+        for(var i=1;i <= 100; i++){
+            var m=0;
+            for (var j = 1;j <= i; j++){
+                var rem = i%j ;
+                if(rem == 0){
+                    m++;
+
+                }
+
+            }
+            if(m == 2){
+            console.log("it is a prime number" +i);
+            }
+
+        }
+
+
+        //program to display sum of all prime numbers from 1 to 100  
+        var sum=0;
+        for (var i = 1; i <= 100; i++) {
+            var m = 0;  
+             for (var j = 1; j <= i; j++) {
+                var rem = i % j;  
+                if (rem == 0) {
+                    m++;
+                 }
+             }
+             if (m == 2) {  
+                console.log(i + " is a prime number");
+                sum=sum+i;
+            }
+            console.log("sum "+sum)
+        }
+
+
+        //program to display sum of all prime numbers between 200 to 20
+        var summ = 0;
+        for (var i = 200;i >= 20;i--){
+            var m = 0;
+            for (var j = 1;j <= i;j++){
+                var rem = i % j;
+                if(rem == 0){
+                    m++;
+                }
+            }
+            if (m == 2){
+                console.log(i);
+                summ=summ + i;
+                console.log(i + " is a prime number");
+            }
+            console.log("sum is" +summ);
+        }
+
+    </script>
+
+    
+</body>
+</html>

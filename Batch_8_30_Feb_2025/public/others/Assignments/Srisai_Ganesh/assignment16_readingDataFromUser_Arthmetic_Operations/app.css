@@ -1,0 +1,23 @@
+ul {
+    width: 400px;
+    border: 2px solid blue;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+li {
+    list-style: none;
+    border: 1px solid #dad;
+    background-color: #fff;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-group {
+    /* float: left; */
+    /* margin: auto; */
+}
+
+#resBlock {
+    display: none;
+}

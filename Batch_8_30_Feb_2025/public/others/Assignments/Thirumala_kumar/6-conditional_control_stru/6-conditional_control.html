@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            var name = prompt("enter your name");
+            var gender = prompt("enter your gender (male/female)");
+            var department = prompt("enter the department");
+            var basicsal = parseFloat(prompt("enter the basicsal"));
+            var hfa = (basicsal * 12)/100;
+            var pf = (basicsal * 24)/100;
+            var total = basicsal + hfa + pf;
+
+            if (gender === 'male' ){
+                 if (total >= 100000) {
+                  taxprecent = (total * 15) / 100;
+                }else if (total >= 50000){
+                    taxprecent = (total * 10) / 100;
+                }
+                else if (total >= 25000) {
+                    taxprecent = (total * 2) / 100;
+                }
+                else {
+                    taxprecent = 0;
+                }
+            }
+
+            if (gender === 'female'){
+                 if (total >= 100000) {
+                  taxprecent = (total * 15) / 100;
+                }else if (total >= 50000){
+                    taxprecent = (total * 10) / 100;
+                }
+                else {
+                    taxprecent = 0;
+                }
+            }
+            
+            console.log("gender :" + gender);
+            console.log("name :" + name);
+            console.log("basicsal :" + basicsal);
+            console.log("total :" + total);
+            console.log("taxprecent :"+taxprecent);
+
+        </script>
+    </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt("enter your name");
+        var gender = prompt("enter your gender (male/female)");
+        var department = prompt("enter the department");
+        var basicsal = parseFloat(prompt("enter the basicsal"));
+        var hfa = (basicsal * 12)/100;
+        var pf = (basicsal * 24)/100;
+        var total = basicsal + hfa + pf;
+
+        if (gender === 'male' ){
+             if (total >= 100000) {
+              taxprecent = (total * 15) / 100;
+            }else if (total >= 50000){
+                taxprecent = (total * 10) / 100;
+            }
+            else if (total >= 25000) {
+                taxprecent = (total * 2) / 100;
+            }
+            else {
+                taxprecent = 0;
+            }
+        }
+
+        if (gender === 'female'){
+             if (total >= 100000) {
+              taxprecent = (total * 15) / 100;
+            }else if (total >= 50000){
+                taxprecent = (total * 10) / 100;
+            }
+            else {
+                taxprecent = 0;
+            }
+        }
+        
+        console.log("gender :" + gender);
+        console.log("name :" + name);
+        console.log("basicsal :" + basicsal);
+        console.log("total :" + total);
+        console.log("taxprecent :"+taxprecent);
+
+    </script>
+</body>
+</html>

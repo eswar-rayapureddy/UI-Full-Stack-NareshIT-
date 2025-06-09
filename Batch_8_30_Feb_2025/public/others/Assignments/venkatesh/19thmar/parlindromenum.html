@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>parlindrome number finding</h1>
+    <script>
+       
+        var n=prompt("enter the number");
+        var m=parseInt(n)
+        var revnumber= 0
+
+        while( n > 0 ) {
+            var rem=n%10;
+            n=n/10;
+            revnumber=(revnumber*10)+rem;
+            n=parseInt(n);
+
+        }
+        if(m == revnumber){
+            console.log("the given number is a parlindrome");
+        }else{
+            console.log("the given number is not a parlindrome");
+        }
+        
+    </script>
+    
+</body>
+</html>

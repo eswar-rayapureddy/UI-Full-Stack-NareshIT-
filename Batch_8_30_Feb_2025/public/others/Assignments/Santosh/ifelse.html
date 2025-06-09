@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var employefname = prompt("Please enter your FirstName");
+        var employelname = prompt("Please enter your lastName");
+        var full_name = employefname + employelname;
+        var age = prompt('Please enter your age');
+        var emp_gender = prompt('Please Enter your Gender m or f');
+        var emp_Dept = prompt('Please Enter your Department');
+        var basc_salary = parseInt(prompt('Please Enter Salary'));
+
+        if (emp_gender == 'm') {
+            if (basc_salary >= 100000) {
+                var total_tax = (20 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            } else if (basc_salary >= 50000) {
+                var total_tax = (10 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            } else if (basc_salary >= 25000) {
+                var total_tax = (5 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            } else {
+                var total_tax = (2 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            }
+        } else {
+            if (basc_salary >= 100000) {
+                var total_tax = (10 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            } else if (basc_salary >= 50000) {
+                var total_tax = (5 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            } else {
+                var total_tax = (1 / 100) * basc_salary;
+                var total_in_hand = basc_salary - total_tax;
+                console.log('Total in hand salary of ' + full_name + "is " + total_in_hand);
+                alert('Dear ' + full_name + "your total tax deductable is: " + total_tax + "and in hand salary will be : " + total_in_hand);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

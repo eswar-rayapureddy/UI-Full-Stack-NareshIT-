@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deserialization</title>
+    </head>
+    <body>
+        <script>
+
+            // Deserialization -> taking values and putting into individual variables
+
+            var studentDetails = ["Raj", 20, 'Male'];
+            console.log(studentDetails);
+
+            /* 
+            var sname = studentDetails[0];
+            var sage = studentDetails[1];
+            var sgender = studentDetails[2];
+            console.log(sname, sage, sgender);
+            */
+
+            [sname, sage, sgender, smarks] = ["Raj", 20, 'Male', [88, 78, 81]];
+            console.log(sname, sage, sgender, smarks);
+
+
+            
+            var univDetails = {
+                name: 'Mumbai University',
+                rank : '2/10',
+                loct: 'Mumbai'
+            }
+            console.log(univDetails);
+            
+            var {name, rank, loct} = univDetails;
+            
+            console.log(name);
+            console.log(rank);
+            console.log(loct);    
+
+
+        </script>
+    </body>
+</html>

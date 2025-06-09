@@ -1,0 +1,88 @@
+
+<!-- 'this' keyword is used in the same  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Employee Details using 'this' keyword</h3>
+    <script>
+        var employeeDetails = {
+
+            companyName : 'MediConnect Industry',
+
+            readEmployeeDetails () {
+                this.employeeName = prompt("Enter Name of The Employee");
+                this.employeeAge = prompt("Enter Age of The Employee");
+                this.employeeGender = prompt("Enter Gender of The Employee (Male/Female)");
+                this.department = prompt("Enter the Departement of Employee");
+                this.basicPay = parseInt(prompt("Enter the Basic Pay of Employee "));
+                this.hraAndpf();
+            },
+
+            hraAndpf () {
+                this.hra = (24/100) * this.basicPay;
+                this.pf = (12/100) * this.basicPay;
+                this.totalSalary();
+            },
+
+            totalSalary () {
+                this.totalSal = this.basicPay + this.hra + this.pf;
+                this.taxApplicable();
+            },
+
+            taxApplicable () {
+                this.tax = '';
+                if (this.employeeGender == 'Male' || this.employeeGender == 'male'){
+                    if(this.totalSal > 100000){
+                        this.tax = (15/100)*this.totalSal;
+                        //console.log("Applicable tax is 15% and the tax will be " + this.tax );
+                    }else if(this.totalSal > 50000){
+                        this.tax = (10/100)*this.totalSal;
+                        //console.log("Applicable tax is 10% and the tax will be " + this.tax );
+                    }else if(this.totalSal > 25000){
+                        this.tax = (5/100)*this.totalSal;
+                        //console.log("Applicable tax is 5% and the tax will be " + this.tax );
+                    }else{
+                        this.tax = 'No Applicable Tax !! ';
+                    }
+                }else if (this.employeeGender == 'Female' || this.employeeGender == 'female'){
+                    if(this.totalSal > 100000){
+                        this.tax = (10/100)*this.totalSal;
+                        //console.log("Applicable tax is 10% and the tax will be " + this.tax );
+                    }else if(this.totalSal > 50000){
+                        this.tax = (5/100)*this.totalSal;
+                        //console.log("Applicable tax is 5% and the tax will be " + this.tax );
+                    }else{
+                        this.tax = 'No Applicable Tax !! ';
+                    }
+                }else{
+                    console.log("Incorrect Choice Entered !! ");
+                }
+            },
+
+            displayDetails() {
+                this.readEmployeeDetails()
+                console.log("Name of the Company is : " + this.companyName);
+                console.log("Name of the employee is : " + this.employeeName);
+                console.log("Age of the employee is : " + this.employeeAge);
+                console.log("Gender of the employee is : " + this.employeeGender);
+                console.log("Departement of the employee is : " + this.department);
+                console.log("Basic Pay of the employee is : " + this.basicPay);
+                console.log("HRA of the employee is : " + this.hra);
+                console.log("PF of the employee is : " + this.pf);
+                console.log("Total Salary of the employee is : " + this.totalSal);
+                console.log("Payable Tax is " + this.tax);
+            }
+        }
+
+        employeeDetails.displayDetails();
+
+
+    </script>
+</body>
+</html>

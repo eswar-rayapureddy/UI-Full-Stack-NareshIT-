@@ -1,0 +1,6 @@
+GIT repo
+
+req for making use of GIT repo 
+    1. Valid registered mail ID
+    2. Need to be a collaborator for existing project
+    2. Git client for cloning code to local

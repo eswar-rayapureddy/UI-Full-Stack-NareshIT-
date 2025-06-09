@@ -1,0 +1,45 @@
+
+<!-- Sum of all values of array -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var getNoOfElemets = () =>{
+            var elements = parseInt(prompt("Enter No of Elemets you wants to Insert "));
+            arrayInput(elements);
+        }
+
+        var arrayInput = (number) => {
+            var array=[];
+            for (var i = 0; i<number ; i++ ){
+                var input = parseInt(prompt("Enter Element : "));
+                array[i]=input;
+            }
+            display(array,number)
+        }
+
+        var display = (array,number) => {
+            for (var i = 0; i<number ; i++ ){
+                console.log(array[i]);
+            }
+            sum(array,number);
+        }
+
+        var sum = (array,number) => {
+            var sum=0;
+            for (var i = 0; i<number ; i++ ){
+                sum = sum+array[i];
+            }
+            console.log("Sum of all the Elements of array is : " + sum);
+        }
+
+        getNoOfElemets();
+        </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+   </head>
+   <body>
+       <script>
+        var palindromeNumberWithInTheArray = () =>{
+            var data = [];
+            var n = parseInt(prompt("enter the count that you want know wheather it is pallindrome or not"));
+            for(var i = 0; i < n; i++){
+                data[i] = parseInt(prompt("enter the values")); 
+                value = data[i];   
+                var isPallindrmone = checkingPalindromeOrNot(value);
+                console.log(isPallindrmone +":" + data[i]);
+
+            }
+            console.log(data);
+        }
+        var checkingPalindromeOrNot = (value) =>{
+            var num = 0;
+            originalValue = value;
+
+            while (value > 0){        
+            var rem = value % 10;
+            value = value / 10;
+            value = parseInt(value);
+            num = (num * 10) + rem;
+            }
+            console.log(num);
+            if(originalValue == num){
+                console.log("it is the palindrome number")
+            }else{
+                console.log("it is not a palindrome number");
+            }
+            
+        }
+        palindromeNumberWithInTheArray();
+
+       </script>
+   </body>
+</html>

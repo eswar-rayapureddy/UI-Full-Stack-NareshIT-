@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palindrome in Array</title>
+    </head>
+    <body>
+        <script>
+            var size = prompt('enter the Size of the Array :');
+            var arr = [];
+            var temp;
+            var reverseNumber;
+            for(i = 0; i < size;i++){
+                arr[i] = parseInt(prompt("Enter element - "+(i+1)+" :"));
+
+            }
+            console.log("The Array Element are : ",arr);
+            console.log('The Palindrome Numbers are : ')
+            for(i = 0; i < size; i++){
+                temp = arr[i] ;
+                reverseNumber = 0;
+                while(arr[i] > 0){
+                    rem = arr[i] % 10;
+                    arr[i] = Math.floor(arr[i] / 10);
+                    reverseNumber = (reverseNumber * 10) + rem;
+
+
+                }
+                if (temp == reverseNumber){
+                    console.log(temp);
+                }
+                
+            }
+
+
+        </script>
+    
+    </body>
+</html>

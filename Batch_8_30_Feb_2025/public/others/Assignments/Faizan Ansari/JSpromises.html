@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Promises</title>
+    </head>
+    <body>
+        <script>
+
+            console.log("Start");
+
+            var a = 11;
+            var myPromise = new Promise((resolve, reject) => {
+                console.log("from inside promise");
+                if(a==10){
+                    resolve("It is resolve");
+                }else {
+                    reject("It is rejected");
+                }
+            })
+
+            myPromise.then(()=>{
+                console.log("From then method");
+            }).catch(()=>{
+                console.log("From catch method");
+            }).finally(()=>{
+                console.log("From finally");
+            })
+
+            console.log("End");
+
+        </script>
+    </body>
+</html>

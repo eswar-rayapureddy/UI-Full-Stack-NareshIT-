@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="demo1.css">
+    </head>
+    <body>
+        <ul>
+            <li>
+                Enter first value: 
+                <input type="text" id="fval">
+            </li>
+            <li>
+                Enter Second value: 
+                <input type="text" id="sval">  
+            </li>
+            <li>
+                <input type="button" value="Get ArithmeticData" onclick="doTheSum()">
+            </li>
+            
+            <li id="resultBlock1">
+                The sum of values is 
+                <span id="sum_block">...</span>
+            </li>
+            <li id="resultBlock2">
+                The sub of values is 
+                <span id="sub_block">...</span>
+            </li>
+            <li id="resultBlock3">
+                The mul of values is 
+                <span id="mul_block">...</span>
+            </li>
+            <li id="resultBlock4">
+                The div of values is 
+                <span>...</span>
+            </li>
+        </ul>
+        <script>
+            var doTheSum = () => {
+                var firstVal = document.querySelector("#fval").value;
+                firstVal = parseInt(firstVal);
+                var secondVal = document.querySelector("#sval").value;
+                secondVal = parseInt(secondVal);
+                var result = firstVal + secondVal;
+                console.log(result)
+
+                document.querySelector('#sum_block').innerText  = result;
+            
+                document.querySelector("#resultBlock1").style.display = 'block';
+                var result1 = firstVal - secondVal;
+                console.log(result1)
+                document.querySelector('#sub_block').innerText  = result1;
+            
+                document.querySelector("#resultBlock2").style.display = 'block';
+                var result2 = firstVal * secondVal;
+                console.log(result2)
+               // document.querySelector('span').innerText  = result2;
+            
+                document.querySelector("#resultBlock3").style.display = 'block';
+                var result3 = firstVal % secondVal;
+
+                //document.querySelector('span').innerText  = result3;
+            
+                document.querySelector("#resultBlock4").style.display = 'block';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+Configuring the webserver
+
+    What is a webserver 
+
+        1. To server services(webservices), through which client can interact with server for data sending or receiving
+        2. To host the resources 
+
+    Eg: AWS, Tomcat apache, jboss, weblogic, php, .net, Nodejs, etc. 
+
+
+    file:///C:/UI_FullStack/UIClasses/Batch_8_30_Feb_2025/Feb_24/newsDetails.html
+
+---------------------
+
+Steps to configure nodejs webserver
+    1. npm install express -g    (installs express module/framework in lcoal)
+    2. npm install exrpess-generator -g (installs express-generator module in local)
+    3. in commandprompt redirect to the folder where you wna to create  a server 
+    4. create a webserver with userdefined servername 
+
+                express webapplication 
+            
+    5. get inside the serverfolder and install all the node modules 
+             
+               npm install 
+    6. Open/edit app.js file add below lines of code 
+
+            app.listen(8081, () => {
+                console.log("Server is listing at 8081");
+            });

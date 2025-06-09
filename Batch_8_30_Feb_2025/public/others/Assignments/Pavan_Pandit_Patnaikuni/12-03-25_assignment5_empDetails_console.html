@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <script>
+      var Name = prompt("Enter name");
+      // Name = toString(Name);
+      var age = prompt("Enter age");
+      age = parseInt(age);
+      var gender = prompt("Enter gender");
+      // gender = toString(gender);
+      var bSal = prompt("Enter basic salary");
+      bSal = parseFloat(bSal);
+      var pf = bSal * 0.12;
+      var hra = bSal * 0.24;
+
+      var totalSal = bSal + pf + hra;
+
+      console.log("The name of the employee is : " , Name);
+      console.log("The age is : " , age);
+      console.log("The gender is : " , gender);
+      console.log("The basic salary is " , bSal);
+      console.log("The PF of salary is : " , pf);
+      console.log("The HRA of salary is : " , hra);
+
+    </script>
+  </body>
+</html>

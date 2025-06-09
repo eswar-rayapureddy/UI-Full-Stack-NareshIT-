@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var stringData = "aaa bab eee eerrdd www"    
+        var singleWord  = " "; var reverseWord = " "
+        var i = j =  0
+        var count = 0
+        function palindromeCheck(singleWord)
+        {
+            
+            len = singleWord.length;
+            var n = 0
+            reverseWord = " "
+            for(k = len; k > 0; k--)
+            {
+                reverseWord[n] = singleWord[k] 
+                n = n + 1
+            }
+            if(reverseWord == singleWord)
+            {
+                console.log("reverseWord" + reverseWord)
+                count = count + 1
+            }
+        }
+        while(stringData[i] != null)
+        {
+            singleWord[j] = stringData[i]
+            
+            
+            j = j + 1
+            if (stringData[i] == " ")
+            {
+            
+              palindromeCheck(singleWord)
+                singleWord =" "
+                j = 0
+            }
+            i = i + 1
+        }
+        palindromeCheck(singleWord)
+        console.log("total palindromes  " + count)
+    </script>
+</body>
+</html>

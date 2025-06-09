@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>emp details</title>
+    </head>
+    <body>
+        <script>
+            let empname=prompt("enter empolyee name:");
+            let empage=prompt('emter empolyee age');
+            let empgender=prompt('enter gender');
+            let empdepartement=prompt('enter department');
+            let idnumber=prompt('enter id number');
+            let floornumber=prompt( " enter floor number");
+           let basis_salary= parseInt(prompt('enter basic salary'));
+           let hra=((basis_salary)*24/100);
+           let pf = ((basis_salary)*12/100);
+           let total=basis_salary + hra + pf
+           console.log("EMPOLYEE_NAME:",empname)
+           console.log("EMPOLYEE_AGE:",empage)
+           console.log("EMPOLYEE_DEPARMENT:",empdepartement)
+           console.log("EMPOLYEE_IDNUMBER:",idnumber)
+           console.log("EMPOLYEE_FLOORNUMBER:",floornumber)
+           console.log("EMPOLYEE_BASIs_SALARY:",basis_salary)
+           console.log("EMPOLYEE_total_SALARY:",total)
+           console.log("EMPOLYEE_BASIC_hra:",hra)
+           console.log("EMPOLYEE_BASIC_pf:",pf)
+
+
+
+
+
+
+
+
+
+ 
+        </script>
+    </body>
+</html>

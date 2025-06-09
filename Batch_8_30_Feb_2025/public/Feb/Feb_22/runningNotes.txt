@@ -1,0 +1,28 @@
+#abc {
+    color: red;
+}
+
+<p style="color:green" id="abc">  
+    ....
+</p>
+
+CSS priority order:  pending
+------------------
+
+anchor tag 
+
+    <a href="path of the external webpage">link text</a>
+
+
+
+<a href="...">
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    
+</a>

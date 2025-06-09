@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //  check the armstrong or not
+            var count = 0;
+            for (var i = 1; i <= 1000; i++){ 
+                var n = i;
+                var temp = n;
+                var len = n.toString().length;
+                var arm = 0;
+                while (n > 0){
+                    var rem = n % 10;
+                    var arm = rem ** len + arm;
+                    var n = parseInt(n / 10);
+                }
+                if ( temp == arm){
+                    console.log(" it is armstrong number ",arm);
+                    count++;
+                }
+            }
+            console.log(" total no of armstrong bewteen 1 to 1000 are :",count);
+        </script>
+    </body>
+</html>

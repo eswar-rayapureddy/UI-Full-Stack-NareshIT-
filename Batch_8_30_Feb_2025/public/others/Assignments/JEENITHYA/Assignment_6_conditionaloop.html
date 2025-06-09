@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var empname= prompt("enter emp name");
+        var gender= prompt("enter emp gender male or female");
+        var department= prompt("enter emp department");
+        var basicsal=parseFloat(prompt("enter emp basic salary"));
+        var pf= parseFloat(prompt("enter pf percentage"));
+        var hra= parseFloat(prompt("enter hra percentage"));
+        var pf = (basicsal*pf)/100;
+        var hra = (basicsal*hra)/100;
+        var totalsal=basicsal+pf+hra;
+        
+        console.log("empname:" , empname);
+        console.log("empgender:" , gender);
+        console.log("empdepartment:" , department);
+        console.log("empbasicsalary:" , basicsal);
+        console.log("pf percentage:",pf);
+        console.log("hra:",hra);
+        console.log("totalsalary:",totalsal);
+        
+        if (gender=="male" || gender=="m"){
+            if(totalsal >= 100000){
+                console.log("Tax is 15%");
+            }
+            else if(totalsal >= 50000){
+                console.log("Tax is 10%");
+            }
+            else if(totalsal >= 25000){
+                console.log("Tax is 5%");
+            }
+            else{
+                console.log("tax is 0");
+            }
+        }
+        if (gender=="female" || gender=="f"){
+            if(totalsal >= 100000){
+                console.log("Tax is 10%");
+            }
+            else if(totalsal >= 50000){
+                console.log("Tax is 5%");
+            }
+            else{
+                console.log("tax is 0");
+            }
+        }
+        
+    </script>
+</body>
+</html>

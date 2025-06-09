@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+    <script>
+        var primeNumbersInTheGivenArray = () =>{
+            var data = [];
+            var b = parseInt(prompt("enter how mnay values"));
+            for (var i = 0 ; i < b; i++) {
+              data[i] = parseInt(prompt("enter value for position" + i));
+              var isPrime = checkingPrimeOrNot(data[i]);
+              console.log(isPrime + " :" + data[i]);
+            }
+            console.log(data);
+    
+        }
+        var checkingPrimeOrNot =(n) =>{
+            var count = 0;
+                for (var i = 2; i < n; i++) {
+                    if (n % i == 0) {
+                        count++;
+                        break;
+                    }
+                }
+                if (count == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        primeNumbersInTheGivenArray();
+        
+
+
+    </script>
+      
+  </body>
+</html>

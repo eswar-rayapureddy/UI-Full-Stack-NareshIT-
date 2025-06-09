@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Serialization</title>
+    </head>
+    <body>
+        <script>
+        // Serialization -> combining with spread opearator - Array, Object 
+
+            var studentDetails = ["Raj", 23, 'M', "Hyderabad", true];
+            var collegeDetails = [ "COEP", 'Pune', "SPPU University", 1];
+
+            var completeDetails = [...studentDetails, ...collegeDetails, 'Stanza Living', 120000]
+
+            console.log(completeDetails);
+
+
+            var employee = {
+                name: "Krish",
+                location: "Delhi",
+                salary: 45000,
+                isFulltime: true
+            }
+
+            var organization = {
+                cname : "Vision Infotech",
+                address: "sect 32 Noida",
+                telephone: 25621-12219
+            }
+
+            var empData = {...employee, ...organization};
+            console.log(empData);
+
+            // <-----------------------------------------------> //
+            console.log("-------------------------------------------")
+
+            var bookname = 'My Life Struggles';
+            var bookPrice = 299;
+            var publisher = 'ABC publisher';
+
+            // var bookDetails = {
+            //     bookname: bookname, 
+            //     bookPrice: bookPrice, 
+            //     publisher: publisher
+            // };
+            // console.log(bookDetails);
+
+            var bookDetails = {bookname, bookPrice, publisher};
+            console.log(bookDetails);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var a = [23,20,56,12,34,21,33];
+    var j = 0;
+    var len = a.length;
+    var b = [] ;
+    
+    for ( var i = 0 ; i < len ; i++)
+    {
+        for ( var j = i + 1 ; j < len ; j++)
+        {
+            if(a[i] < a[j + 1])
+            {
+                var b = a[i]
+                a[i] = a[j + 1]
+                a[j + 1] = b
+            }
+                
+        }
+            
+    }   
+    console.log("Descending order of array " + a)
+    for ( var i = 0 ; i < len ; i++)
+    {
+        for ( var j = i + 1 ; j < len ; j++)
+        {
+            if(a[i] > a[j + 1])
+            {
+                var b = a[i]
+                a[i] = a[j + 1]
+                a[j + 1] = b
+            }
+                
+        }
+            
+    }   
+    console.log("Acending order is " + a)
+
+    </script>
+</body>
+</html>

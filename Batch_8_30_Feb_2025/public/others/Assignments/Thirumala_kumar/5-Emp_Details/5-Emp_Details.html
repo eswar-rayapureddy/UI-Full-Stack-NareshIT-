@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Employee Details</title>
+    </head>
+    <body>
+        <script>
+            var Ename = prompt("enter the Name");
+            var Gender = prompt("enter your Gender");
+            var Edepartmebnt = prompt("enter the Department");
+            var BasicSalary= parseFloat(prompt("enter the basicSalary"));
+            var pf = (BasicSalary*12)/100;
+            var hra = (BasicSalary*24)/100;
+            var Total = BasicSalary + pf + hra;
+            console.log("Ename is :"+Ename);
+            console.log("Edepartmebnt is :"+Edepartmebnt);
+            console.log("Gender is :"+Gender);
+            console.log("BasicSalary is :"+BasicSalary);
+            console.log("Total is :"+Total);
+        </script>
+        
+    </body>
+</html>

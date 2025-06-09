@@ -1,0 +1,60 @@
+Predefined heading tags:
+
+    h1
+    h2, 
+    h3,
+    h4,
+    h5,
+    h6
+
+    Inline elements and block level elements 
+
+Day-1 https://youtu.be/yn2jhS8ZZcM
+Day-2 https://youtu.be/E7iz16TpDcA
+Day-3 https://youtu.be/mq9p4pt4AFA
+Day-4 https://youtu.be/lhcJ2GI7b8E
+
+@durgaprasad158 
+
+p tag -> used to hold mutliline of text content..
+
+HTML Attributes :
+    Adding extra / meta data to tags through html Attributes
+
+    <abc>
+    </abc>
+
+    Predefined Attributes:
+        id -> using which we could add unique ref to html elements
+        name -> we can group relative set of items with same name 
+        class -> using which we can inject single or multiple classes to html elements
+        style -> using which we can inject inline css prop 
+        src - through which we can specify the path
+        href - through which we can specify the path of external link
+        alt - alternative text
+        title - title to be shown on mouseover of element
+        etc. 
+
+    Syntax:
+        <tagname attrname="value" attrname="value2" ... ... ..>
+            ....
+        </tagname>
+
+        <human aadhar="2423423" contact="112312" name="asdfa" age="70">
+            ...
+        </human>
+
+    Naming Convention: 
+
+        <p id="newsContent_3"></p>
+
+            id ="news cntent 1" - wrong 
+
+            id ="newscontent1" -> works not recommended
+
+            id="newsDetailsContent1" - works and recommended
+
+            id="news-dtails-content1" - works
+
+            id="news_dtails_content_1" - works 
+

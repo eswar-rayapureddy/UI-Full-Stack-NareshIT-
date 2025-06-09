@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+    <script>
+        var empname , gender , loc , department , basicsal;
+        var pf , hra , totalsal , taxpercent;
+        function readEmpDetails(){
+            empname = prompt("enter name");
+            gender = prompt("enter gender male / female");
+            loc = prompt("enter location");
+            department = prompt("enter department")
+            basicsal = prompt("enter basicsal");
+            basicsal = parseFloat(basicsal);
+            getPfAndHra();
+        }
+        function getPfAndHra(){
+            pf = (12 * basicsal) / 100;
+            hra = (24 * basicsal) / 100;
+            getTotalSal();
+        }
+        function getTotalSal(){
+            totalsal = basicsal + pf + hra;
+            getTaxPercentBasedOnGender();
+        }
+        function  getTaxPercentBasedOnGender(){
+             if ( gender == 'male'){
+                 if (totalsal > 100000){
+                     taxpercent = (totalsal * 15) / 100;
+                 }else if (totalsal > 50000){
+                     taxpercent = (totalsal * 10) / 100;
+                 }else if ( totalsal > 25000){
+                     taxpercent = (totalsal * 5) / 100;
+                 }else {
+                     taxpercent = 0;
+                 }
+             }
+             if (gender == 'female'){
+                 if (totalsal > 100000){
+                     taxpercent = (totalsal * 10) / 100;
+                 }else if (totalsal > 50000){
+                     taxpercent = (totalsal * 5) / 100;
+                 }else {
+                     taxpercent = 0;
+                 }
+             }
+         }
+        function displayEmpDetails(){
+            readEmpDetails();
+            console.log("name",empname);
+            console.log("gender",gender);
+            console.log("location",loc);
+            console.log("depatment",department);
+            console.log("basicsalary",basicsal);
+            console.log("pf",pf);
+            console.log("hra",hra);
+            console.log("taxpercent",taxpercent);
+            console.log("totalasalary",totalsal);
+          }
+          displayEmpDetails();
+   </script>
+   </body>
+</html>

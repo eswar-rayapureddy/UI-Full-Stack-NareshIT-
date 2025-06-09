@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmployeeDetails</title>
+</head>
+<body>
+
+  
+</body>
+
+     
+     <Script >
+        var  employeeName =prompt("Enter Your Name");
+        var  gender =prompt("Enter your Gender");
+        var departmentName=prompt("Department Name");
+        
+        var basicSalary=prompt("Enter Your Basic Salary");
+            basicSalary=parseInt(basicSalary);
+        
+        var PF =prompt("Enter your PF is %");
+            PF=parseInt(PF);
+           var empPF=(PF*basicSalary)/100;
+        
+        var HRA=prompt("Enter Your HRA in %");
+            HRA=parseInt(HRA);
+          var  empHra=(HRA*basicSalary)/100;
+        
+            var totalSalary = basicSalary + empPF +empHra ; 
+        
+            console.log("Employee Name :" + employeeName);
+            console.log("Gender :" + gender);
+            console.log("Department :" + departmentName);
+            console.log("Basic Salary :" + basicSalary);
+            console.log("PF is :" + PF +"%");
+            console.log("HRA is :" + HRA +"%");
+            console.log("Total Salary :" + totalSalary);
+            </Script>
+</html>

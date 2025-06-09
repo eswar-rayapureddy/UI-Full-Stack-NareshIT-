@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+      <script>
+        var enteringValues = () =>{
+            var data = [];
+            var n = parseInt(prompt("enter how mnay values"));
+            for (var i = 0 ; i < n; i++) {
+                data[i] = parseInt(prompt("enter value for position" + i));
+                value = data[i];
+                
+            }
+            var sortedData = descendingOrder(data);
+            console.log("Sorted Data in Descending Order:", sortedData + ":" + data);
+            console.log(data);
+
+        }
+        var descendingOrder = (data) =>{
+            for (var i = 0; i < data.length - 1; i++) {
+                for (var k = 0; k < data.length - 1 - i; k++) {
+                    if (data[k] < data[k + 1]) {  
+                        var temp = data[k];
+                        data[k] = data[k + 1];
+                        data[k + 1] = temp;
+                    }
+                }
+            }
+        console.log("Descending Order:", data);
+
+        }
+        enteringValues();
+
+      </script>
+  </body>
+</html>

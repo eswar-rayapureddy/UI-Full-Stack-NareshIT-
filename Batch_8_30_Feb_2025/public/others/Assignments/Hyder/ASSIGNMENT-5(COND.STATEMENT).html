@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Tax Calculation</title>
+</head>
+<body>
+<script>
+    let empname = prompt('ENTER EMPLOYEE NAME');
+    let empage = parseInt(prompt('ENTER EMPLOYEE AGE'));
+    let empgender = prompt('ENTER EMPLOYEE GENDER').toLowerCase();
+    let empsalary = parseInt(prompt("ENTER EMPLOYEE SALARY"));
+
+    let hra = empsalary * 23 / 100;
+    let pf = empsalary * 12 / 100;
+    let total = hra + pf + empsalary;
+
+    let tax6M = 6 / 100 * total;
+    let tax1M = 1 / 100 * total;
+    let tax5M = 5 / 100 * total;
+
+    let tax9F = 9 / 100 * total;
+    let tax5F = 5 / 100 * total;
+    let tax8F = 8 / 100 * total;
+
+    console.log('EMPLOYEE NAME:', empname);
+    console.log('EMPLOYEE AGE:', empage);
+    console.log('EMPLOYEE GENDER:', empgender);
+    console.log('EMPLOYEE SALARY:', empsalary);
+    console.log('HRA:', hra);
+    console.log('PF:', pf);
+    console.log('TOTAL SALARY:', total);
+
+    if (empgender === "male") {
+        if (empsalary >= 50000) {
+            console.log('Tax paid (5%):', tax5M);
+        } else if (empsalary >= 20000) {
+            console.log('Tax paid (1%):', tax1M);
+        } else if (empsalary >= 10000) {
+            console.log('Tax paid (6%):', tax6M);
+        }
+    } else if (empgender === "female") {
+        if (empsalary >= 50000) {
+            console.log('Tax paid (9%):', tax9F);
+        } else if (empsalary >= 30000) {
+            console.log('Tax paid (5%):', tax5F);
+        } else if (empsalary >= 6000) {
+            console.log('Tax paid (8%):', tax8F);
+        }
+    } else {
+        console.log('Invalid gender entered.');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program to find the lucky number of a given number</title>
+  </head>
+  <body>
+    <script>
+      var num = parseInt(prompt("Enter any number"));
+      var temp = num;
+      var sum = 0;
+      var rem;
+      while (num > 9) {
+        sum = 0;
+        while (num > 0) {
+          rem = num % 10;
+          sum = sum + rem;
+          num = parseInt(num / 10);
+        }
+        num = sum;
+      }
+      console.log("Lucky number of " + temp + " is : " + num);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+header, footer, main {
+    border: 1px solid;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    color: blue;
+}
+main {
+    height: 500px;
+    text-align: left;
+}
+
+.statusMsgBlock {
+    border: 2px solid;
+    text-align: center;
+    width: 450px;
+    background-color: aqua;
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 150px;
+}
+
+.tabContainer {
+   
+    display: flex;
+  
+}
+
+.tabContainer div {
+    border: 1px solid;
+    margin: 5px;
+    width: 90px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.tabContainer div:hover{
+    background-color: #ccc;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+span img {
+    width: 50px;
+  height: 30px;
+  position: absolute;
+  right: 17px;
+  top: 11px;
+  display: none;
+}
+
+@media screen and (min-width: 350px) and (max-width: 550px ) {
+    .statusMsgBlock {
+        width: 220px;
+    }
+
+    .addsblock {
+        display: none;
+    }
+
+    .tabContainer {
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        right: 10px;
+        background: #fff;
+        
+    }
+
+    span img{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px){
+    .statusMsgBlock {
+        width: 400px;
+        background: purple;
+        color: #fff;
+    }
+}
+
+.addsblock {
+    border: 1px solid;
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    height: 150px;
+    width: 150px;
+    background-color: yellow;
+}

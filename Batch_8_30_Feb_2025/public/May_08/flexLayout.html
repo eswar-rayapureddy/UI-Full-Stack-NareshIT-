@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demonstrating Flex layouts</title>
+        <style>
+            .container {
+                border: 2px solid;
+                margin: 2px;
+                padding: 5px;
+                height: 600px;
+                display: flex;
+                /* flex-direction: column-reverse; */
+                /* flex-wrap: wrap; */
+                flex-flow: row wrap;
+            
+                justify-content: space-evenly;
+                
+            }
+            .container div {
+                border: 1px solid;
+                width: 120px;
+                height: 50px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="order: 6;">Item 1</div>
+            <div style="order: 1;">Item 2</div>
+            <div style="order: 3;flex-grow: 2;">Item 3</div>
+            <div style="order: 5;">Item 4</div>
+            <div style="order: 4;flex-grow: 3;">Item 5</div>
+            <div style="order: 2;flex-shrink: 2;flex-basis: 200px;">Item 6</div>
+            
+            
+        </div>
+
+        <script>
+            // document.querySelector("").style.order = 1;
+        </script>
+    </body>
+</html>

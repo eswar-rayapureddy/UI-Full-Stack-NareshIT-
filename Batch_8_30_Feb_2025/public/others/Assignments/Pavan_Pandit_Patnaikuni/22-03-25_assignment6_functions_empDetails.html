@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      
+      details();
+      function details() {
+      
+       var name = prompt("Enter your name");
+       var gend = prompt("Enter gender");
+       var bSal = parseInt(prompt("Enter basic salary"));
+        
+        salary(name, gend, bSal);
+      } 
+      function salary(name, gend, bSal){
+        var pf = bSal * 0.12;
+        var hra = bSal * 0.05;
+        var tSal = bSal + pf + hra;
+        displayDetails(name, gend, bSal, pf, hra, tSal);
+      };
+      
+       
+      function displayDetails(name, gend, bSal, pf, hra, tSal) {
+        console.log(name);
+        console.log(gend);
+        console.log("basic salary : " + bSal);
+        console.log("pf : " + pf);
+        console.log("hra : " + hra);
+        console.log("total salary : " + tSal);
+      };
+    // displayDetails();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Parameter with default values
+
+            var addValue = (a = 3, b = 6, c = 9) => {
+                var sum = a + b + c;
+                return sum;
+            }
+
+            var result1 = addValue(10, 10, 10);
+            console.log(result1);
+
+            var result2 = addValue(20, 15)
+            console.log(result2);
+
+            var result3 = addValue(10);
+            console.log(result3);
+
+            var result4 = addValue();
+            console.log(result4);
+
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        // to sum of all prime numbers blw 200 to 20
+        var sum = 0;
+        for ( var j = 200; j >=20; j--){
+            var count = 0;
+            for(var i = 1; i <= j; i++){
+                var rem = j % i;
+                 if (rem == 0){
+                    count++;
+                }
+            }
+            if (count == 2){
+                console.log("is a prime number :" + j)
+                sum = sum + j;
+            }
+        }  
+        console.log("sum of all prime bewteen 1 to 100 is:",sum);
+        </script>
+    </body>
+</html>
+
+
+

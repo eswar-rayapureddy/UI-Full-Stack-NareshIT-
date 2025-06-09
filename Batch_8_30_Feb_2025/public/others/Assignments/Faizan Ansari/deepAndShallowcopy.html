@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deep Copy and Shallow Copy</title>
+    </head>
+    <body>
+        <script>
+
+            var a = 11;
+            var b;
+            b = a;
+            a++;
+            console.log("value of a :"+a);
+            console.log("value of b :"+b);
+
+            var data1 = {
+                name: "Raj",
+                age: 21
+            }
+
+            var data2;
+            // data2 = data1; // Deep Copy -> same object but 2 references created
+            data2 = {...data1} // shallow -> implemented with spread operator
+            data1.age++;
+
+            console.log(data1.age);
+            console.log(data2.age);
+
+        </script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,31 @@
+Inline and Block level elements:
+
+    Block level elements:
+        1. The best example for block level elements is 'div' tag
+        2. By default it occupies 100% width of the container
+        3. By default while rendering the the page, block level elements will try to render in the new line 
+        4. The element which is following the block level element will also comes to new line 
+        5. we can still control the dimentions of any block level element.
+
+    Inline elements:
+
+        1. 'span' The best example for inline element 
+        2. Inline elments will always tries to render withing the same line..
+
+        3. It occupies the width based on the content its holding
+        4. W`e cannot control the dimentions of inline element 
+
+----------------------------------
+
+CSS Default priority Order:
+
+    1. Inline css 
+    2. Id based css 
+    3. Class based css 
+    4. Tagname based
+
+
+
+    "!important"
+
+    cssprop !important;

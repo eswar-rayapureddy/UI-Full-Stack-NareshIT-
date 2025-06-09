@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPUT ELEMENTS</title>
+
+    <style>
+        h2 {
+            color: green;
+            size: 28px;
+            text-align: center;
+        }
+    
+        .formcontainer {
+            border: 7px solid pink;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            background-color: gray;
+            height: 60%;
+        }
+    
+        .title {
+            text-align: center;
+    
+        }
+    
+        li {
+            list-style: none;
+            margin: 5px;
+            padding: 5px;
+        }
+    
+        .formcontainer li {
+            background-color: white;
+        }
+    
+        input {
+            margin: 2px;
+        }
+    
+        .dtls {
+            text-align: center;
+            float: left;
+            margin-top: 45px;
+            padding: 10px;
+        }
+    
+        [name="details"] {
+            border: 2px solid red;
+        }
+    
+        [test="abc"] {
+            background-color: lightcyan;
+            color: darkorange;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        [type="button"]{
+            float: left;
+             margin-left:50%;
+            background-color: green;
+            color: white;
+            margin-top: 06px;
+        }
+        [value="Register"]{
+            color: white;
+            background-color: red;
+            float: left;
+            margin-top: 06px;
+        }
+        .ex {
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>User registration Form</h2>
+    <form action="https://www.google.com/" method="GET">
+        <ul class="formcontainer">
+            <li class="title" test="abc"> Student details for Registration
+            <li>
+                <label for="stdname">
+                    Enter User Name
+                </label>
+                <input type="text" name="stdname" placeholder="Please enter username">
+            </li>
+            <li>
+                <label for="pword"> Enter Password</label>
+                <input type="text" maxlength="10" placeholder="Please enter password">
+            </li>
+
+            <li>
+                <label for="country"> Country</label>
+                <input type="text" name="country" value="Incredible India">
+            </li>
+            <li>
+                <label for="gender">Gender </label>
+                <input type="radio" name="gender" checked> Male
+                <input type="radio" name="gender"> Female
+
+            </li>
+
+            <li>
+                <label for="languages">Languages Spoken</label>
+                <input type="checkbox" checked>English
+                <input type="checkbox" disabled>Hindi
+                <input type="checkbox">Japanese
+                <input type="checkbox">Chinese
+            </li>
+            <li>
+                <label for="Country1">Country of Residency</label>
+                <select name="Country1">
+                    <optgroup> Asia
+                        <option value="ind"> India</option>
+                        <option value="jpn">Japan</option>
+                        <option value="chn">China</option>
+                        <option value="sng">Singapore</option>
+                    </optgroup>
+                    <option value="usa">USA</option>
+                    <optgroup>
+
+                        <option value="frc">France</option>
+                        <option value="blg">Belgium</option>
+                        <option value="ndrl">Nederland</option>
+                    </optgroup>
+                </select>
+            </li>
+            <li>
+                <label for="details" class="dtls"> Tell us about yourself</label>
+                <textarea name="details" rows="7" cols="50" maxlength="300" title="Something about yourself"></textarea>
+            </li>
+            <li class="ex">
+                <input type="button" value="Login">
+                <input type="submit" value="Register">
+            </li>
+            </li>
+        </ul>
+    </form> 
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <title>
+            Assignment on drag and drop
+        </title>
+        <style>
+            /* body {
+                padding: 0px;
+                margin: 0px;
+            } */
+            #mens,
+            #womens,
+            #kids {
+                width: 99%;
+                height: 30%;
+                border: 1px solid;
+                padding: 10px;
+                margin: 20px;
+                background-color: #ccc;
+            }
+            #kids > div ,
+            #mens > div ,
+            #womens > div {
+                text-align: center;
+                padding: 5px;
+                font-family: monospace;
+                font-size: larger;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border-bottom: 1px solid;
+                background-color: aliceblue;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                margin: 5px;
+                border: 1px solid white;
+                cursor: pointer;
+            }
+            .imgForMens,
+            .imgForWomens,
+            .imgForKids 
+             {
+                text-align: center;
+                width: 99%;
+                border: 1px solid;
+                padding: 10px;
+                margin: 20px;       
+            }
+            .imgForMens div ,
+            .imgForWomens div,
+            .imgForKids  div {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                padding: 5px;
+                border-bottom: 1px solid #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mens" id="mens" ondragover="OverOnContainer(event) " ondrop=" OnElementDrop(event)">
+            <div>Mens Cart</div>
+
+        </div>
+        <div class="womens" id="womens" ondragover="OverOnContainer(event) " ondrop=" OnElementDrop(event)">
+            <div>Womens Cart</div>
+
+        </div>
+        <div class="kids" id="kids" ondragover="OverOnContainer(event) " ondrop=" OnElementDrop(event)">
+            <div>Kids Cart</div>
+
+        </div>
+
+        <div class="imgForMens">
+            <div>Mens Products</div>
+            <img class="mens" src=" file:///D:/Eswar/SampleImages/mensShirts.png" alt="men" id="menImg1" ondragstart="ImageStartDragging(event)">
+            <img class="mens" src=" file:///D:/Eswar/SampleImages/mensWatches.webp" alt="men" id="menImg2" ondragstart="ImageStartDragging(event)">
+            <img class="mens" src=" file:///D:/Eswar/SampleImages/mensPants.webp" alt="men" id="menImg3" ondragstart="ImageStartDragging(event)">
+            <img class="mens" src=" file:///D:/Eswar/SampleImages/mensShoes.jpg" alt="men" id="menImg4" ondragstart="ImageStartDragging(event)">
+        </div>
+
+        <div class="imgForWomens">
+            <div>Womens Products</div>
+            <img class="womens" src=" file:///D:/Eswar/SampleImages/womensShoes.jpg" alt="women" id="womenImg1" ondragstart="ImageStartDragging(event)">
+            <img class="womens" src=" file:///D:/Eswar/SampleImages/womensBangles.jfif" alt="women" id="womenImg2" ondragstart="ImageStartDragging(event)">
+            <img class="womens" src=" file:///D:/Eswar/SampleImages/womensWatches.jfif" alt="women" id="womenImg3" ondragstart="ImageStartDragging(event)">
+            <img class="womens" src=" file:///D:/Eswar/SampleImages/womenjewellery.jpg" alt="women" id="womenImg4" ondragstart="ImageStartDragging(event)">
+        </div>
+
+        <div class="imgForKids">
+            <div>Kids Products </div>
+            <img class="kids" src=" file:///D:/Eswar/SampleImages/kidsShorts.jfif" alt="k" id="kids1" ondragstart="ImageStartDragging(event)">
+            <img class="kids" src=" file:///D:/Eswar/SampleImages/kidsTshirts.jfif" alt="k" id="kids2" ondragstart="ImageStartDragging(event)">
+            <img class="kids" src="file:///D:/Eswar/SampleImages/kidsToys.webp " alt="k" id="kids3" ondragstart="ImageStartDragging(event)">
+            <img class="kids" src=" file:///D:/Eswar/SampleImages/kidsWatches.jfif" alt="k" id="kids4" ondragstart="ImageStartDragging(event)">
+        </div>
+
+        <script>
+            let productId , productClass;
+            function ImageStartDragging(event) {
+                // console.log(event);
+                productId = event.target.getAttribute('id');
+                productClass = event.target.getAttribute('class');
+                console.log(productClass);
+                console.log(productId)
+            }
+            function OverOnContainer(event) {
+                console.log('dragOver')
+                event.preventDefault();
+            }
+            function OnElementDrop(event) {
+                let containerClass = event.target.getAttribute('class');
+                let containerID = event.target.getAttribute('id');
+                containerID = '#' + containerID;
+                console.log(containerClass);
+                event.preventDefault();
+                productId = '#' + productId;
+                if (containerClass == productClass) {
+                    document.querySelector(containerID).append(document.querySelector(productId));
+                } else {
+                    alert("The Product does't Belongs to that Block");
+                }
+            }
+        </script>
+    </body>
+</html>

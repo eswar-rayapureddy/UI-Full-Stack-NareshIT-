@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+</head>
+<body>
+    <script>
+        var empname = prompt("Enter Employee Name ");
+        var empgender = prompt("Enter Employee Gender ");
+        var empdept = prompt("Enter Employee Dept");
+        var basicsal = prompt("Enter BasicSalary ");
+        basicsal = parseInt(basicsal);
+    
+        var pf = (basicsal * 12) / 100;
+        var hra = (basicsal * 24) / 100;
+        
+        var totalsal = basicsal + hra + pf; 
+
+        console.log("Employee Name is " + empname);
+        console.log("Employee Gender is " + empgender);
+        console.log("Employee Dept is " + empdept);
+        console.log("PF is " + pf);
+        console.log("HRA is " + hra);
+        console.log("TotalSalary is " + totalsal);
+    </script>
+    
+</body>
+</html>
