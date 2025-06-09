@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Values Generator</title>
+    <style>
+        .captchaText {
+            border: 1px solid;
+            width: 120px;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            background-color: bisque;
+            display: block;
+            height: 17px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="captchaText"></div><br>
+        <button onclick="generateCapthcaText()" style="background-color: aquamarine; display: block; margin: auto;">Generate</button>
+    <script>
+
+var strings = ['A', 'U', 'L', 'N', 'S'];
+
+var pattern = 'ASNULNAL';
+
+var generateLowerCaseRandomChar = () => {
+    var max = 122;
+    var min = 97;
+    var randomAscii = Math.random() * (max - min) + min;
+    return String.fromCharCode(randomAscii);
+
+}
+
+var generateUpperCaseRandomChar = () => {
+    var max = 90;
+    var min = 65;
+    var randomAscii = Math.random() * (max - min) + min;
+    return String.fromCharCode(randomAscii);
+
+}
+
+
+var generateRandomNumber = () => {
+
+    return Math.round(Math.random() * 9);
+
+}
+
+var generateCapthcaText = () => {
+    // var capthca = Number + uppercase + lowercase + number + uppecase;
+
+    var capthcaText = generateRandomNumber() + generateUpperCaseRandomChar() + generateLowerCaseRandomChar() + generateRandomNumber() + generateUpperCaseRandomChar();
+
+    document.querySelector(".captchaText").innerText = capthcaText;
+}
+
+
+console.log(generateLowerCaseRandomChar());
+console.log(generateUpperCaseRandomChar());
+console.log(generateRandomNumber());
+    </script>
+</body>
+</html>

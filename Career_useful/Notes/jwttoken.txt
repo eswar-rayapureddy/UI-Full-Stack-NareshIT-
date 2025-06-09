@@ -1,0 +1,30 @@
+npm install dotenv 
+
+setting dotenv 
+requestAnimationFrame("dotenv").config();
+
+process.env.key ...
+------------
+
+
+
+Node module jsonwebtoken
+
+Generating jwt token:
+    jwt.sign(userobject, "userdefinedkey", );
+
+Test jwt token; 
+   
+
+    var userPassedJwtToken = req.headers['authorization'] ? req.headers['authorization'] : '';
+    userPassedJwtToken = userPassedJwtToken.replace('Bearer ', '');
+    jwt.verify(userPassedJwtToken, process.env.JWT_SECRET_KEY, (err, data) => {
+
+    });
+
+------
+clientside:
+    axios.get(api, { headers: {"Authorization" : `Bearer ${token}`} })
+
+serverside: 
+    req.headers['Authorization']

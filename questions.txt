@@ -1,0 +1,59 @@
+
+
+
+Modern UI Fullstack training with React -> Full stack webdever 
+
+
+    UI Fullstack development - 85 - 90Classes
+        +
+    React Lib - 50 classes
+
+webpages and roles and resp  of  webdeveloper
+
+UI  -> UI developer / webdeveloper
+
+UX -> UX designer 
+
+webdevelopment
+
+What is UI  and how its useful -> DONE
+
+What is UX and roles and resp - Done 
+
+Prereq for this training -> Zero -> Scrach to 101 completer topic  - Done 
+
+List of softwares/tools we use - 
+
+Salary for frontend dev - Done 
+
+What about Zero knowledge on computers/languages - 
+
+While AI/Deepseeking is here, what is the futuer of UI Fullstack developer 
+
+List of tech we cover ?
+
+Timings and duration - 8:30 - 10, 85 to 90 Classes - ui, REact 50 Classes
+
+How this training will be helpful for exp candidates 
+
+
+What projects we cover here 
+
+is Angular or React ? 
+
+
+@durgaprasad158 
+
+
+diff btwn fullstackand frontend dev 
+
+Day-1 https://youtu.be/yn2jhS8ZZcM
+Day-2 https://youtu.be/E7iz16TpDcA
+
+Static webpages - Html, css 
+Dynamic webpages -> html, css, JS(to implment dynamicness, arithematic, logical operations etc. )
+
+Browsr -> 3 languages (html, css, js )
+
+
+

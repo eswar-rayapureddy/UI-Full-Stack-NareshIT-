@@ -1,0 +1,29 @@
+Client: 
+<script type="module">
+    import { io } from "https://cdn.socket.io/4.7.5/socket.io.esm.min.js";
+
+    const socket = io("http://localhost:8081/"); || io()
+
+
+    socket.on("usermsg", (data) => {
+        console.log("received " + data);
+    })
+</script>
+
+Server:
+
+
+var express = require('express');
+var app = express();
+
+const server = require('http').createServer(app);
+
+const io = require('socket.io')(server);
+
+io.on('connection', (socket) => { 
+
+});
+
+server.listen(8081, () => {
+  console.log("Server is lsting at 8081")
+})

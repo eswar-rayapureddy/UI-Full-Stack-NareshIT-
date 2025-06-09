@@ -1,0 +1,31 @@
+
+CodeRepo: GITHUB, Git tortise, Git bash, Git desktop
+
+Webtechnologies: HTML5, CSS3, JS, Object Oriented advanced Javascript, ECMA 6,
+                 XML, JSON, AJAX, DHTML, Templating
+Libraries and Frameworks:   Jquery, Angular, React, Handlebars, axios
+
+Responsive: CSS3 Media Quries, Bootstrap 5.* API,
+
+CSS lib: Bootstrap, Less & Sass, React metrial
+
+Web Server: Node js with Express framework
+
+Database: Mongodb
+
+Tools: POSTMAN, GIT Desktop, Debugging Tool, Mongo Compass
+
+Editors: Visual studio code, Sublime 
+
+Project:
+
+    Project title: Onlineshopping application
+
+    Description: Used for end users to explorre list of products with custom query
+
+    Technologies: Angluar, bootstrap, adv js , html5
+
+    Roles and responsibilities:
+        1. 
+
+

@@ -1,0 +1,105 @@
+List of technologies:
+
+    UI Fullstack With React:
+        UI fullstack - 90 classes
+            Frontend/UI:
+                HTML4, 
+                CSS 2
+                Javascript - core (JSON, XML, closures)
+                DHTML
+                Adv Javascript - OOPS
+                ECMA Script
+                Html5 
+                CSS3
+                Bootstrap 5.x
+                Responsive Webpages (media quries etc.)
+
+            Backend:
+                Node js  - (post, get, socket, data enc/dec , Webservices (REST API), session, upload, SMTP server, Clusters, Multer, upload files from client to server etc.)
+                Express js - framework
+                Mongodb - database 
+            
+            Lib:
+                Templating lib (handlebars, mustache js etc )
+                Jquery 
+                Axios (ajax communicaiton)
+                Bootstrap
+                Sass, Less 
+            Tools: 
+                Debugging Tool
+                Editor - VScode /sublime 
+                Mongodb compass
+                Postman 
+                GIT repo 
+                GIT clients - (bash, desktop, gitui, GIT tortise etc)
+            Portfolio creation and Resume building
+
+            Projects: 2 projects 
+
+        React js -> 50 classes
+            Complete React js 
+            Typescript language
+            React with Typescript 
+            Redux
+            React Maetrialui
+            yup, formik,...etc 
+        Projects - 2
+
+
+
+Fullstack dev -> 
+    UI (html, css, js) + UI/client lib/framework (React/Angular)
+          +
+    Webserver (java|pyhton|.net|nodejs)
+          +
+    Database(Sql, sqlserver, mysql, Oracle, Mongodb etc)
+
+Java fullstack dev: 
+    UI (html, css, js) + UI/client lib/framework (React | Angular)
+    Tomcat apache with springboot
+    Any database
+
+
+
+Python fullstack dev: 
+    UI (html, css, js) + UI/client lib/framework (React | Angular)
+    Python
+    Any database
+
+.Net fullstack dev: 
+    UI (html, css, js) + UI/client lib/framework (React | Angular)
+    .Net
+    Any database
+------------------
+
+
+    UI (html, css, js) + UI/client lib/framework (React | Angular)
+    Nodejs with Express Framework 
+    Any database 
+
+
+JAva + .net + Oracle -> 
+
+React + Angular + Mongodb -> 
+
+.Net + Angular() + Mondobd 
+------------------------
+
+Fullstack dev
+    .net + Mongodb + Angular framework ->
+    UI + REact + Angular + Mondodb + Nodejs-> 
+
+
+    UI + REact js + Nodejs  + Mondodb - MERN stACK DEV
+        M -> Mondodb 
+        E - > Express js 
+        R -> react js 
+        N -> Node js web server
+
+    UI + Angular + Nodejs  + Mondodb - MEAN stACK DEV
+
+
+@durgaprasad158
+
+
+Day-1 https://youtu.be/69gzwee_WBs
