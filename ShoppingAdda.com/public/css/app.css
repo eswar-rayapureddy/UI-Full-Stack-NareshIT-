@@ -1,0 +1,56 @@
+.pageLogo {
+    width: 40px;
+    height: 40px;
+}
+.logincontrols, .signupModal {
+    margin: 5px;
+    padding: 5px;
+    li {
+        list-style: none;
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+.captchaBlock {
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 150px;
+    padding: 20px;
+    border: 2px solid red;
+}
+
+#productDetailsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 100%;
+        margin: 5px;
+        height: 150px
+    }
+    .card-title {
+        height: 100px;
+    }
+}
+
+#productDetailsContainer > div {
+    margin: 10px;
+}
+.loggedinUser {
+    display: none;
+}
+
+.priceValue {
+    font-weight: bold;
+    
+}
+
+#categoryList div {
+    text-transform: capitalize;
+    input[type=checkbox] {
+        margin: 20px;
+    }
+}
+
