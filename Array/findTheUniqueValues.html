@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Unique Values</title>
+    </head>
+    <body>
+        <script>
+            var abc = [99,119,89,67,99,119];
+            // var a = new Set(abc);
+            // console.log(a);
+            // var a = [...a];
+            // console.log(a)
+            // console.log(a.sort((a,b) => b -a));
+            // console.log(a[1]);
+            var UniqueValues = abc.reduce((acc,val) => {
+                if(!acc.includes(val)) {
+                    acc.push(val);
+                }
+                return acc;
+            },[]);
+            console.log(UniqueValues);
+        </script>
+    </body>
+</html>

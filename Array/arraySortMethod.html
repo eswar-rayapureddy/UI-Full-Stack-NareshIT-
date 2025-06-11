@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Sorting</title>
+    </head>
+    <body>
+        <script>
+            var stdDetails = [
+            {
+                name : 'abc',
+                age : 20
+            },
+            {
+                name : 'bcd',
+                age : 56
+            },
+            {
+                name : 'adc',
+                age : 15
+            },
+            {
+                name : 'bn',
+                age : 12
+            },
+             {
+                name : 'gnh',
+                age : 20
+            }
+           ];
+           var Sdetails =  {
+                name : 'gnh',
+                age : 20
+            }
+
+           for(let keys in Sdetails) {
+                console.log(keys+':'+Sdetails[keys])
+           }
+
+            // console.log(stdDetails[0]["age"]);
+            // stdDetails.sort((a,b) => a.age - b.age);
+            // console.log(stdDetails)
+
+            var uniqueValues = stdDetails.reduce((acc,val) => {
+                if(acc.some(val2 => val2.age == val.age)) {
+                   delete val.age;   //delete is the method is used to delete the keys in an object
+                   acc.push(val);
+                } else {
+                    acc.push(val);
+                }
+                return acc;
+            },[]);
+            console.log(uniqueValues);
+            
+            uniqueValues.sort((a,b) => b.age - a.age);
+            console.log(uniqueValues)
+        </script>
+    </body>
+</html>

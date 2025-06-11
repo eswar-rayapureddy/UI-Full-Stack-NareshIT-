@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Largest Number 
+        </title>
+    </head>
+    <body>
+        <script>
+            // with predefined functions
+            var arr = [90,89,78,76,90,91,45,43,56];
+            console.log(arr.sort((a,b) => b -a));
+            console.log('largest Number is :',arr[0]);
+
+
+            //with out predefined methods
+            var arr1 = [90,89,78,76,90,91,45,43,56];
+            var largest = 0;
+            for(var i = 0; i < arr1.length;i++) {
+                if(arr1[i] > largest) {
+                    largest = arr1[i];
+                }
+            }
+            console.log(largest);
+        </script>
+    </body>
+</html>

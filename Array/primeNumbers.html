@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Prime Numbers 
+        </title>
+    </head>
+    <body>
+        <script>
+            var arr = [1,2,3,4,5,6,7,8,9,10];
+            var primeNumbers = arr.map(element => {
+                    var zeroCount = 0;
+                    for(var i = 2; i < element; i++) {
+                        
+                        var rem = element % i;
+                        if(rem == 0) {
+                            zeroCount++;
+                            break;
+                        }
+                    }
+                        if(zeroCount == 0) {
+                            console.log(element)
+                        }
+                });
+                // console.log(primeNumbers)
+        </script>
+    </body>
+</html>
