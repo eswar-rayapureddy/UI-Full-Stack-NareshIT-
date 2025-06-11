@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Reverse of given string
+        </title>
+    </head>
+    <body>
+        <script>
+            // if you wnat every letter reverse
+            var str ="Radar showed that the racecar and rotor stopped near the noon sun";
+            var reverseString = '';
+            for (var i = str.length - 1; i >= 0; i--) {
+                reverseString += str[i];
+            }
+            console.log(reverseString);
+
+            //if you want every word reverse
+            var splictedString = str.split(' ');
+            console.log(splictedString);
+            var reverseString1 = '';
+            var reverseOfArray = splictedString.reverse();
+            reverseOfArray.forEach(element => {
+                reverseString1 += element + ' ';
+            });
+            console.log(reverseString1)
+        </script>
+    </body>
+</html>
