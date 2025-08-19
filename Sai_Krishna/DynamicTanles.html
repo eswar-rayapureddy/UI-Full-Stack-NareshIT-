@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #userDetails {
+                padding: 5px;
+                margin: 5px auto;
+                width: 350px;
+                text-align: center;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                border: 1px solid black;
+                background-color: #CFAB8D;
+                li {
+                    list-style: none;
+                    padding: 5px;
+                    margin: 5px;
+                    border: 1px solid;
+                    background-color: #ECEEDF;
+                }
+                input {
+                    width: 260px;
+                    height: 20px;
+                }
+            }
+            
+            #btns {
+                background-color: black;
+                color: white;
+                border: 2px solid black;
+                width: 50px !important;
+                height: 25px !important;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            #btns:active {
+                background-color: white;
+                color: black;
+            }
+            #tableData {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid black;
+                    font-family: emoji;
+                th,td {
+                    border: 1px solid black;
+                    padding: 5px;
+                    margin: 3px;
+                    border-collapse: collapse;
+                }
+                th {
+                    background-color: #3674B5;
+                    color: white;
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <ul id="userDetails">
+            <li>
+                <input type="text" placeholder="FirstName" id="fname">
+            </li>
+            <li>
+                <input type="text" placeholder="LastName" id="lname">
+            </li>
+            <li>
+                <input type="email" placeholder="Email" id="email">
+            </li>
+            <li>
+                <input type="number" placeholder="Age" id="age">
+            </li>
+            <li>
+                <input type="date" placeholder="Date Of Birth" id="dob">
+            </li>
+            <li>
+                <input type="text" placeholder="City" id="city">
+            </li>
+            <li>
+                <input type="button" onclick="saveDetials()" value="Save" id="btns">
+            </li>
+        </ul>
+        <table id="tableData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>DateOfBirth</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody id="DynamicData">
+                
+            </tbody>
+        </table>
+
+
+        <script>
+            let userData = [];
+            function saveDetials() {
+                var userEnteredDetails = {
+                    name : document.querySelector('#fname').value + document.querySelector('#lname').value,
+                    email : document.querySelector('#email').value,
+                    age : document.querySelector('#age').value,
+                    city : document.querySelector('#city').value,
+                    dob : document.querySelector('#dob').value
+                }
+                userData.push(userEnteredDetails);
+
+                
+                document.querySelector('#fname').value = ''
+                document.querySelector('#lname').value = ''
+                document.querySelector('#email').value = ''
+                document.querySelector('#age').value = ''
+                document.querySelector('#city').value = ''
+                document.querySelector('#dob').value = ''
+                
+                document.querySelector('#DynamicData').innerHTML = ''
+                
+                for(var i = 0; i < userData.length; i++) {
+                    renderOnPage(userData[i]);
+                }
+
+                
+                function renderOnPage(userDetails) {
+                    var trTag = document.createElement('tr');
+                    var tdTag1 = document.createElement('td');
+                    tdTag1.innerText = userDetails.name;
+                    trTag.append(tdTag1);
+                    var tdTag2 = document.createElement('td');
+                    tdTag2.innerText = userDetails.age;
+                    trTag.append(tdTag2);
+                    var tdTag3 = document.createElement('td');
+                    tdTag3.innerText = userDetails.email;
+                    trTag.append(tdTag3);
+                    var tdTag4 = document.createElement('td');
+                    tdTag4.innerText = userDetails.dob;
+                    trTag.append(tdTag4);
+                    var tdTag5 = document.createElement('td');
+                    tdTag5.innerText = userDetails.city;
+                    trTag.append(tdTag5);
+                    document.querySelector('#DynamicData').append(trTag)
+                }
+                
+            }
+        </script>
+    </body>
+</html>
